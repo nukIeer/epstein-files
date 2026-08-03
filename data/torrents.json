@@ -1,0 +1,162 @@
+[
+  {
+    "dataset": "COMBINED (all datasets)",
+    "vol": "combined-all-epstein-files",
+    "infohash": "e83a9200d09890e645d9399006cfb53361ac651c",
+    "size_bytes": 33351008256,
+    "source": "yung-megafone/Epstein-Files",
+    "note": "Single combined full archive of all EFTA datasets."
+  },
+  {
+    "dataset": "DataSet 1",
+    "vol": "VOL00001",
+    "infohash": "10d451428ac43a98f2eff06ce256231b8eba7bed",
+    "size_bytes": 1329247376,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 1",
+    "infohash": "4e2fd3707919bebc3177e85498d67cb7474bfd96",
+    "size_bytes": 2658494752,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 10",
+    "vol": "DataSet 10.zip",
+    "infohash": "d509cc4ca1a415a9ba3b6cb920f67c44aed7fe1f",
+    "size_bytes": 84439381640,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 11",
+    "vol": "DataSet 11.zip",
+    "infohash": "59975667f8bdd5baf9945b0e2db8a57d52d32957",
+    "size_bytes": 27441913130,
+    "source": "yung-megafone/Epstein-Files",
+    "btmh": "12200ab9e7614c13695fe17c71baedec717b6294a34dfa243a614602b87ec06453ad"
+  },
+  {
+    "dataset": "DataSet 12",
+    "vol": "VOL00012",
+    "infohash": "3db3fc05e2481513675a50e313333692995e19ca",
+    "size_bytes": 125711730,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 2",
+    "vol": "VOL00002",
+    "infohash": "dd6b5cac7991d34625e4eea1fb2c295c6fbd3adc",
+    "size_bytes": 662334369,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 2",
+    "infohash": "d3ec6b3ea50ddbcf8b6f404f419adc584964418a",
+    "size_bytes": 662334369,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 3",
+    "vol": "VOL00003",
+    "infohash": "3f5923fefc496e394fc1fd553f9d3a1c4242789c",
+    "size_bytes": 628519331,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 3",
+    "infohash": "27704fe736090510aa9f314f5854691d905d1ff3",
+    "size_bytes": 628519331,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 4",
+    "vol": "VOL00004",
+    "infohash": "6fc5aede157615f08335568efbf459b537001756",
+    "size_bytes": 375905556,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 4",
+    "infohash": "4be48044be0e10f719d0de341b7a47ea3e8c3c1a",
+    "size_bytes": 375905556,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 5",
+    "vol": "VOL00005",
+    "infohash": "9e3dd82b77f2c7264b0ef13f87f31a5c3c291046",
+    "size_bytes": 64579973,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 5",
+    "infohash": "1deb0669aca054c313493d5f3bf48eed89907470",
+    "size_bytes": 64579973,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 6",
+    "vol": "VOL00006",
+    "infohash": "6d1792e4d04d814bbbf0ed06e70ee72b92b5544f",
+    "size_bytes": 55600717,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 6",
+    "infohash": "05e7b8aefd91cefcbe28a8788d3ad4a0db47d5e2",
+    "size_bytes": 55600717,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 7",
+    "vol": "VOL00007",
+    "infohash": "101b10571e0b2edc2496f72a831c865ec6a3c070",
+    "size_bytes": 103060624,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 7",
+    "infohash": "bcd8ec2e697b446661921a729b8c92b689df0360",
+    "size_bytes": 103060624,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 8",
+    "vol": "VOL00008",
+    "infohash": "8dacaa3a16be77a51db1cc21fe3b0ffaca0ab116",
+    "size_bytes": 11465535175,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 8",
+    "infohash": "c3a522d6810ee717a2c7e2ef705163e297d34b72",
+    "size_bytes": 11465535175,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "DataSet 9",
+    "vol": "DS9_181GB",
+    "infohash": "50fc8133084864e15440b53dfa89cd43cda6c934",
+    "size_bytes": 186445201408,
+    "source": "yung-megafone/Epstein-Files",
+    "btmh": "1220482c89a1b7e09185fdf01b2fb7e15d60fe4518425e8db6f75a5a5a2f45054f40"
+  },
+  {
+    "dataset": "DataSet_9.tar.xz",
+    "infohash": "acb9cb1741502c7dc09460e4fb7b44eac8022906",
+    "size_bytes": 93143408940,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "dataset-09 (Incomplete)",
+    "infohash": "286060d26392042a5e2b5354d09ec7c7c5cee7dc",
+    "size_bytes": 101565025420,
+    "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "epstein-files-structured-full-20250204.tar.zst",
+    "infohash": "f5cbe5026b1f86617c520d0a9cd610d6254cbe85",
+    "size_bytes": 221393230690,
+    "source": "yung-megafone/Epstein-Files"
+  }
+]

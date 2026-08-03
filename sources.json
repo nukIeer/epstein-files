@@ -1,0 +1,42 @@
+{
+  "description": "Upstream sources the aggregator pulls from. Add entries via PR. Every URL must point to PUBLIC raw text/JSON/markdown. type: readme_scan (extract magnets+links from a raw file), torrents_json, github_tree (scan repo tree for *.torrent and compute infohash).",
+  "sources": [
+    {
+      "id": "yung-megafone-readme",
+      "enabled": true,
+      "type": "readme_scan",
+      "note": "Primary. DataSets 1-12 + combined magnets, official DOJ + archive.org + geeken.dev links.",
+      "url": "https://raw.githubusercontent.com/yung-megafone/Epstein-Files/main/README.md"
+    },
+    {
+      "id": "yung-megafone-torrents",
+      "enabled": true,
+      "type": "github_tree",
+      "note": "Scan repo tree for *.torrent, compute infohash, emit magnets.",
+      "repo": "yung-megafone/Epstein-Files",
+      "ref": "main",
+      "path_prefix": "Torrent Files/"
+    },
+    {
+      "id": "beak2825-archive-readme",
+      "enabled": true,
+      "type": "readme_scan",
+      "note": "Server-response/checksum archive; DOJ change/delete tracking.",
+      "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/main/README.md"
+    },
+    {
+      "id": "awesome-epstein-files",
+      "enabled": true,
+      "type": "readme_scan",
+      "note": "Curated datasets + tools list; extract any magnets/links.",
+      "url": "https://raw.githubusercontent.com/AGIBuilder/awesome-epstein-files/main/README.md"
+    },
+    {
+      "id": "niemasd-readme",
+      "enabled": true,
+      "type": "readme_scan",
+      "note": "EFTA (H.R.4405) scripts + files.",
+      "url": "https://raw.githubusercontent.com/niemasd/Epstein-Files/main/README.md"
+    }
+  ]
+}

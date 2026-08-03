@@ -1,0 +1,33 @@
+{
+  "title": "Epstein Files — Aggregated Pointer Index (magnets, torrents, mirrors)",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "license": "cc-zero",
+  "description": "A tiny, pointer-only index of publicly released Epstein Files Transparency Act (EFTA) materials: DataSets 1-12 and combined full archives. Contains magnet links, torrent infohashes, and official/mirror URLs only — no document blobs. Auto-updated daily from curated upstream sources and archived here on each GitHub release for long-term, citable preservation.",
+  "keywords": [
+    "Epstein Files",
+    "EFTA",
+    "H.R.4405",
+    "DOJ",
+    "public records",
+    "FOIA",
+    "digital preservation",
+    "torrent",
+    "data archiving"
+  ],
+  "creators": [
+    { "name": "Epstein Files Aggregated Index contributors" }
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isDerivedFrom",
+      "identifier": "https://www.justice.gov/epstein/",
+      "scheme": "url"
+    },
+    {
+      "relation": "references",
+      "identifier": "https://www.congress.gov/bill/119th-congress/house-bill/4405",
+      "scheme": "url"
+    }
+  ]
+}

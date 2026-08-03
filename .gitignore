@@ -1,0 +1,26 @@
+# Keep the repo tiny — never commit actual document blobs or torrent payloads.
+*.pdf
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.iso
+*.mp4
+*.mov
+*.jpg
+*.jpeg
+*.png
+*.tiff
+# .torrent metadata files are pointers and ARE allowed; comment out to store them:
+# *.torrent
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db

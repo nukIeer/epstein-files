@@ -1,0 +1,55 @@
+name: Validate PR
+
+on:
+  pull_request:
+    paths:
+      - "sources.json"
+      - "data/**"
+      - "scripts/**"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: JSON is valid
+        run: |
+          python -c "import json; json.load(open('sources.json'))"
+          python -c "import json; json.load(open('data/torrents.json'))"
+          python -c "import json; json.load(open('data/documents.json'))"
+
+      - name: Magnets well-formed
+        run: |
+          python - <<'PY'
+          import re, sys
+          bad = []
+          for i, line in enumerate(open('data/magnets.txt', encoding='utf-8'), 1):
+              s = line.strip()
+              if not s or s.startswith('#'):
+                  continue
+              if not s.startswith('magnet:?') or not re.search(r'urn:btih:([0-9a-fA-F]{40}|[2-7A-Za-z]{32})', s):
+                  bad.append((i, s[:60]))
+          if bad:
+              for i, s in bad:
+                  print(f"line {i}: malformed magnet: {s}", file=sys.stderr)
+              sys.exit(1)
+          print("magnets OK")
+          PY
+
+      - name: No blobs committed
+        run: |
+          if git ls-files | grep -iE '\.(pdf|zip|7z|iso|mp4|mov|tar|tar\.gz)$'; then
+            echo "Blob files must not be committed — index pointers only." >&2
+            exit 1
+          fi
+          echo "No blobs."
+
+      - name: Aggregator runs clean
+        run: python scripts/aggregate.py

@@ -1,0 +1,26 @@
+# Magnet links — one per line. Auto-managed by scripts/aggregate.py (deduped by infohash).
+# Source: DOJ Epstein Files Transparency Act (EFTA) releases + community mirrors.
+magnet:?xt=urn:btih:05e7b8aefd91cefcbe28a8788d3ad4a0db47d5e2&dn=DataSet%206&xl=55600717
+magnet:?xt=urn:btih:101b10571e0b2edc2496f72a831c865ec6a3c070&dn=VOL00007&xl=103060624
+magnet:?xt=urn:btih:10d451428ac43a98f2eff06ce256231b8eba7bed&dn=VOL00001&xl=1329247376
+magnet:?xt=urn:btih:1deb0669aca054c313493d5f3bf48eed89907470&dn=DataSet%205&xl=64579973
+magnet:?xt=urn:btih:27704fe736090510aa9f314f5854691d905d1ff3&dn=DataSet%203&xl=628519331
+magnet:?xt=urn:btih:286060d26392042a5e2b5354d09ec7c7c5cee7dc&dn=dataset-09%20%28Incomplete%29&xl=101565025420
+magnet:?xt=urn:btih:3db3fc05e2481513675a50e313333692995e19ca&dn=VOL00012&xl=125711730
+magnet:?xt=urn:btih:3f5923fefc496e394fc1fd553f9d3a1c4242789c&dn=VOL00003&xl=628519331
+magnet:?xt=urn:btih:4be48044be0e10f719d0de341b7a47ea3e8c3c1a&dn=DataSet%204&xl=375905556
+magnet:?xt=urn:btih:4e2fd3707919bebc3177e85498d67cb7474bfd96&dn=DataSet%201&xl=2658494752
+magnet:?xt=urn:btih:50fc8133084864e15440b53dfa89cd43cda6c934&xt=urn:btmh:1220482c89a1b7e09185fdf01b2fb7e15d60fe4518425e8db6f75a5a5a2f45054f40&dn=DS9_181GB&xl=186445201408&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce
+magnet:?xt=urn:btih:59975667f8bdd5baf9945b0e2db8a57d52d32957&xt=urn:btmh:12200ab9e7614c13695fe17c71baedec717b6294a34dfa243a614602b87ec06453ad&dn=DataSet%2011.zip&xl=27441913130&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=http%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.srv00.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filemail.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-udp.gbitt.info%3A80%2Fannounce&tr=udp%3A%2F%2Frun.publictracker.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.dstud.io%3A6969%2Fannounce&tr=udp%3A%2F%2Fleet-tracker.moe%3A1337%2Fannounce&tr=https%3A%2F%2Ftracker.zhuqiy.com%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.pmman.tech%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.moeblog.cn%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.alaskantf.com%3A443%2Fannounce&tr=https%3A%2F%2Fshahidrazi.online%3A443%2Fannounce&tr=http%3A%2F%2Fwww.torrentsnipe.info%3A2701%2Fannounce&tr=http%3A%2F%2Fwww.genesis-sp.org%3A2710%2Fannounce
+magnet:?xt=urn:btih:6d1792e4d04d814bbbf0ed06e70ee72b92b5544f&dn=VOL00006&xl=55600717
+magnet:?xt=urn:btih:6fc5aede157615f08335568efbf459b537001756&dn=VOL00004&xl=375905556
+magnet:?xt=urn:btih:8dacaa3a16be77a51db1cc21fe3b0ffaca0ab116&dn=VOL00008&xl=11465535175
+magnet:?xt=urn:btih:9e3dd82b77f2c7264b0ef13f87f31a5c3c291046&dn=VOL00005&xl=64579973
+magnet:?xt=urn:btih:acb9cb1741502c7dc09460e4fb7b44eac8022906&dn=DataSet_9.tar.xz&xl=93143408940
+magnet:?xt=urn:btih:bcd8ec2e697b446661921a729b8c92b689df0360&dn=DataSet%207&xl=103060624
+magnet:?xt=urn:btih:c3a522d6810ee717a2c7e2ef705163e297d34b72&dn=DataSet%208&xl=11465535175
+magnet:?xt=urn:btih:d3ec6b3ea50ddbcf8b6f404f419adc584964418a&dn=DataSet%202&xl=662334369
+magnet:?xt=urn:btih:d509cc4ca1a415a9ba3b6cb920f67c44aed7fe1f&dn=DataSet%2010.zip&xl=84439381640
+magnet:?xt=urn:btih:dd6b5cac7991d34625e4eea1fb2c295c6fbd3adc&dn=VOL00002&xl=662334369
+magnet:?xt=urn:btih:e83a9200d09890e645d9399006cfb53361ac651c&dn=combined-all-epstein-files&xl=33351008256&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce
+magnet:?xt=urn:btih:f5cbe5026b1f86617c520d0a9cd610d6254cbe85&dn=epstein-files-structured-full-20250204.tar.zst&xl=221393230690
