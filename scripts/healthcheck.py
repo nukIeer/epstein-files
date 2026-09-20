@@ -64,6 +64,11 @@ def targets():
         if u.startswith(("http://", "https://")):
             cites.setdefault(u, set()).add(d["id"])
 
+    for v in load_json(os.path.join(DATA, "viewers.json"), []):
+        u = v.get("url", "")
+        if u.startswith(("http://", "https://")):
+            cites.setdefault(u, set()).add(f"viewer: {v['name']}")
+
     return {u: sorted(c) for u, c in cites.items()}
 
 

@@ -31,6 +31,9 @@ jobs:
       - name: Run aggregator
         run: python scripts/aggregate.py
 
+      - name: Render the human-facing pages
+        run: python scripts/render_docs.py
+
       - name: Verify the index before committing it
         run: python scripts/verify.py selftest
 
@@ -38,8 +41,8 @@ jobs:
         run: |
           git config user.name  "epstein-files-bot"
           git config user.email "bot@users.noreply.github.com"
-          if [ -n "$(git status --porcelain data/ MANIFEST.md)" ]; then
-            git add data/ MANIFEST.md
+          if [ -n "$(git status --porcelain data/ MANIFEST.md docs/)" ]; then
+            git add data/ MANIFEST.md docs/
             git commit -m "chore(data): auto-update aggregated index [skip ci]"
             git push
           else

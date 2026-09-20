@@ -1,9 +1,13 @@
 # Data dictionary
 
-Every file in `data/` is **generated** by `scripts/aggregate.py`. Nothing here is a
-document; everything is a pointer to material held elsewhere. Schemas are stable —
-fields are added, not renamed or removed, so a consumer pinned to an older release keeps
-working.
+Everything in `data/` is a pointer to material held elsewhere — nothing here is a
+document. Most of it is **generated** by `scripts/aggregate.py`; `viewers.json` is the
+one hand-curated exception, and `health.json` comes from `scripts/healthcheck.py`.
+
+Schemas are stable: fields are added, not renamed or removed, so a consumer pinned to an
+older release keeps working.
+
+If you are not writing code, you want [`START-HERE.md`](START-HERE.md) instead.
 
 ## `data/datasets.json`
 
@@ -73,6 +77,28 @@ are hundreds of gigabytes of images. Sorted by downloads, descending.
 > **Not vetted.** These are other people's pipelines. OCR quality, coverage, dedup­lication
 > and redaction handling vary widely and none of it is checked here. Anything load-bearing
 > should be traced back to the source document via `datasets.json`.
+
+## `data/viewers.json`
+
+The one **hand-curated** file: websites where the documents can be read without
+downloading anything. Whether a site is usable by a non-technical visitor is a
+judgement call, so this list is maintained by people, not scraped. Rendered into
+[`VIEWERS.md`](VIEWERS.md).
+
+| Field | Type | Meaning |
+|-------|------|---------|
+| `name`, `url` | string | Display name and landing page. |
+| `kind` | string | `official`, `browse`, `search`, `graph`, or `media`. |
+| `operator` | string | Who runs it — government, a named person, a company, or "community". |
+| `summary` | string | One or two sentences in plain language. |
+| `needs_download` | bool | `true` means it must be run locally, so it is listed under "for researchers" rather than offered to general visitors. |
+| `needs_account` | bool | Whether a login is required. |
+| `source_repo` | string | *Optional.* Source code, when open. |
+| `note` | string | *Optional.* Caveat about how it works. |
+| `caution` | string | *Optional.* Rendered as a prominent warning. Used where a site's contents raise a concern — for example one advertising "unredacted" material that the DOJ withheld to protect victims. |
+
+Reachability is **not** stored here. It comes from `health.json` at render time, so the
+curated description and the live status never drift apart.
 
 ## `data/health.json`
 

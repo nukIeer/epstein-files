@@ -26,12 +26,19 @@ Supported `type` values:
 - `huggingface` — index derived corpora (OCR text, email sets, embeddings) into
   `data/derivatives.json`, gated on downloads/likes to keep re-uploads out.
 
-### 2. Add a single magnet or link
+### 2. Add a browser-based viewer
+[`data/viewers.json`](data/viewers.json) is the one hand-curated file — "is this usable
+by someone non-technical" is a judgement call, not something a scraper can decide. Add
+an object with `name`, `url`, `kind`, `operator`, `summary` and `needs_download`. Use
+`caution` for anything that warrants a warning (for example a site promoting
+unredacted material). Reachability is probed automatically; do not hardcode status.
+
+### 3. Add a single magnet or link
 Append to [`data/magnets.txt`](data/magnets.txt) or [`data/links.txt`](data/links.txt),
 one per line. Don't worry about ordering or duplicates — the aggregator normalizes and
 dedupes on the next run.
 
-### 3. Add or correct a checksum
+### 4. Add or correct a checksum
 `data/datasets.json` is generated, so fix checksums at the upstream the entry came from
 (see its `artifacts[].url`) — or open an issue here with the file, its SHA-256, and where
 you got it, and we will add the upstream as a source.
@@ -42,8 +49,11 @@ you got it, and we will add the upstream as a source.
 - **Pointers, not payloads.** No blobs, ever.
 - Prefer the **official DOJ URL** as tier-1, `archive.org` as tier-2, community mirrors
   as tier-3.
-- Run `python scripts/aggregate.py` then `python scripts/verify.py selftest` locally
-  before opening a PR — that is exactly what CI runs.
+- Run `python scripts/aggregate.py`, `python scripts/render_docs.py`, then
+  `python scripts/verify.py selftest` locally before opening a PR — that is exactly
+  what CI runs.
+- **Never edit `docs/VIEWERS.md` or `docs/DOWNLOADS.md` by hand.** They are generated
+  from `data/` by `scripts/render_docs.py`; change the script or the data.
 
 ## Validation
 Every PR runs [`.github/workflows/validate.yml`](.github/workflows/validate.yml): JSON

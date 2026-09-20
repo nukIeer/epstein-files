@@ -1,0 +1,74 @@
+[
+  {
+    "name": "U.S. Department of Justice — Epstein files",
+    "url": "https://www.justice.gov/epstein/",
+    "kind": "official",
+    "operator": "U.S. Department of Justice",
+    "summary": "The primary source. Browse and download the releases from the government site that published them.",
+    "needs_download": false,
+    "needs_account": false,
+    "note": "Authoritative, but the site has reorganized before and files have been removed after publication — which is why this index exists."
+  },
+  {
+    "name": "Epstein Archive (epstein-docs)",
+    "url": "https://epstein-docs.github.io",
+    "kind": "browse",
+    "operator": "epstein-docs (community, open source)",
+    "source_repo": "https://github.com/epstein-docs/epstein-docs.github.io",
+    "summary": "Browse ~8,175 processed documents by person, organization, location, date or document type. Includes machine-generated summaries. No download, no account.",
+    "needs_download": false,
+    "needs_account": false,
+    "note": "Organized for browsing by category rather than keyword search. Summaries are AI-generated — read the underlying document before relying on one."
+  },
+  {
+    "name": "Epstein Files Browser",
+    "url": "https://epstein-files-browser.vercel.app",
+    "kind": "search",
+    "operator": "Rhys Sullivan (community, open source)",
+    "source_repo": "https://github.com/RhysSullivan/epstein-files-browser",
+    "summary": "Web viewer for the released documents. The most-starred community browser.",
+    "needs_download": false,
+    "needs_account": false,
+    "note": "Rate-limits automated probes, so this index may report it unreachable even while it works in a browser."
+  },
+  {
+    "name": "JeffTube",
+    "url": "https://jefftube.net",
+    "kind": "media",
+    "operator": "community, open source",
+    "source_repo": "https://github.com/imMatheus/jefftube",
+    "summary": "Plays the video files from the DOJ release in the browser, laid out like a video site.",
+    "needs_download": false,
+    "needs_account": false
+  },
+  {
+    "name": "Epstein Exposed",
+    "url": "https://epsteinexposed.org",
+    "kind": "search",
+    "operator": "Vatra Labs (private company)",
+    "summary": "Aggregates ~11,622 DOJ files with cross-referencing across people, locations, organizations, dates and flights.",
+    "needs_download": false,
+    "needs_account": false,
+    "caution": "Advertises 'community-sourced unredacted documents'. Material the DOJ redacted can identify victims. Redactions in these productions protect real people — prefer the official or archive.org copies unless you have a specific, defensible reason to work with unredacted versions."
+  },
+  {
+    "name": "Epstein Document Explorer",
+    "url": "https://github.com/maxandrews/Epstein-doc-explorer",
+    "kind": "graph",
+    "operator": "Max Andrews (community, open source)",
+    "summary": "Graph explorer of the email corpus — shows who corresponded with whom. Run locally; no hosted site.",
+    "needs_download": true,
+    "needs_account": false,
+    "note": "Requires running the project yourself. Listed for researchers, not general visitors."
+  },
+  {
+    "name": "Epstein Files DB",
+    "url": "https://github.com/LMSBAND/epstein-files-db",
+    "kind": "search",
+    "operator": "community, open source",
+    "summary": "Searchable database of the EFTA files with a relationship graph and full-text search. Run locally; no hosted site.",
+    "needs_download": true,
+    "needs_account": false,
+    "note": "Requires running the project yourself. Listed for researchers, not general visitors."
+  }
+]

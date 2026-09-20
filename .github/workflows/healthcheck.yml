@@ -25,12 +25,15 @@ jobs:
       - name: Probe every pointer
         run: python scripts/healthcheck.py --workers 16
 
+      - name: Re-render pages with fresh link status
+        run: python scripts/render_docs.py
+
       - name: Commit results
         run: |
           git config user.name  "epstein-files-bot"
           git config user.email "bot@users.noreply.github.com"
-          if [ -n "$(git status --porcelain data/health.json)" ]; then
-            git add data/health.json
+          if [ -n "$(git status --porcelain data/health.json docs/)" ]; then
+            git add data/health.json docs/
             git commit -m "chore(health): weekly link probe [skip ci]"
             git push
           else

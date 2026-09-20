@@ -25,6 +25,7 @@ jobs:
           python -c "import json; json.load(open('data/torrents.json'))"
           python -c "import json; json.load(open('data/datasets.json'))"
           python -c "import json; json.load(open('data/derivatives.json'))"
+          python -c "import json; json.load(open('data/viewers.json'))"
           python -c "import json; json.load(open('.zenodo.json'))"
 
       - name: Magnets well-formed
@@ -67,6 +68,9 @@ jobs:
 
       - name: Aggregator runs clean
         run: python scripts/aggregate.py
+
+      - name: Human-facing pages render
+        run: python scripts/render_docs.py
 
       - name: Index still self-consistent after aggregation
         run: python scripts/verify.py selftest
