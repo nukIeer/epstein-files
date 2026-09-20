@@ -1,11 +1,11 @@
 {
   "checked": "2026-09-20",
   "total": 157,
-  "ok": 139,
+  "ok": 138,
   "by_verdict": {
-    "blocked": 14,
+    "blocked": 15,
     "gone": 4,
-    "ok": 139
+    "ok": 138
   },
   "results": [
     {
@@ -162,6 +162,18 @@
       ]
     },
     {
+      "url": "https://old.reddit.com/r/DataHoarder/comments/1qrd9ma/did_anyone_manage_to_get_backupsarchive_of_the/o2o8pov/",
+      "status": 403,
+      "verdict": "blocked",
+      "ok": false,
+      "size_hint": "1522",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
       "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/refs/heads/main/DataSet12_Changed.txt",
       "status": 404,
       "verdict": "gone",
@@ -188,7 +200,7 @@
       "status": 403,
       "verdict": "blocked",
       "ok": false,
-      "size_hint": "5704",
+      "size_hint": "5640",
       "content_type": "text/html",
       "cited_by": [
         "links.txt"
@@ -210,7 +222,7 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "453558",
+      "size_hint": "453564",
       "content_type": "text/html",
       "last_ok": "2026-09-20",
       "cited_by": [
@@ -872,7 +884,7 @@
       "status": 302,
       "verdict": "ok",
       "ok": true,
-      "redirect_to": "https://dn721704.ca.archive.org/0/items/data-set-1/DataSet%201.zip",
+      "redirect_to": "https://ia601807.us.archive.org/10/items/data-set-1/DataSet%201.zip",
       "content_type": "text/html",
       "last_ok": "2026-09-20",
       "cited_by": [
@@ -937,7 +949,7 @@
       "status": 302,
       "verdict": "ok",
       "ok": true,
-      "redirect_to": "https://dn721704.ca.archive.org/0/items/data-set-1/DataSet%206.zip",
+      "redirect_to": "https://ia601807.us.archive.org/10/items/data-set-1/DataSet%206.zip",
       "content_type": "text/html",
       "last_ok": "2026-09-20",
       "cited_by": [
@@ -963,7 +975,7 @@
       "status": 302,
       "verdict": "ok",
       "ok": true,
-      "redirect_to": "https://ia601606.us.archive.org/9/items/data-set-10/DataSet%2010.zip",
+      "redirect_to": "https://ia801606.us.archive.org/9/items/data-set-10/DataSet%2010.zip",
       "content_type": "text/html",
       "last_ok": "2026-09-20",
       "cited_by": [
@@ -1370,18 +1382,6 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/epstein/files/DataSet%2010/EFTA01286686.pdf",
       "content_type": "text/html",
-      "last_ok": "2026-09-20",
-      "cited_by": [
-        "links.txt"
-      ]
-    },
-    {
-      "url": "https://old.reddit.com/r/DataHoarder/comments/1qrd9ma/did_anyone_manage_to_get_backupsarchive_of_the/o2o8pov/",
-      "status": 302,
-      "verdict": "ok",
-      "ok": true,
-      "redirect_to": "https://old.reddit.com/login/?reason=lor2&dest=https%3A%2F%2Fold.reddit.com%2Fr%2FDataHoarder%2Fcomments%2F1qrd9ma%2Fdid_anyone_manage_to_get_backupsarchive_of_the%2Fo2o8pov%2F",
-      "size_hint": "0",
       "last_ok": "2026-09-20",
       "cited_by": [
         "links.txt"
