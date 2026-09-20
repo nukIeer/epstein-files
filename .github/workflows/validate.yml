@@ -23,7 +23,8 @@ jobs:
         run: |
           python -c "import json; json.load(open('sources.json'))"
           python -c "import json; json.load(open('data/torrents.json'))"
-          python -c "import json; json.load(open('data/documents.json'))"
+          python -c "import json; json.load(open('data/datasets.json'))"
+          python -c "import json; json.load(open('.zenodo.json'))"
 
       - name: Magnets well-formed
         run: |
@@ -51,5 +52,20 @@ jobs:
           fi
           echo "No blobs."
 
+      - name: Index is self-consistent
+        run: python scripts/verify.py selftest
+
+      - name: Repo stays small
+        run: |
+          kb=$(du -sk --exclude=.git . | cut -f1)
+          echo "working tree: ${kb} KB"
+          if [ "$kb" -gt 5120 ]; then
+            echo "Working tree exceeds 5 MB — this index is pointers only." >&2
+            exit 1
+          fi
+
       - name: Aggregator runs clean
         run: python scripts/aggregate.py
+
+      - name: Index still self-consistent after aggregation
+        run: python scripts/verify.py selftest

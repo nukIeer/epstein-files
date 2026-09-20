@@ -1,0 +1,316 @@
+[
+  {
+    "dataset": "Data Set 1",
+    "slug": "data-set-1",
+    "size_label": "1.23 GB",
+    "complete": true,
+    "artifacts": [
+      {
+        "kind": "official",
+        "url": "https://www.justice.gov/epstein/files/DataSet%201.zip"
+      },
+      {
+        "kind": "mirror:archive.org",
+        "url": "https://archive.org/download/data-set-1/DataSet%201.zip",
+        "sha256": "598f4d2d71f0d183cf898cd9d6fb8ec1f6161e0e71d8c37897936aef75f860b4"
+      },
+      {
+        "kind": "torrent",
+        "url": "magnet:?xt=urn:btih:10d451428ac43a98f2eff06ce256231b8eba7bed&dn=VOL00001&xl=1329247376",
+        "sha256": "6aca077cf08065e8341e0627b5affd38bd39a28599604bdaeb852de2869f76ee"
+      },
+      {
+        "kind": "mirror:doj-files.geeken.dev",
+        "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%201.zip",
+        "sha256": "26cf803105093fdc69a34ec1ef2c43e274771ac7dd1bb4a5e89027622afa0355"
+      }
+    ]
+  },
+  {
+    "dataset": "Data Set 2",
+    "slug": "data-set-2",
+    "size_label": "630 MB",
+    "complete": true,
+    "artifacts": [
+      {
+        "kind": "official",
+        "url": "https://www.justice.gov/epstein/files/DataSet%202.zip"
+      },
+      {
+        "kind": "mirror:archive.org",
+        "url": "https://archive.org/download/data-set-1/DataSet%202.zip",
+        "sha256": "24cebbaefe9d49bca57726b5a4b531ff20e6a97c370ba87a7593dd8dbdb77bff"
+      },
+      {
+        "kind": "torrent",
+        "url": "magnet:?xt=urn:btih:dd6b5cac7991d34625e4eea1fb2c295c6fbd3adc&dn=VOL00002&xl=662334369",
+        "sha256": "62cf3dc6653b62f38171bb1f3771876da4bdc4aa20cae7d24bd12717169723f0"
+      },
+      {
+        "kind": "mirror:doj-files.geeken.dev",
+        "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%202.zip",
+        "sha256": "62cf3dc6653b62f38171bb1f3771876da4bdc4aa20cae7d24bd12717169723f0"
+      }
+    ]
+  },
+  {
+    "dataset": "Data Set 3",
+    "slug": "data-set-3",
+    "size_label": "595 MB",
+    "complete": true,
+    "artifacts": [
+      {
+        "kind": "official",
+        "url": "https://www.justice.gov/epstein/files/DataSet%203.zip"
+      },
+      {
+        "kind": "mirror:archive.org",
+        "url": "https://archive.org/download/data-set-1/DataSet%203.zip",
+        "sha256": "160231c8c689c76003976b609e55689530fc4832a1535ce13bfcd8f871c21e65"
+      },
+      {
+        "kind": "torrent",
+        "url": "magnet:?xt=urn:btih:3f5923fefc496e394fc1fd553f9d3a1c4242789c&dn=VOL00003&xl=628519331",
+        "sha256": "160231c8c689c76003976b609e55689530fc4832a1535ce13bfcd8f871c21e65"
+      },
+      {
+        "kind": "mirror:doj-files.geeken.dev",
+        "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%203.zip",
+        "sha256": "160231c8c689c76003976b609e55689530fc4832a1535ce13bfcd8f871c21e65"
+      }
+    ]
+  },
+  {
+    "dataset": "Data Set 4",
+    "slug": "data-set-4",
+    "size_label": "351 MB",
+    "complete": true,
+    "artifacts": [
+      {
+        "kind": "official",
+        "url": "https://www.justice.gov/epstein/files/DataSet%204.zip"
+      },
+      {
+        "kind": "mirror:archive.org",
+        "url": "https://archive.org/download/data-set-1/DataSet%204.zip",
+        "sha256": "979154842bac356ef36bb2d0e72f78e0f6b771d79e02dd6934cff699944e2b71"
+      },
+      {
+        "kind": "torrent",
+        "url": "magnet:?xt=urn:btih:6fc5aede157615f08335568efbf459b537001756&dn=VOL00004&xl=375905556",
+        "sha256": "e78948690c22b904d6b79afe92a4eb1d7abb8e746b0d025123826ebee0df8273"
+      },
+      {
+        "kind": "mirror:doj-files.geeken.dev",
+        "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%204.zip",
+        "sha256": "e78948690c22b904d6b79afe92a4eb1d7abb8e746b0d025123826ebee0df8273"
+      }
+    ]
+  },
+  {
+    "dataset": "Data Set 5",
+    "slug": "data-set-5",
+    "size_label": "61.4 MB",
+    "complete": true,
+    "artifacts": [
+      {
+        "kind": "official",
+        "url": "https://www.justice.gov/epstein/files/DataSet%205.zip"
+      },
+      {
+        "kind": "mirror:archive.org",
+        "url": "https://archive.org/download/data-set-1/DataSet%205.zip",
+        "sha256": "7317e2ad089c82a59378a9c038e964feab246be62ecc24663b741617af3da709"
+      },
+      {
+        "kind": "torrent",
+        "url": "magnet:?xt=urn:btih:9e3dd82b77f2c7264b0ef13f87f31a5c3c291046&dn=VOL00005&xl=64579973",
+        "sha256": "eeda87e747487d718e35b661d2d078ff08f0b0e80107c5f498fce17ae4f298ba"
+      },
+      {
+        "kind": "mirror:doj-files.geeken.dev",
+        "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%205.zip",
+        "sha256": "eeda87e747487d718e35b661d2d078ff08f0b0e80107c5f498fce17ae4f298ba"
+      }
+    ]
+  },
+  {
+    "dataset": "Data Set 6",
+    "slug": "data-set-6",
+    "size_label": "51.2 MB",
+    "complete": true,
+    "artifacts": [
+      {
+        "kind": "official",
+        "url": "https://www.justice.gov/epstein/files/DataSet%206.zip"
+      },
+      {
+        "kind": "mirror:archive.org",
+        "url": "https://archive.org/download/data-set-1/DataSet%206.zip",
+        "sha256": "d54d26d94127b9a277cf3f7d9eeaf9a7271f118757997edac3bc6e1039ed6555"
+      },
+      {
+        "kind": "torrent",
+        "url": "magnet:?xt=urn:btih:6d1792e4d04d814bbbf0ed06e70ee72b92b5544f&dn=VOL00006&xl=55600717",
+        "sha256": "4ed74dcce6d7f7fd1b7b298d76de2f5e6eaca190562f8310ca5011b354314785"
+      },
+      {
+        "kind": "mirror:doj-files.geeken.dev",
+        "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%206.zip",
+        "sha256": "4ed74dcce6d7f7fd1b7b298d76de2f5e6eaca190562f8310ca5011b354314785"
+      }
+    ]
+  },
+  {
+    "dataset": "Data Set 7",
+    "slug": "data-set-7",
+    "size_label": "96.9 MB",
+    "complete": true,
+    "artifacts": [
+      {
+        "kind": "official",
+        "url": "https://www.justice.gov/epstein/files/DataSet%207.zip"
+      },
+      {
+        "kind": "mirror:archive.org",
+        "url": "https://archive.org/download/data-set-1/DataSet%207.zip",
+        "sha256": "51e1961b3bcf18a21afd9bcf697fdb54dac97d1b64cf88297f4c5be268d26b8e"
+      },
+      {
+        "kind": "torrent",
+        "url": "magnet:?xt=urn:btih:101b10571e0b2edc2496f72a831c865ec6a3c070&dn=VOL00007&xl=103060624",
+        "sha256": "51e1961b3bcf18a21afd9bcf697fdb54dac97d1b64cf88297f4c5be268d26b8e"
+      },
+      {
+        "kind": "mirror:doj-files.geeken.dev",
+        "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%207.zip",
+        "sha256": "51e1961b3bcf18a21afd9bcf697fdb54dac97d1b64cf88297f4c5be268d26b8e"
+      }
+    ]
+  },
+  {
+    "dataset": "Data Set 8",
+    "slug": "data-set-8",
+    "size_label": "10.67 GB",
+    "complete": true,
+    "artifacts": [
+      {
+        "kind": "official",
+        "url": "https://www.justice.gov/epstein/files/DataSet%208.zip"
+      },
+      {
+        "kind": "mirror:archive.org",
+        "url": "https://archive.org/details/data-set-8",
+        "sha256": "8cb7345bf7a0b32f183658ac170fb0b6527895c95f0233d7b99d544579567294"
+      },
+      {
+        "kind": "torrent",
+        "url": "magnet:?xt=urn:btih:8dacaa3a16be77a51db1cc21fe3b0ffaca0ab116&dn=VOL00008&xl=11465535175",
+        "sha256": "558010b96b7980ed529a2ad4ea224123a59446927e4441d23a2e8e5c2361ee07"
+      },
+      {
+        "kind": "mirror:doj-files.geeken.dev",
+        "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%208.zip",
+        "sha256": "558010b96b7980ed529a2ad4ea224123a59446927e4441d23a2e8e5c2361ee07"
+      }
+    ]
+  },
+  {
+    "dataset": "Data Set 9",
+    "slug": "data-set-9-incomplete",
+    "size_label": "~180 GB",
+    "complete": false,
+    "artifacts": [
+      {
+        "kind": "official",
+        "url": "https://www.justice.gov/epstein/files/DataSet%209.zip"
+      },
+      {
+        "kind": "torrent",
+        "url": "magnet:?xt=urn:btih:50fc8133084864e15440b53dfa89cd43cda6c934&xt=urn:btmh:1220482c89a1b7e09185fdf01b2fb7e15d60fe4518425e8db6f75a5a5a2f45054f40&dn=DS9_181GB&xl=186445201408&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce",
+        "sha256": "eb3c112a62d326e302bcfc6224cc1d31a5fff6c5f3bdf9f4ec32089511191922"
+      },
+      {
+        "kind": "mirror:doj-files.geeken.dev",
+        "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%209.zip",
+        "sha256": "eb3c112a62d326e302bcfc6224cc1d31a5fff6c5f3bdf9f4ec32089511191922"
+      }
+    ]
+  },
+  {
+    "dataset": "Data Set 10",
+    "slug": "data-set-10",
+    "size_label": "78.65 GB",
+    "complete": true,
+    "artifacts": [
+      {
+        "kind": "official",
+        "url": "https://www.justice.gov/epstein/files/DataSet%2010.zip"
+      },
+      {
+        "kind": "mirror:archive.org",
+        "url": "https://archive.org/download/data-set-10/DataSet%2010.zip",
+        "sha256": "7d6935b1c63ff2f6bcabdd024ebc2a770f90c43b0d57b646fa7cbd4c0abcf846"
+      },
+      {
+        "kind": "torrent",
+        "url": "magnet:?xt=urn:btih:d509cc4ca1a415a9ba3b6cb920f67c44aed7fe1f&dn=DataSet%2010.zip&xl=84439381640",
+        "sha256": "7d6935b1c63ff2f6bcabdd024ebc2a770f90c43b0d57b646fa7cbd4c0abcf846"
+      },
+      {
+        "kind": "mirror:doj-files.geeken.dev",
+        "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%2010.zip",
+        "sha256": "7d6935b1c63ff2f6bcabdd024ebc2a770f90c43b0d57b646fa7cbd4c0abcf846"
+      }
+    ]
+  },
+  {
+    "dataset": "Data Set 11",
+    "slug": "data-set-11",
+    "size_label": "27.5 GB",
+    "complete": true,
+    "artifacts": [
+      {
+        "kind": "official",
+        "url": "https://www.justice.gov/epstein/files/DataSet%2011.zip"
+      },
+      {
+        "kind": "torrent",
+        "url": "magnet:?xt=urn:btih:59975667f8bdd5baf9945b0e2db8a57d52d32957&xt=urn:btmh:12200ab9e7614c13695fe17c71baedec717b6294a34dfa243a614602b87ec06453ad&dn=DataSet%2011.zip&xl=27441913130&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=http%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.srv00.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filemail.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker-udp.gbitt.info%3A80%2Fannounce&tr=udp%3A%2F%2Frun.publictracker.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.dstud.io%3A6969%2Fannounce&tr=udp%3A%2F%2Fleet-tracker.moe%3A1337%2Fannounce&tr=https%3A%2F%2Ftracker.zhuqiy.com%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.pmman.tech%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.moeblog.cn%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.alaskantf.com%3A443%2Fannounce&tr=https%3A%2F%2Fshahidrazi.online%3A443%2Fannounce&tr=http%3A%2F%2Fwww.torrentsnipe.info%3A2701%2Fannounce&tr=http%3A%2F%2Fwww.genesis-sp.org%3A2710%2Fannounce",
+        "sha256": "9714273b9e325f0a1f406063c795db32f5da2095b75e602d4c4fbaba5de3ed80"
+      },
+      {
+        "kind": "mirror:doj-files.geeken.dev",
+        "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%2011.zip",
+        "sha256": "9714273b9e325f0a1f406063c795db32f5da2095b75e602d4c4fbaba5de3ed80"
+      }
+    ]
+  },
+  {
+    "dataset": "Data Set 12",
+    "slug": "data-set-12",
+    "size_label": "114.1 MB",
+    "complete": true,
+    "artifacts": [
+      {
+        "kind": "official",
+        "url": "https://www.justice.gov/epstein/files/DataSet%2012.zip"
+      },
+      {
+        "kind": "mirror:archive.org",
+        "url": "https://archive.org/details/data-set-12_202601",
+        "sha256": "b5314b7efca98e25d8b35e4b7fac3ebb3ca2e6cfd0937aa2300ca8b71543bbe2"
+      },
+      {
+        "kind": "torrent",
+        "url": "magnet:?xt=urn:btih:3db3fc05e2481513675a50e313333692995e19ca&dn=VOL00012&xl=125711730",
+        "sha256": "b5314b7efca98e25d8b35e4b7fac3ebb3ca2e6cfd0937aa2300ca8b71543bbe2"
+      },
+      {
+        "kind": "mirror:doj-files.geeken.dev",
+        "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%2012.zip",
+        "sha256": "b5314b7efca98e25d8b35e4b7fac3ebb3ca2e6cfd0937aa2300ca8b71543bbe2"
+      }
+    ]
+  }
+]

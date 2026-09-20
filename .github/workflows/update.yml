@@ -31,6 +31,9 @@ jobs:
       - name: Run aggregator
         run: python scripts/aggregate.py
 
+      - name: Verify the index before committing it
+        run: python scripts/verify.py selftest
+
       - name: Commit changes if any
         run: |
           git config user.name  "epstein-files-bot"

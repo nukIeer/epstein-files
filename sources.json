@@ -1,11 +1,28 @@
 {
-  "description": "Upstream sources the aggregator pulls from. Add entries via PR. Every URL must point to PUBLIC raw text/JSON/markdown. type: readme_scan (extract magnets+links from a raw file), torrents_json, github_tree (scan repo tree for *.torrent and compute infohash).",
+  "description": "Upstream sources the aggregator pulls from. Add entries via PR. Every URL must point to PUBLIC raw text/JSON/markdown. type: readme_scan (extract magnets+links from a raw file), torrents_json, github_tree (scan repo tree for *.torrent and compute infohash), archive_org (search the Internet Archive and index each matching item's auto-generated .torrent).",
   "sources": [
+    {
+      "id": "archive-org-collections",
+      "enabled": true,
+      "type": "archive_org",
+      "note": "Internet Archive items mirroring the DOJ/EFTA releases at collection scale (>= 1 GB). Each item's auto-generated .torrent is fetched once; its infohash is then cached in data/torrents.json under ia_item and never re-fetched.",
+      "query": "(identifier:*epstein* OR title:\"epstein\") AND (identifier:*DataSet* OR identifier:*data-set* OR title:\"Data Set\" OR identifier:*justice.gov* OR title:\"Epstein Files\" OR title:\"Transparency Act\")",
+      "min_size_bytes": 1073741824,
+      "max_items": 80,
+      "deny": "twitch|bitchute|rumble|youtube|podcast|bonzibuddy|pizzagate|cabal|webcast|rocksmith|talking about|reaction"
+    },
     {
       "id": "yung-megafone-readme",
       "enabled": true,
       "type": "readme_scan",
       "note": "Primary. DataSets 1-12 + combined magnets, official DOJ + archive.org + geeken.dev links.",
+      "url": "https://raw.githubusercontent.com/yung-megafone/Epstein-Files/main/README.md"
+    },
+    {
+      "id": "yung-megafone-datasets",
+      "enabled": true,
+      "type": "dataset_sections",
+      "note": "Same README, parsed per-release: builds data/datasets.json with each DataSet's official DOJ URL, mirrors, magnet and published SHA-256 checksums.",
       "url": "https://raw.githubusercontent.com/yung-megafone/Epstein-Files/main/README.md"
     },
     {

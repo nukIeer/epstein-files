@@ -3,7 +3,8 @@
   "upload_type": "dataset",
   "access_right": "open",
   "license": "cc-zero",
-  "description": "A tiny, pointer-only index of publicly released Epstein Files Transparency Act (EFTA) materials: DataSets 1-12 and combined full archives. Contains magnet links, torrent infohashes, and official/mirror URLs only — no document blobs. Auto-updated daily from curated upstream sources and archived here on each GitHub release for long-term, citable preservation.",
+  "version": "0.2.0",
+  "description": "<p>A pointer-only index of publicly released Epstein Files Transparency Act (EFTA) materials and related DOJ, House Oversight and court productions.</p><p>The index records magnet URIs, BitTorrent infohashes, official and mirror URLs, and the SHA-256 checksums published alongside them. It contains <strong>no document blobs</strong>: a few hundred kilobytes of metadata describing terabytes of material held on justice.gov, the Internet Archive, and in BitTorrent swarms.</p><p>Contents: <code>data/datasets.json</code> (per-release view — official URL, every known mirror, magnet, published SHA-256), <code>data/torrents.json</code> (every distinct torrent keyed by infohash, with Internet Archive item identifiers), <code>data/magnets.txt</code>, <code>data/links.txt</code>, and a generated <code>MANIFEST.md</code>. Field-level schemas are documented in <code>docs/DATA_DICTIONARY.md</code>.</p><p>Tooling: <code>scripts/aggregate.py</code> rebuilds the index from a curated source list (stdlib only, deterministic, run daily in CI); <code>scripts/verify.py</code> lets a researcher resolve a release to its pointers and identify an already-downloaded file against the recorded checksums.</p><p>Caveats that matter for reuse: checksums are transcribed from the upstream that published each mirror and are not independently re-verified here; Data Set 9 is incomplete at the source, and community reconstructions cover more of it than the official ZIP. Only publicly released material is indexed. These records concern the sexual abuse of minors and contain victim information; appearance in the files is not evidence of wrongdoing.</p>",
   "keywords": [
     "Epstein Files",
     "EFTA",
@@ -12,8 +13,9 @@
     "public records",
     "FOIA",
     "digital preservation",
-    "torrent",
-    "data archiving"
+    "BitTorrent",
+    "data archiving",
+    "provenance"
   ],
   "creators": [
     { "name": "Epstein Files Aggregated Index contributors" }
@@ -27,6 +29,11 @@
     {
       "relation": "references",
       "identifier": "https://www.congress.gov/bill/119th-congress/house-bill/4405",
+      "scheme": "url"
+    },
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/nukIeer/epstein-files",
       "scheme": "url"
     }
   ]

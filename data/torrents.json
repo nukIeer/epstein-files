@@ -8,6 +8,62 @@
     "note": "Single combined full archive of all EFTA datasets."
   },
   {
+    "dataset": "COMBINED ALL EPSTEIN FILES Jp 2",
+    "infohash": "8b511ce669b975fb753734392ea6f0e93fe631d0",
+    "size_bytes": 24838668288,
+    "source": "archive.org",
+    "ia_item": "combined-all-epstein-files-jp-2",
+    "published": "2026-03-24"
+  },
+  {
+    "dataset": "DOJ Disclosures - Epstein Files Transparency Act (HR_4405) - DataSet 08",
+    "infohash": "a2d3a2b7ff133820b2214d0ac76be1150b416f7f",
+    "size_bytes": 10699669504,
+    "source": "archive.org",
+    "ia_item": "epstein_library_transparency_act_hr_4405_dataset8",
+    "published": "2026-02-05"
+  },
+  {
+    "dataset": "DOJ Disclosures - Epstein Files Transparency Act (HR_4405) - DataSet 11",
+    "infohash": "7278a911cfd80287cbe9fb6f789b3e000e24c40c",
+    "size_bytes": 27451719680,
+    "source": "archive.org",
+    "ia_item": "epstein_library_transparency_act_hr_4405_dataset11_202602",
+    "published": "2026-02-05"
+  },
+  {
+    "dataset": "DOJ Disclosures Epstein Files Transparency Act H.R.4405 23 Dec Batch 1-8",
+    "infohash": "3a75e6a1307f3ff45801a7e89e224d6e4ffe2111",
+    "size_bytes": 13885243392,
+    "source": "archive.org",
+    "ia_item": "JEpstein_H_R_4405_251223",
+    "published": "2025-12-23"
+  },
+  {
+    "dataset": "DOJ Epstein Files (2025-08-22) - Full Release (33295 Pages)",
+    "infohash": "6b918e2f18f34dcce73c1cbfcd541375b1ade8a1",
+    "size_bytes": 80258007040,
+    "source": "archive.org",
+    "ia_item": "doj-jeffrey-epstein-first-production-2025",
+    "published": "2025-09-03"
+  },
+  {
+    "dataset": "DOJ Epstein Files - DataSet 8 Complete Archive (December 2025)",
+    "infohash": "83ed41c9b200f72c4f3fe0fcf3a759ad000e2408",
+    "size_bytes": 483590668288,
+    "source": "archive.org",
+    "ia_item": "doj-epstein-files-dataset8-2025",
+    "published": "2025-12-25"
+  },
+  {
+    "dataset": "DOJ Epstein Files First Production",
+    "infohash": "2817aabfff21b76bd477f66b0006f90f61462b4e",
+    "size_bytes": 203339857920,
+    "source": "archive.org",
+    "ia_item": "doj_epstein_files_first_production",
+    "published": "2025-09-05"
+  },
+  {
     "dataset": "DataSet 1",
     "vol": "VOL00001",
     "infohash": "10d451428ac43a98f2eff06ce256231b8eba7bed",
@@ -148,15 +204,223 @@
     "source": "yung-megafone/Epstein-Files"
   },
   {
+    "dataset": "EPSTEIN FILES 1 TO 8 AND 12",
+    "infohash": "bd693109f7f3dbff8d01e1324bf163f70a915c22",
+    "size_bytes": 13885243392,
+    "source": "archive.org",
+    "ia_item": "data-set-8_202601",
+    "published": "2026-01-31"
+  },
+  {
+    "dataset": "Entirity Of Epstein Files",
+    "infohash": "fe512f4b8dd28dc7abebe276a7392e78631367fb",
+    "size_bytes": 5825888256,
+    "source": "archive.org",
+    "ia_item": "entirity-of-epstein-files",
+    "published": "2026-05-20"
+  },
+  {
+    "dataset": "Epstein Data Sets So Far",
+    "infohash": "ad4aa342f669b36a5733d5ac02ae2a079bacbbaa",
+    "size_bytes": 41460695040,
+    "source": "archive.org",
+    "ia_item": "Epstein-Data-Sets-So-Far",
+    "published": "2026-02-02"
+  },
+  {
+    "dataset": "Epstein File Archive",
+    "infohash": "d93afc79e4cc45dafede0480c855473c64f1ecc6",
+    "size_bytes": 4523556864,
+    "source": "archive.org",
+    "ia_item": "epstein-file-archive-datasets",
+    "published": "2026-02-19"
+  },
+  {
+    "dataset": "Epstein Files",
+    "infohash": "b6785e5773b6b6e21853829e958cd7a95a9c3433",
+    "size_bytes": 41460695040,
+    "source": "archive.org",
+    "ia_item": "epstein-files-archive",
+    "published": "2025-12-24"
+  },
+  {
+    "dataset": "Epstein Files",
+    "infohash": "0bf707c55f55c0d838697d78c0609a32ac014fc6",
+    "size_bytes": 14042529792,
+    "source": "archive.org",
+    "ia_item": "epstein-files_202601",
+    "published": "2026-01-24"
+  },
+  {
+    "dataset": "Epstein Files (December 19th, 2025 Release)",
+    "infohash": "e527b065d2d0a6bdf40ef3b2d3ed409c258a2a47",
+    "size_bytes": 14327742464,
+    "source": "archive.org",
+    "ia_item": "epstein-files-12-19-25-release",
+    "published": "2026-04-26"
+  },
+  {
+    "dataset": "Epstein Files - Dataset 9",
+    "infohash": "a846f4965e176934b04b50d297238265ecfad6bf",
+    "size_bytes": 13937672192,
+    "source": "archive.org",
+    "ia_item": "Epstein-Dataset-9-2026-01-30",
+    "published": "2026-02-02"
+  },
+  {
+    "dataset": "Epstein Files Data Set 11",
+    "infohash": "307acb7abc8e77cd245fa227982a87b814f0e9d9",
+    "size_bytes": 27451719680,
+    "source": "archive.org",
+    "ia_item": "epstein-files-data-set-11",
+    "published": "2026-02-06"
+  },
+  {
+    "dataset": "Epstein Files December 19th 2025 Release",
+    "infohash": "6dcd01f774fe217524affd3cdc760a7430cf9d0f",
+    "size_bytes": 36901486592,
+    "source": "archive.org",
+    "ia_item": "epstein-files-dec-19-25-release",
+    "published": "2025-12-23"
+  },
+  {
+    "dataset": "Epstein Files December, 2025 - Data Set 1-7",
+    "infohash": "3d8194f920c28cf16db1c8110e00ae4323bf5829",
+    "size_bytes": 16290676736,
+    "source": "archive.org",
+    "ia_item": "data-set-1_20251220",
+    "published": "2025-12-20"
+  },
+  {
+    "dataset": "Epstein Files PDF Docs",
+    "infohash": "6d69345f38187e1cd881e920cf9be3afca99d6ba",
+    "size_bytes": 13891534848,
+    "source": "archive.org",
+    "ia_item": "epstein-files-pdf-docs",
+    "published": "2026-02-02"
+  },
+  {
+    "dataset": "Epstein Files Transparency Act (Data Sets 1-8) (12-23-25)",
+    "infohash": "e8f23b7ed0a8ce76eb73d5cabdc84504b87d56de",
+    "size_bytes": 13895729152,
+    "source": "archive.org",
+    "ia_item": "EFTA_12-23-25",
+    "published": "2025-12-24"
+  },
+  {
+    "dataset": "Epstein Files Transparency Act (H.R.4405) - Data sets 5-8",
+    "infohash": "5c6b39f898faffaa93b176d1134930f063212923",
+    "size_bytes": 10926161920,
+    "source": "archive.org",
+    "ia_item": "hr4405B",
+    "published": "2025-12-24"
+  },
+  {
+    "dataset": "Epstein Files, Part 2",
+    "infohash": "8af559c23c82e04fe9515ee123e67631804f0e1d",
+    "size_bytes": 60062433280,
+    "source": "archive.org",
+    "ia_item": "video2_202602",
+    "published": "2026-02-05"
+  },
+  {
+    "dataset": "Epstein Library Data Set 1-8",
+    "infohash": "a8aeb5295007cce71dd866173ae53666e4375151",
+    "size_bytes": 13885243392,
+    "source": "archive.org",
+    "ia_item": "20251224_20251224_2055",
+    "published": "2025-12-24"
+  },
+  {
+    "dataset": "Jeffrey Epstein Files Archive",
+    "infohash": "8808fe0f46d83f786892de3867885ea6f2539318",
+    "size_bytes": 63625494528,
+    "source": "archive.org",
+    "ia_item": "jeffrey-epstein-files-archive",
+    "published": "2025-12-23"
+  },
+  {
+    "dataset": "Jeffrey Epstein records - DoJ full datasets",
+    "infohash": "6196327b1082aefe14e5726e0f8a83b924f8f366",
+    "size_bytes": 41450209280,
+    "source": "archive.org",
+    "ia_item": "data-set-8_20251228",
+    "published": "2025-12-28"
+  },
+  {
+    "dataset": "Oversight Committee Additional Epstein Files (2025-11-12) - Full Release (26,032 files)",
+    "infohash": "4048d434f0821169eb07e0325a276394b866923a",
+    "size_bytes": 109676855296,
+    "source": "archive.org",
+    "ia_item": "oversight-committee-additional-epstein-files",
+    "published": "2025-11-14"
+  },
+  {
+    "dataset": "The Epstein Files",
+    "infohash": "bf4fde9cdf21cce5c72d3af67e78a184bce544b9",
+    "size_bytes": 43268440064,
+    "source": "archive.org",
+    "ia_item": "the-epstein-library",
+    "published": "2025-12-28"
+  },
+  {
+    "dataset": "The Epstein Files",
+    "infohash": "6bebd8da1aa56a58502b6b76a292149780c59ae5",
+    "size_bytes": 13885243392,
+    "source": "archive.org",
+    "ia_item": "epstein-files_202512",
+    "published": "2025-12-25"
+  },
+  {
+    "dataset": "The Epstein Files",
+    "infohash": "994ee6218d13a1532fa986de9f27b64f53a61014",
+    "size_bytes": 6761218048,
+    "source": "archive.org",
+    "ia_item": "the-epstein-files-07-14-2025",
+    "published": "2025-07-14"
+  },
+  {
+    "dataset": "[DylanBurnsTV] [2025-2-28] - PKK Turkey Peace? Trumps Awkward Meeting with British PM, Epstein Files, Chips Act Dead? NATO update",
+    "infohash": "f9d9ab8a71d0d1825191e5dad66adce56d9379d0",
+    "size_bytes": 7346323456,
+    "source": "archive.org",
+    "ia_item": "dylan-burns-tv-2025-2-28-pkk-turkey-peace-trumps-awkward-meeting-with-british-pm",
+    "published": "2025-03-17"
+  },
+  {
     "dataset": "dataset-09 (Incomplete)",
     "infohash": "286060d26392042a5e2b5354d09ec7c7c5cee7dc",
     "size_bytes": 101565025420,
     "source": "yung-megafone/Epstein-Files"
   },
   {
+    "dataset": "doj_epstein_dataset10_incomplete",
+    "infohash": "1688e8ab7df6deec151607bf48cb86b4241d858a",
+    "size_bytes": 9730785280,
+    "source": "archive.org",
+    "ia_item": "doj_epstein_dataset10_incomplete",
+    "published": "2026-01-30"
+  },
+  {
+    "dataset": "epstein-files-dataset-zip-collectionn",
+    "infohash": "ea3563dc5c88fb364266f526c136845f00f62ede",
+    "size_bytes": 47789899776,
+    "source": "archive.org",
+    "ia_item": "epstein-files-dataset-zip-collectionn",
+    "published": "2026-02-06"
+  },
+  {
     "dataset": "epstein-files-structured-full-20250204.tar.zst",
     "infohash": "f5cbe5026b1f86617c520d0a9cd610d6254cbe85",
     "size_bytes": 221393230690,
     "source": "yung-megafone/Epstein-Files"
+  },
+  {
+    "dataset": "www.justice.gov_epstein_files_DataSets",
+    "infohash": "466e2644684c9d364bf10ea872a6f9f0bb1a048d",
+    "size_bytes": 61631102976,
+    "source": "archive.org",
+    "ia_item": "www.justice.gov_epstein_files_DataSets",
+    "published": "2026-02-02"
   }
 ]

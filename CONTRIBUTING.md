@@ -19,15 +19,20 @@ Supported `type` values:
 - `readme_scan` — extract every magnet + URL from a raw text/markdown file.
 - `torrents_json` — a JSON array of `{name, infohash, size, source}`.
 - `github_tree` — scan a repo's tree for `*.torrent`; infohash is computed automatically.
+- `archive_org` — run an Internet Archive search; each matching item's auto-generated
+  `.torrent` is fetched once and its real infohash recorded.
+- `dataset_sections` — parse a per-release README into `data/datasets.json`
+  (official URL, mirrors, magnet, published SHA-256).
 
 ### 2. Add a single magnet or link
 Append to [`data/magnets.txt`](data/magnets.txt) or [`data/links.txt`](data/links.txt),
 one per line. Don't worry about ordering or duplicates — the aggregator normalizes and
 dedupes on the next run.
 
-### 3. Add document-level metadata
-Append objects to [`data/documents.json`](data/documents.json):
-`{ "title": "...", "dataset": "DataSet 9", "url": "...", "sha256": "..." }`.
+### 3. Add or correct a checksum
+`data/datasets.json` is generated, so fix checksums at the upstream the entry came from
+(see its `artifacts[].url`) — or open an issue here with the file, its SHA-256, and where
+you got it, and we will add the upstream as a source.
 
 ## Rules
 - **Public material only.** Court unsealings, Congressional/DOJ releases, FOIA
@@ -35,8 +40,8 @@ Append objects to [`data/documents.json`](data/documents.json):
 - **Pointers, not payloads.** No blobs, ever.
 - Prefer the **official DOJ URL** as tier-1, `archive.org` as tier-2, community mirrors
   as tier-3.
-- Run `python scripts/aggregate.py` locally before opening a PR — it's the same check CI
-  runs.
+- Run `python scripts/aggregate.py` then `python scripts/verify.py selftest` locally
+  before opening a PR — that is exactly what CI runs.
 
 ## Validation
 Every PR runs [`.github/workflows/validate.yml`](.github/workflows/validate.yml): JSON

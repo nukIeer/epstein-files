@@ -87,7 +87,8 @@ def bencode(x) -> bytes:
     raise TypeError(type(x))
 
 
-def torrent_infohash(raw: bytes):
+def torrent_meta(raw: bytes):
+    """-> (infohash, name, total_length, trackers) for a .torrent blob."""
     d = bdecode(raw)
     info = d[b"info"]
     ih = hashlib.sha1(bencode(info)).hexdigest()
@@ -95,7 +96,23 @@ def torrent_infohash(raw: bytes):
     length = info.get(b"length")
     if length is None:
         length = sum(f[b"length"] for f in info.get(b"files", []))
-    return ih, name, length
+
+    trackers = []
+    for t in [d.get(b"announce")] + [u for tier in d.get(b"announce-list", []) for u in tier]:
+        if isinstance(t, bytes):
+            u = t.decode("utf-8", "replace")
+            if u not in trackers:
+                trackers.append(u)
+    return ih, name, length, trackers
+
+
+def build_magnet(ih: str, name: str, length, trackers=()) -> str:
+    m = f"magnet:?xt=urn:btih:{ih}&dn={urllib.parse.quote(name)}"
+    if isinstance(length, int) and length > 0:
+        m += f"&xl={length}"
+    for t in trackers:
+        m += "&tr=" + urllib.parse.quote(t, safe="")
+    return m
 
 
 # ---- extraction -----------------------------------------------------------
@@ -140,18 +157,33 @@ def main():
             links.add(s)
 
     torrents = {t["infohash"].lower(): t for t in load_json(os.path.join(DATA, "torrents.json"), []) if t.get("infohash")}
+    # Seeded from the committed file so a failed upstream fetch never empties it.
+    datasets = load_json(os.path.join(DATA, "datasets.json"), [])
 
     for s in src.get("sources", []):
         if not s.get("enabled"):
             continue
         try:
-            handle_source(s, magnets, links, torrents)
+            if s["type"] == "dataset_sections":
+                text = fetch(s["url"])
+                datasets = parse_dataset_sections(text) or datasets
+                # The same pointers also belong in the flat magnet/link lists.
+                for ds in datasets:
+                    for a in ds["artifacts"]:
+                        if a["url"].startswith("magnet:"):
+                            ih = magnet_infohash(a["url"])
+                            if ih:
+                                magnets[ih] = max(magnets.get(ih, ""), a["url"], key=len)
+                        elif not LINK_DENY.search(a["url"]):
+                            links.add(a["url"])
+            else:
+                handle_source(s, magnets, links, torrents)
             print(f"[ok] {s['id']}")
         except Exception as e:  # noqa: BLE001 - keep other sources alive
             print(f"[warn] {s['id']}: {e}", file=sys.stderr)
 
-    write_outputs(magnets, links, torrents)
-    print(f"magnets={len(magnets)} links={len(links)} torrents={len(torrents)}")
+    write_outputs(magnets, links, torrents, datasets)
+    print(f"magnets={len(magnets)} links={len(links)} torrents={len(torrents)} datasets={len(datasets)}")
 
 
 def handle_source(s, magnets, links, torrents):
@@ -180,7 +212,7 @@ def handle_source(s, magnets, links, torrents):
             if p.lower().endswith(".torrent") and p.startswith(prefix):
                 url = f"https://raw.githubusercontent.com/{repo}/{ref}/" + urllib.parse.quote(p)
                 try:
-                    ih, name, length = torrent_infohash(fetch(url, binary=True))
+                    ih, name, length, trackers = torrent_meta(fetch(url, binary=True))
                 except Exception as e:  # noqa: BLE001
                     print(f"[warn] torrent {p}: {e}", file=sys.stderr)
                     continue
@@ -189,11 +221,145 @@ def handle_source(s, magnets, links, torrents):
                     ih,
                     {"dataset": name, "infohash": ih, "size_bytes": length, "source": repo},
                 )
-                if ih not in magnets:
-                    dn = urllib.parse.quote(name)
-                    magnets[ih] = f"magnet:?xt=urn:btih:{ih}&dn={dn}&xl={length}"
+                magnets.setdefault(ih, build_magnet(ih, name, length, trackers))
+    elif t == "archive_org":
+        handle_archive_org(s, magnets, links, torrents)
+    elif t == "dataset_sections":
+        pass  # handled separately in main(); needs its own output file
     else:
         raise ValueError(f"unknown source type: {t}")
+
+
+# ---- per-dataset sections --------------------------------------------------
+DS_HDR = re.compile(r'^### <a id="(data-set-[^"]*)"></a>\s*(.+?)\s*$', re.M)
+SHA256_RE = re.compile(r"\*\*SHA-?256:?\*\*[:\s]*([0-9a-fA-F]{64})")
+SIZE_IN_HDR = re.compile(r"\(([~\d][^)]*(?:B|b))\)")
+
+
+def classify(u: str) -> str:
+    if u.startswith("magnet:"):
+        return "torrent"
+    host = urllib.parse.urlparse(u).netloc.lower()
+    if "justice.gov" in host:
+        return "official"
+    if "archive.org" in host:
+        return "mirror:archive.org"
+    return f"mirror:{host}"
+
+
+def parse_dataset_sections(text: str):
+    """Extract per-dataset artifacts (+ their SHA-256) from the upstream README.
+
+    The upstream publishes every pointer twice: once as a markdown link and once
+    inside a fenced ```text block for copy-paste. We read the fenced blocks — they
+    are unambiguous — and attach each `**SHA256:**` line to the artifact above it.
+    """
+    out = []
+    hdrs = list(DS_HDR.finditer(text))
+    for i, h in enumerate(hdrs):
+        body = text[h.end() : hdrs[i + 1].start() if i + 1 < len(hdrs) else len(text)]
+        title = re.sub(r"\[\^\d+\]", "", h.group(2)).strip()
+
+        size_m = SIZE_IN_HDR.search(title)
+        name = re.sub(r"\s*\(.*", "", title).strip()
+        entry = {
+            "dataset": name,
+            "slug": h.group(1),
+            "size_label": size_m.group(1).strip() if size_m else None,
+            "complete": "INCOMPLETE" not in title.upper(),
+            "artifacts": [],
+        }
+
+        current = None
+        in_fence = False
+        fence_buf = []
+        for line in body.splitlines():
+            if line.strip().startswith("```"):
+                if in_fence:
+                    blob = "\n".join(fence_buf).strip()
+                    # A fenced block is a pointer only if it is exactly one URL/magnet.
+                    if "\n" not in blob and (blob.startswith("http") or blob.startswith("magnet:")):
+                        current = {"kind": classify(blob), "url": blob}
+                        entry["artifacts"].append(current)
+                    in_fence, fence_buf = False, []
+                else:
+                    in_fence, fence_buf = True, []
+                continue
+            if in_fence:
+                fence_buf.append(line)
+                continue
+            m = SHA256_RE.search(line)
+            if m and current is not None and "sha256" not in current:
+                current["sha256"] = m.group(1).lower()
+
+        if entry["artifacts"]:
+            out.append(entry)
+    return out
+
+
+# ---- Internet Archive ------------------------------------------------------
+IA_SEARCH = "https://archive.org/advancedsearch.php"
+
+
+def ia_search(query: str, min_size: int, rows: int):
+    params = [
+        ("q", f"({query}) AND item_size:[{min_size} TO 99999999999999]"),
+        ("fl[]", "identifier"),
+        ("fl[]", "title"),
+        ("fl[]", "item_size"),
+        ("fl[]", "mediatype"),
+        ("fl[]", "publicdate"),
+        ("sort[]", "item_size desc"),
+        ("rows", str(rows)),
+        ("output", "json"),
+    ]
+    resp = json.loads(fetch(IA_SEARCH + "?" + urllib.parse.urlencode(params)))
+    return resp.get("response", {}).get("docs", [])
+
+
+def handle_archive_org(s, magnets, links, torrents):
+    """Index Internet Archive items that mirror the releases at collection scale.
+
+    Every public IA item carries an auto-generated `<id>_archive.torrent`. We fetch
+    it once per item, record the real infohash, and never fetch it again (items
+    already present in torrents.json are skipped by their `ia_item` field).
+    """
+    docs = ia_search(s["query"], s.get("min_size_bytes", 1 << 30), s.get("max_items", 60))
+    deny = re.compile(s["deny"], re.I) if s.get("deny") else None
+    seen = {t["ia_item"] for t in torrents.values() if t.get("ia_item")}
+
+    for d in docs:
+        ident = d["identifier"]
+        title = str(d.get("title", ""))
+        if deny and deny.search(f"{ident} {title}"):
+            continue
+
+        links.add(f"https://archive.org/details/{ident}")
+        if ident in seen:
+            continue  # torrent already indexed — don't re-download it every run
+        if d.get("mediatype") == "web":
+            continue  # WARC crawls of justice.gov: browsable, but IA generates no torrent
+
+        url = f"https://archive.org/download/{ident}/{urllib.parse.quote(ident)}_archive.torrent"
+        try:
+            ih, name, length, trackers = torrent_meta(fetch(url, binary=True))
+        except Exception as e:  # noqa: BLE001 - item may be darkened or mid-derive
+            print(f"[warn] ia {ident}: {e}", file=sys.stderr)
+            continue
+
+        ih = ih.lower()
+        torrents.setdefault(
+            ih,
+            {
+                "dataset": title or name,
+                "infohash": ih,
+                "size_bytes": length,
+                "source": "archive.org",
+                "ia_item": ident,
+                "published": (d.get("publicdate") or "")[:10],
+            },
+        )
+        magnets.setdefault(ih, build_magnet(ih, name, length, trackers))
 
 
 def human(n):
@@ -206,7 +372,7 @@ def human(n):
     return f"{n:.1f} PB"
 
 
-def write_outputs(magnets, links, torrents):
+def write_outputs(magnets, links, torrents, datasets=()):
     # magnets.txt
     header = [
         "# Magnet links — one per line. Auto-managed by scripts/aggregate.py (deduped by infohash).",
@@ -227,11 +393,23 @@ def write_outputs(magnets, links, torrents):
         json.dump(tlist, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
-    write_manifest(magnets, links, tlist)
+    # datasets.json
+    dlist = sorted(datasets, key=lambda d: natural_key(d.get("dataset", "")))
+    with open(os.path.join(DATA, "datasets.json"), "w", encoding="utf-8", newline="\n") as f:
+        json.dump(dlist, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
+    write_manifest(magnets, links, tlist, dlist)
 
 
-def write_manifest(magnets, links, tlist):
+def natural_key(s: str):
+    """'Data Set 10' sorts after 'Data Set 9', not between 1 and 2."""
+    return [int(p) if p.isdigit() else p.lower() for p in re.split(r"(\d+)", s)]
+
+
+def write_manifest(magnets, links, tlist, dlist=()):
     total = sum(t.get("size_bytes", 0) or 0 for t in tlist)
+    n_sha = sum(1 for d in dlist for a in d["artifacts"] if a.get("sha256"))
     lines = [
         "# MANIFEST — Epstein Files Aggregated Index",
         "",
@@ -240,16 +418,51 @@ def write_manifest(magnets, links, tlist):
         f"- **Torrents indexed:** {len(tlist)}",
         f"- **Magnets:** {len(magnets)}",
         f"- **Direct/mirror links:** {len(links)}",
-        f"- **Total indexed payload:** {human(total)} ({total:,} bytes)",
+        f"- **Documented datasets:** {len(dlist)} ({n_sha} artifacts with a published SHA-256)",
+        f"- **Sum of indexed torrent payloads:** {human(total)} ({total:,} bytes)",
         "",
+        "> The payload sum counts every indexed torrent. Many are *mirrors of the same",
+        "> release*, so it is an upper bound on transfer volume, not the size of the",
+        "> underlying corpus. Use `data/datasets.json` for the deduplicated per-release view.",
+        "",
+    ]
+
+    if dlist:
+        lines += [
+            "## Datasets",
+            "",
+            "Per-release view: the official DOJ URL, every known mirror, and published checksums.",
+            "",
+            "| Dataset | Size | Complete | Artifacts | Checksums |",
+            "|---------|------|----------|-----------|-----------|",
+        ]
+        for d in dlist:
+            arts = d["artifacts"]
+            shas = sum(1 for a in arts if a.get("sha256"))
+            lines.append(
+                f"| {d['dataset']} | {d.get('size_label') or '?'} | "
+                f"{'yes' if d.get('complete') else '**no**'} | {len(arts)} | {shas} |"
+            )
+        lines.append("")
+
+    lines += [
         "## Torrents",
         "",
-        "| Dataset | Infohash | Size |",
-        "|---------|----------|------|",
+        "| Dataset | Infohash | Size | Source |",
+        "|---------|----------|------|--------|",
     ]
     for t in tlist:
-        lines.append(f"| {t.get('dataset','?')} | `{t.get('infohash','?')}` | {human(t.get('size_bytes'))} |")
-    lines += ["", "See [`data/magnets.txt`](data/magnets.txt) and [`data/links.txt`](data/links.txt) for the full pointer lists.", ""]
+        src = t.get("ia_item") or t.get("source", "?")
+        lines.append(
+            f"| {t.get('dataset','?')} | `{t.get('infohash','?')}` | "
+            f"{human(t.get('size_bytes'))} | {src} |"
+        )
+    lines += [
+        "",
+        "See [`data/magnets.txt`](data/magnets.txt), [`data/links.txt`](data/links.txt) and "
+        "[`data/datasets.json`](data/datasets.json) for the full pointer lists.",
+        "",
+    ]
     with open(os.path.join(ROOT, "MANIFEST.md"), "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(lines))
 

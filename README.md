@@ -1,68 +1,108 @@
 # Epstein Files — Aggregated Index
 
-A **tiny, pointer-only** archive index for publicly released Epstein-related documents.
+A **tiny, pointer-only** research index for publicly released Epstein-related documents.
 
-This repository contains **no document blobs**. It stores only *pointers*: magnet links,
-torrent infohashes, direct URLs, and a document manifest. That keeps the repo a few
-kilobytes while indexing terabytes of public material held elsewhere (torrents, IPFS,
-mirrors, court/FOIA releases).
+This repository contains **no document blobs**. It stores *pointers*: magnet URIs,
+torrent infohashes, official and mirror URLs, and the SHA-256 checksums published
+alongside them. That keeps the repo a few hundred kilobytes while indexing terabytes of
+public material held elsewhere — on justice.gov, the Internet Archive, and in BitTorrent
+swarms.
 
-The index is **auto-updated daily** by aggregating a curated list of upstream sources,
-**community-editable** via pull requests, and **archived to Zenodo with a citable DOI** on
-every release.
+The index is **rebuilt daily** from a curated source list, **community-editable** via
+pull requests, and **archived to Zenodo with a citable DOI** on every release.
 
 ## What's here
 
 | Path | Contents |
 |------|----------|
-| [`data/magnets.txt`](data/magnets.txt) | Deduped magnet links |
-| [`data/torrents.json`](data/torrents.json) | Torrents: name, infohash, size, source |
-| [`data/links.txt`](data/links.txt) | Direct / mirror / IPFS URLs |
-| [`data/documents.json`](data/documents.json) | Document-level index (title, source, hash) |
-| [`sources.json`](sources.json) | Upstream repos & files the aggregator pulls from |
-| [`MANIFEST.md`](MANIFEST.md) | Generated human-readable index (do not edit by hand) |
+| [`data/datasets.json`](data/datasets.json) | **Start here.** Per-release: official URL, every mirror, magnet, published SHA-256 |
+| [`data/torrents.json`](data/torrents.json) | Every distinct torrent: name, infohash, size, source |
+| [`data/magnets.txt`](data/magnets.txt) | Deduped magnet URIs, one per line |
+| [`data/links.txt`](data/links.txt) | Direct / mirror / archive URLs |
+| [`MANIFEST.md`](MANIFEST.md) | Generated human-readable rollup |
+| [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md) | Field-by-field schema and provenance model |
+| [`sources.json`](sources.json) | Upstreams the aggregator pulls from |
+
+## Use the index
+
+Find every way to obtain one release, with checksums:
+
+```bash
+python scripts/verify.py list
+python scripts/verify.py show "Data Set 9"
+```
+
+Identify a file you already downloaded — from any mirror — against the recorded
+checksums:
+
+```bash
+python scripts/verify.py check ~/Downloads/DataSet9.zip
+```
+
+Or fetch everything the index points at:
+
+```bash
+aria2c -i data/magnets.txt
+```
+
+Consuming it from your own code: `data/datasets.json` is the deduplicated per-release
+view; `data/torrents.json` is keyed by infohash. Schemas and stability guarantees are in
+[`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md).
 
 ## How it works
 
 ```
 sources.json ──► scripts/aggregate.py ──► data/*  +  MANIFEST.md
-                        ▲
-                        │ daily cron (GitHub Actions)
-                        │ + on push + manual dispatch
+                        ▲                      │
+                        │ daily cron           └──► scripts/verify.py selftest
+                        │ + on push + manual
 ```
 
 1. `aggregate.py` reads `sources.json`.
-2. For each source it fetches the referenced raw files (magnet lists, link lists,
-   torrent JSON), plus optionally scans a GitHub repo tree for `*.torrent` / magnet files.
-3. Everything is parsed, normalized, **deduped by infohash / URL**, and written back to
-   `data/`.
-4. `MANIFEST.md` is regenerated.
-5. The workflow commits any diff.
+2. Each source is fetched by type: raw README scans, torrent JSON, GitHub tree scans for
+   `*.torrent`, Internet Archive searches, and a per-release parser that extracts
+   checksums.
+3. Everything is normalized and **deduped by infohash / URL**, then written to `data/`.
+4. `MANIFEST.md` is regenerated and the index is self-tested before anything is committed.
 
-## Use the index
+The aggregator is stdlib-only, seeds from what is already committed, and keeps other
+sources alive when one fails — so an upstream going down degrades to "no change" rather
+than data loss.
 
-Download everything referenced by a torrent client that accepts magnet lists:
+## Verification and its limits
 
-```bash
-# feed all magnets to your client (example: aria2)
-aria2c -i data/magnets.txt
-```
+Checksums in this index are **transcribed from the upstream that published each mirror**.
+This project does not re-download terabytes to independently re-verify them. A matching
+hash is strong evidence of provenance; a mismatch is a reason to investigate, not proof
+of tampering — mirrors legitimately repackage the archives. Data Set 9 is known to be
+**incomplete at the source**: files were removed from justice.gov after publication, and
+community reconstructions cover more of it than the official ZIP. See the notes in
+[`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md).
 
-Or import `data/torrents.json` into your own tooling.
+## Scope and responsible use
+
+Only **publicly released** material is indexed: court unsealings, Congressional and DOJ
+releases, FOIA productions, and public mirrors thereof. This project indexes pointers to
+that material; it does not host it.
+
+These records concern the sexual abuse of minors and contain information about victims,
+some of it identifying, in productions that were redacted inconsistently. Appearance in
+these files is not evidence of wrongdoing, and many named people are witnesses, staff, or
+unrelated correspondents. Use the material for research, journalism and accountability —
+not to identify, contact or expose victims.
 
 ## Contribute
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md). Short version: add a magnet/link/source, open a PR.
-The CI validates and dedupes automatically.
-
-## Provenance & scope
-
-Only **publicly released** material (court unsealings, Congressional releases, FOIA
-productions, and public mirrors thereof). This project indexes pointers to that material;
-it does not host it. See [`LICENSE`](LICENSE) — index data is dedicated to the public
-domain under CC0.
+See [`CONTRIBUTING.md`](CONTRIBUTING.md). Short version: add a source or a magnet, open a
+PR. CI validates, dedupes and rejects blobs automatically.
 
 ## Citation
 
 Each GitHub Release is archived to Zenodo. Cite via the DOI badge (added after first
-release).
+release), or see [`CITATION.cff`](CITATION.cff).
+
+## License
+
+Index data and metadata are dedicated to the public domain under
+[CC0 1.0](LICENSE). The underlying documents are U.S. government records and are not
+covered by this repository's license.

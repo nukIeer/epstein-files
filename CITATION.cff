@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+title: "Epstein Files — Aggregated Pointer Index (magnets, torrents, mirrors)"
+message: "If you use this index in research, please cite it."
+type: dataset
+authors:
+  - name: "Epstein Files Aggregated Index contributors"
+    website: "https://github.com/nukIeer/epstein-files"
+abstract: >-
+  A pointer-only index of publicly released Epstein Files Transparency Act (EFTA)
+  materials and related DOJ, House Oversight and court productions. The index records
+  magnet URIs, BitTorrent infohashes, official and mirror URLs, and published SHA-256
+  checksums for each release. It contains no document blobs: it is a few hundred
+  kilobytes of metadata describing terabytes of material held on the Internet Archive,
+  in BitTorrent swarms, and on justice.gov. Rebuilt daily from a curated source list,
+  and shipped with tooling to verify a downloaded artifact against the recorded
+  checksums.
+keywords:
+  - Epstein Files
+  - EFTA
+  - H.R.4405
+  - DOJ
+  - public records
+  - FOIA
+  - digital preservation
+  - BitTorrent
+  - data archiving
+  - provenance
+license: CC0-1.0
+repository-code: "https://github.com/nukIeer/epstein-files"
+version: "0.2.0"
+date-released: "2026-09-20"
+references:
+  - type: legislation
+    title: "Epstein Files Transparency Act of 2025 (H.R.4405)"
+    url: "https://www.congress.gov/bill/119th-congress/house-bill/4405"
+  - type: database
+    title: "U.S. Department of Justice — Epstein files release"
+    url: "https://www.justice.gov/epstein/"
