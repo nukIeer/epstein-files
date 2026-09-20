@@ -51,6 +51,61 @@ deduplicate on content before summing sizes.
 | `ia_item` | string | *Optional.* Internet Archive identifier; present iff `source` is `archive.org`. Also the cache key that stops the aggregator re-downloading the torrent. |
 | `published` | string | *Optional.* `YYYY-MM-DD` the IA item went public. |
 
+## `data/derivatives.json`
+
+Third-party **processed** versions of the same records — OCR text, extracted email
+sets, embeddings. For most text-analysis work these are what you want; the raw scans
+are hundreds of gigabytes of images. Sorted by downloads, descending.
+
+| Field | Type | Meaning |
+|-------|------|---------|
+| `id` | string | Platform identifier, e.g. `"ishumilin/epstein-files-ocr-complete"`. |
+| `platform` | string | Currently always `"huggingface"`. |
+| `url` | string | Landing page. |
+| `kind` | string | `ocr-text`, `email-corpus`, `embeddings`, `media`, `index`, or `corpus`. Inferred from the name and tags. |
+| `name_group` | string | Lowercased name without the owner. **Entries sharing one are probably the same corpus re-uploaded** — group by this before treating them as independent. |
+| `downloads`, `likes` | int | Platform counters at last run. The quality gate is ≥50 downloads or ≥3 likes. |
+| `license` | string \| null | As declared by the uploader. Frequently wrong or absent — verify before redistributing. |
+| `formats`, `modalities` | array | From platform tags, e.g. `["parquet"]`, `["text"]`. |
+| `size_category` | string \| null | Platform bucket, e.g. `"1M<n<10M"` rows. |
+| `updated` | string | `YYYY-MM-DD` of last modification upstream. |
+
+> **Not vetted.** These are other people's pipelines. OCR quality, coverage, dedup­lication
+> and redaction handling vary widely and none of it is checked here. Anything load-bearing
+> should be traced back to the source document via `datasets.json`.
+
+## `data/health.json`
+
+Output of `scripts/healthcheck.py`, refreshed weekly in CI. Answers "does this pointer
+still resolve, and if not, when did it last work?"
+
+| Field | Type | Meaning |
+|-------|------|---------|
+| `checked` | string | `YYYY-MM-DD` of the probe run. |
+| `total`, `ok` | int | Pointers probed / reachable. |
+| `by_verdict` | object | Counts per verdict. |
+| `results` | array | One entry per pointer. |
+
+Each entry of `results`:
+
+| Field | Type | Meaning |
+|-------|------|---------|
+| `url` | string | The probed pointer. |
+| `status` | int \| null | HTTP status; `null` when the request never completed. |
+| `ok` | bool | `true` for 2xx/3xx. |
+| `verdict` | string | `ok`, `gone` (404/410), `blocked` (401/403/429), `unreachable` (DNS/TLS/timeout), `error` (other). |
+| `last_ok` | string | *Optional.* Last date this pointer was seen working, carried forward across runs. |
+| `cited_by` | array | Which releases or files reference it. |
+| `redirect_to`, `size_hint`, `content_type`, `error` | | *Optional* probe details. |
+
+> **`blocked` is not `gone`.** Bot protection, rate limiting and geo-blocking are
+> indistinguishable from withdrawal at this level. `congress.gov` and `justice.gov`
+> both refuse this probe while serving browsers normally. Treat `blocked` as "check by
+> hand". Only `gone` means the host actively says the resource is not there.
+
+Probes send `HEAD`, falling back to a one-byte ranged `GET` for hosts that reject it.
+No response body is ever downloaded.
+
 ## `data/magnets.txt`
 
 One magnet URI per line; `#` comments. Deduplicated by infohash, sorted by infohash.

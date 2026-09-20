@@ -23,6 +23,8 @@ Supported `type` values:
   `.torrent` is fetched once and its real infohash recorded.
 - `dataset_sections` — parse a per-release README into `data/datasets.json`
   (official URL, mirrors, magnet, published SHA-256).
+- `huggingface` — index derived corpora (OCR text, email sets, embeddings) into
+  `data/derivatives.json`, gated on downloads/likes to keep re-uploads out.
 
 ### 2. Add a single magnet or link
 Append to [`data/magnets.txt`](data/magnets.txt) or [`data/links.txt`](data/links.txt),

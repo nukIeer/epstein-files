@@ -27,7 +27,7 @@ keywords:
   - provenance
 license: CC0-1.0
 repository-code: "https://github.com/nukIeer/epstein-files"
-version: "0.2.0"
+version: "0.3.0"
 date-released: "2026-09-20"
 references:
   - type: legislation

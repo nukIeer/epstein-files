@@ -18,6 +18,8 @@ pull requests, and **archived to Zenodo with a citable DOI** on every release.
 | [`data/datasets.json`](data/datasets.json) | **Start here.** Per-release: official URL, every mirror, magnet, published SHA-256 |
 | [`data/torrents.json`](data/torrents.json) | Every distinct torrent: name, infohash, size, source |
 | [`data/magnets.txt`](data/magnets.txt) | Deduped magnet URIs, one per line |
+| [`data/derivatives.json`](data/derivatives.json) | Processed corpora built from the releases: OCR text, email sets, embeddings |
+| [`data/health.json`](data/health.json) | Weekly probe: which pointers still resolve, and when each last worked |
 | [`data/links.txt`](data/links.txt) | Direct / mirror / archive URLs |
 | [`MANIFEST.md`](MANIFEST.md) | Generated human-readable rollup |
 | [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md) | Field-by-field schema and provenance model |
@@ -45,6 +47,18 @@ Or fetch everything the index points at:
 aria2c -i data/magnets.txt
 ```
 
+Check what is still alive before planning a download:
+
+```bash
+python scripts/healthcheck.py --report
+```
+
+**Working with the text rather than the scans?** Start from
+[`data/derivatives.json`](data/derivatives.json) instead. It indexes third-party OCR
+corpora, extracted email sets and embeddings — far easier to analyse than hundreds of
+gigabytes of page images. They are other people's pipelines and are not vetted here, so
+trace anything load-bearing back to the source document.
+
 Consuming it from your own code: `data/datasets.json` is the deduplicated per-release
 view; `data/torrents.json` is keyed by infohash. Schemas and stability guarantees are in
 [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md).
@@ -64,6 +78,7 @@ sources.json ──► scripts/aggregate.py ──► data/*  +  MANIFEST.md
    checksums.
 3. Everything is normalized and **deduped by infohash / URL**, then written to `data/`.
 4. `MANIFEST.md` is regenerated and the index is self-tested before anything is committed.
+5. Weekly, `healthcheck.py` probes every HTTP pointer and records what still resolves.
 
 The aggregator is stdlib-only, seeds from what is already committed, and keeps other
 sources alive when one fails — so an upstream going down degrades to "no change" rather
@@ -76,8 +91,13 @@ This project does not re-download terabytes to independently re-verify them. A m
 hash is strong evidence of provenance; a mismatch is a reason to investigate, not proof
 of tampering — mirrors legitimately repackage the archives. Data Set 9 is known to be
 **incomplete at the source**: files were removed from justice.gov after publication, and
-community reconstructions cover more of it than the official ZIP. See the notes in
-[`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md).
+community reconstructions cover more of it than the official ZIP.
+
+Pointers rot, and the index records it rather than hiding it. `health.json` distinguishes
+`gone` (the host says it is not there) from `blocked` (the host refused *us* — bot
+protection is indistinguishable from withdrawal at this level, and `congress.gov` and
+`justice.gov` both do it). Read `blocked` as "check by hand". See
+[`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md) for the full model.
 
 ## Scope and responsible use
 

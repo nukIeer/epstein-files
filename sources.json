@@ -12,6 +12,16 @@
       "deny": "twitch|bitchute|rumble|youtube|podcast|bonzibuddy|pizzagate|cabal|webcast|rocksmith|talking about|reaction"
     },
     {
+      "id": "huggingface-derivatives",
+      "enabled": true,
+      "type": "huggingface",
+      "note": "Derived corpora on Hugging Face (OCR text, email sets, embeddings) built from the same releases. Matched on the dataset NAME, never the owner, so people surnamed Epstein are not swept in. Quality gate: >=50 downloads or >=3 likes, which drops the long tail of one-download re-uploads.",
+      "search": "epstein",
+      "limit": 100,
+      "min_downloads": 50,
+      "min_likes": 3
+    },
+    {
       "id": "yung-megafone-readme",
       "enabled": true,
       "type": "readme_scan",

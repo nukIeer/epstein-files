@@ -1,0 +1,38 @@
+name: Link health
+
+on:
+  schedule:
+    - cron: "43 4 * * 1"   # Mondays 04:43 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: healthcheck
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Probe every pointer
+        run: python scripts/healthcheck.py --workers 16
+
+      - name: Commit results
+        run: |
+          git config user.name  "epstein-files-bot"
+          git config user.email "bot@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data/health.json)" ]; then
+            git add data/health.json
+            git commit -m "chore(health): weekly link probe [skip ci]"
+            git push
+          else
+            echo "No change."
+          fi

@@ -157,8 +157,9 @@ def main():
             links.add(s)
 
     torrents = {t["infohash"].lower(): t for t in load_json(os.path.join(DATA, "torrents.json"), []) if t.get("infohash")}
-    # Seeded from the committed file so a failed upstream fetch never empties it.
+    # Seeded from the committed files so a failed upstream fetch never empties them.
     datasets = load_json(os.path.join(DATA, "datasets.json"), [])
+    derivatives = load_json(os.path.join(DATA, "derivatives.json"), [])
 
     for s in src.get("sources", []):
         if not s.get("enabled"):
@@ -176,14 +177,19 @@ def main():
                                 magnets[ih] = max(magnets.get(ih, ""), a["url"], key=len)
                         elif not LINK_DENY.search(a["url"]):
                             links.add(a["url"])
+            elif s["type"] == "huggingface":
+                derivatives = handle_huggingface(s) or derivatives
             else:
                 handle_source(s, magnets, links, torrents)
             print(f"[ok] {s['id']}")
         except Exception as e:  # noqa: BLE001 - keep other sources alive
             print(f"[warn] {s['id']}: {e}", file=sys.stderr)
 
-    write_outputs(magnets, links, torrents, datasets)
-    print(f"magnets={len(magnets)} links={len(links)} torrents={len(torrents)} datasets={len(datasets)}")
+    write_outputs(magnets, links, torrents, datasets, derivatives)
+    print(
+        f"magnets={len(magnets)} links={len(links)} torrents={len(torrents)} "
+        f"datasets={len(datasets)} derivatives={len(derivatives)}"
+    )
 
 
 def handle_source(s, magnets, links, torrents):
@@ -224,10 +230,81 @@ def handle_source(s, magnets, links, torrents):
                 magnets.setdefault(ih, build_magnet(ih, name, length, trackers))
     elif t == "archive_org":
         handle_archive_org(s, magnets, links, torrents)
-    elif t == "dataset_sections":
-        pass  # handled separately in main(); needs its own output file
+    elif t in ("dataset_sections", "huggingface"):
+        pass  # handled separately in main(); each needs its own output file
     else:
         raise ValueError(f"unknown source type: {t}")
+
+
+# ---- derivative corpora (Hugging Face) -------------------------------------
+HF_API = "https://huggingface.co/api/datasets"
+
+# Ordered: the first pattern that matches a dataset name wins.
+DERIVATIVE_KINDS = [
+    ("embeddings", r"embedding|vector|faiss|chroma"),
+    ("ocr-text", r"\bocr\b"),
+    ("email-corpus", r"email"),
+    ("media", r"video|cctv|image|photo"),
+    ("index", r"index|catalog"),
+]
+
+
+def classify_derivative(name: str, tags) -> str:
+    low = name.lower()
+    for kind, pat in DERIVATIVE_KINDS:
+        if re.search(pat, low):
+            return kind
+    if any(t.startswith("modality:image") for t in tags):
+        return "media"
+    return "corpus"
+
+
+def handle_huggingface(s):
+    """Index derived corpora: OCR text, email sets, embeddings built from the releases.
+
+    Most researchers want processed text, not 700 GB of scans. These are third-party
+    derivatives of the same public records — we point at them, we do not vouch for
+    their accuracy or completeness.
+    """
+    url = f"{HF_API}?" + urllib.parse.urlencode(
+        {"search": s.get("search", "epstein"), "limit": s.get("limit", 100), "full": "true"}
+    )
+    out = []
+    for d in json.loads(fetch(url)):
+        if d.get("private") or d.get("disabled") or d.get("gated"):
+            continue
+        owner, _, name = d["id"].partition("/")
+        # Match on the dataset name, never the owner: "ben-epstein/splat" is a person
+        # with a surname, not a release derivative.
+        if "epstein" not in name.lower():
+            continue
+        dl, likes = d.get("downloads") or 0, d.get("likes") or 0
+        if dl < s.get("min_downloads", 50) and likes < s.get("min_likes", 3):
+            continue
+
+        tags = d.get("tags") or []
+        card = d.get("cardData") or {}
+        tagged = lambda p: [t.split(":", 1)[1] for t in tags if t.startswith(p)]  # noqa: E731
+
+        out.append(
+            {
+                "id": d["id"],
+                "platform": "huggingface",
+                "url": f"https://huggingface.co/datasets/{d['id']}",
+                "kind": classify_derivative(name, tags),
+                # Re-uploads are rife. Same name_group = probably the same corpus.
+                "name_group": name.lower(),
+                "downloads": dl,
+                "likes": likes,
+                "license": card.get("license"),
+                "formats": tagged("format:"),
+                "modalities": tagged("modality:"),
+                "size_category": (card.get("size_categories") or [None])[0],
+                "updated": (d.get("lastModified") or "")[:10],
+            }
+        )
+    out.sort(key=lambda x: (-x["downloads"], -x["likes"], x["id"]))
+    return out
 
 
 # ---- per-dataset sections --------------------------------------------------
@@ -372,7 +449,7 @@ def human(n):
     return f"{n:.1f} PB"
 
 
-def write_outputs(magnets, links, torrents, datasets=()):
+def write_outputs(magnets, links, torrents, datasets=(), derivatives=()):
     # magnets.txt
     header = [
         "# Magnet links — one per line. Auto-managed by scripts/aggregate.py (deduped by infohash).",
@@ -399,7 +476,12 @@ def write_outputs(magnets, links, torrents, datasets=()):
         json.dump(dlist, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
-    write_manifest(magnets, links, tlist, dlist)
+    # derivatives.json
+    with open(os.path.join(DATA, "derivatives.json"), "w", encoding="utf-8", newline="\n") as f:
+        json.dump(list(derivatives), f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
+    write_manifest(magnets, links, tlist, dlist, derivatives)
 
 
 def natural_key(s: str):
@@ -407,7 +489,7 @@ def natural_key(s: str):
     return [int(p) if p.isdigit() else p.lower() for p in re.split(r"(\d+)", s)]
 
 
-def write_manifest(magnets, links, tlist, dlist=()):
+def write_manifest(magnets, links, tlist, dlist=(), derivatives=()):
     total = sum(t.get("size_bytes", 0) or 0 for t in tlist)
     n_sha = sum(1 for d in dlist for a in d["artifacts"] if a.get("sha256"))
     lines = [
@@ -444,6 +526,27 @@ def write_manifest(magnets, links, tlist, dlist=()):
                 f"{'yes' if d.get('complete') else '**no**'} | {len(arts)} | {shas} |"
             )
         lines.append("")
+
+    if derivatives:
+        by_kind = {}
+        for d in derivatives:
+            by_kind.setdefault(d["kind"], []).append(d)
+        lines += [
+            "## Derivative corpora",
+            "",
+            "Third-party processed versions — OCR text, email sets, embeddings — built from",
+            "the same public records. Usually what you actually want instead of the raw scans.",
+            "Listed by popularity; **not vetted for accuracy or completeness**.",
+            "",
+            "| Corpus | Kind | Downloads | License | Updated |",
+            "|--------|------|-----------|---------|---------|",
+        ]
+        for d in derivatives:
+            lines.append(
+                f"| [{d['id']}]({d['url']}) | {d['kind']} | {d['downloads']:,} | "
+                f"{d.get('license') or '?'} | {d.get('updated') or '?'} |"
+            )
+        lines += ["", f"By kind: " + ", ".join(f"{k} ({len(v)})" for k, v in sorted(by_kind.items())), ""]
 
     lines += [
         "## Torrents",

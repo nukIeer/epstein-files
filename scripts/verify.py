@@ -197,10 +197,28 @@ def cmd_selftest(args):
         if not u.startswith(("http://", "https://")):
             problems.append(f"not an absolute URL in links.txt: {u[:60]}")
 
+    # 5. derivatives point somewhere and are classified
+    derivatives = load("derivatives.json", [])
+    for d in derivatives:
+        if not d.get("url", "").startswith("http"):
+            problems.append(f"derivative without a URL: {d.get('id')!r}")
+        if not d.get("kind"):
+            problems.append(f"derivative without a kind: {d.get('id')!r}")
+
     print(
-        f"magnets={len(magnets)} torrents={len(torrents)} "
-        f"datasets={len(datasets)} links={len(links)}"
+        f"magnets={len(magnets)} torrents={len(torrents)} datasets={len(datasets)} "
+        f"derivatives={len(derivatives)} links={len(links)}"
     )
+
+    # Advisory only — a dead mirror is a fact about the world, not a broken index.
+    health = load("health.json", {})
+    if health.get("results"):
+        counts = health.get("by_verdict") or {}
+        print(
+            f"link health as of {health.get('checked')}: "
+            f"{health.get('ok')}/{health.get('total')} reachable"
+            + (f"  ({', '.join(f'{k}={v}' for k, v in counts.items())})" if counts else "")
+        )
     if problems:
         print(f"\n{len(problems)} problem(s):", file=sys.stderr)
         for p in problems[:50]:

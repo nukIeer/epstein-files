@@ -3,22 +3,27 @@
   "upload_type": "dataset",
   "access_right": "open",
   "license": "cc-zero",
-  "version": "0.2.0",
-  "description": "<p>A pointer-only index of publicly released Epstein Files Transparency Act (EFTA) materials and related DOJ, House Oversight and court productions.</p><p>The index records magnet URIs, BitTorrent infohashes, official and mirror URLs, and the SHA-256 checksums published alongside them. It contains <strong>no document blobs</strong>: a few hundred kilobytes of metadata describing terabytes of material held on justice.gov, the Internet Archive, and in BitTorrent swarms.</p><p>Contents: <code>data/datasets.json</code> (per-release view — official URL, every known mirror, magnet, published SHA-256), <code>data/torrents.json</code> (every distinct torrent keyed by infohash, with Internet Archive item identifiers), <code>data/magnets.txt</code>, <code>data/links.txt</code>, and a generated <code>MANIFEST.md</code>. Field-level schemas are documented in <code>docs/DATA_DICTIONARY.md</code>.</p><p>Tooling: <code>scripts/aggregate.py</code> rebuilds the index from a curated source list (stdlib only, deterministic, run daily in CI); <code>scripts/verify.py</code> lets a researcher resolve a release to its pointers and identify an already-downloaded file against the recorded checksums.</p><p>Caveats that matter for reuse: checksums are transcribed from the upstream that published each mirror and are not independently re-verified here; Data Set 9 is incomplete at the source, and community reconstructions cover more of it than the official ZIP. Only publicly released material is indexed. These records concern the sexual abuse of minors and contain victim information; appearance in the files is not evidence of wrongdoing.</p>",
+  "version": "0.3.0",
+  "description": "<p>A pointer-only index of publicly released Epstein Files Transparency Act (EFTA) materials and related DOJ, House Oversight and court productions.</p><p>The index records magnet URIs, BitTorrent infohashes, official and mirror URLs, and the SHA-256 checksums published alongside them. It contains <strong>no document blobs</strong>: a few hundred kilobytes of metadata describing terabytes of material held on justice.gov, the Internet Archive, and in BitTorrent swarms.</p><p><strong>Contents.</strong> <code>data/datasets.json</code> — per-release view: official URL, every known mirror, magnet, and published SHA-256 per artifact. <code>data/torrents.json</code> — every distinct torrent keyed by infohash, with Internet Archive item identifiers. <code>data/derivatives.json</code> — third-party processed corpora (OCR text, extracted email sets, embeddings) built from the same records. <code>data/health.json</code> — a weekly probe of every HTTP pointer recording which still resolve and when each last worked. Plus <code>data/magnets.txt</code>, <code>data/links.txt</code> and a generated <code>MANIFEST.md</code>. Field-level schemas are in <code>docs/DATA_DICTIONARY.md</code>.</p><p><strong>Tooling.</strong> <code>scripts/aggregate.py</code> rebuilds the index from a curated source list (stdlib only, deterministic, run daily in CI); <code>scripts/verify.py</code> resolves a release to its pointers and identifies an already-downloaded file against the recorded checksums; <code>scripts/healthcheck.py</code> probes for link rot.</p><p><strong>Caveats that matter for reuse.</strong> Checksums are transcribed from the upstream that published each mirror and are not independently re-verified here. Data Set 9 is incomplete at the source, and community reconstructions cover more of it than the official ZIP. Derivative corpora are other people's pipelines and are not vetted for OCR quality, coverage or redaction handling. In link health, <em>blocked</em> (401/403/429) is not <em>gone</em>: bot protection is indistinguishable from withdrawal at probe level.</p><p>Only publicly released material is indexed. These records concern the sexual abuse of minors and contain victim information; appearance in the files is not evidence of wrongdoing.</p>",
   "keywords": [
-    "Epstein Files",
-    "EFTA",
-    "H.R.4405",
-    "DOJ",
-    "public records",
-    "FOIA",
-    "digital preservation",
     "BitTorrent",
+    "DOJ",
+    "EFTA",
+    "Epstein Files",
+    "FOIA",
+    "H.R.4405",
+    "OCR",
     "data archiving",
-    "provenance"
+    "digital preservation",
+    "link rot",
+    "provenance",
+    "public records",
+    "research data"
   ],
   "creators": [
-    { "name": "Epstein Files Aggregated Index contributors" }
+    {
+      "name": "Epstein Files Aggregated Index contributors"
+    }
   ],
   "related_identifiers": [
     {

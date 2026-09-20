@@ -24,6 +24,7 @@ jobs:
           python -c "import json; json.load(open('sources.json'))"
           python -c "import json; json.load(open('data/torrents.json'))"
           python -c "import json; json.load(open('data/datasets.json'))"
+          python -c "import json; json.load(open('data/derivatives.json'))"
           python -c "import json; json.load(open('.zenodo.json'))"
 
       - name: Magnets well-formed

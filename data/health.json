@@ -1,0 +1,1834 @@
+{
+  "checked": "2026-09-20",
+  "total": 157,
+  "ok": 139,
+  "by_verdict": {
+    "blocked": 14,
+    "gone": 4,
+    "ok": 139
+  },
+  "results": [
+    {
+      "url": "https://archive.org/details/data-set-8",
+      "status": 404,
+      "verdict": "gone",
+      "ok": false,
+      "content_type": "text/html",
+      "cited_by": [
+        "Data Set 8",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://copyparty.vvv.systems/DOJ%20Epstein%20Files/extracted/VOL00008/IMAGES/0004/EFTA00020685.pdf",
+      "status": 404,
+      "verdict": "gone",
+      "ok": false,
+      "content_type": "text/html",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%201.zip",
+      "status": 403,
+      "verdict": "blocked",
+      "ok": false,
+      "content_type": "text/html",
+      "cited_by": [
+        "Data Set 1",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%2010.zip",
+      "status": 403,
+      "verdict": "blocked",
+      "ok": false,
+      "content_type": "text/html",
+      "cited_by": [
+        "Data Set 10",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%2011.zip",
+      "status": 403,
+      "verdict": "blocked",
+      "ok": false,
+      "content_type": "text/html",
+      "cited_by": [
+        "Data Set 11",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%2012.zip",
+      "status": 403,
+      "verdict": "blocked",
+      "ok": false,
+      "content_type": "text/html",
+      "cited_by": [
+        "Data Set 12",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%202.zip",
+      "status": 403,
+      "verdict": "blocked",
+      "ok": false,
+      "content_type": "text/html",
+      "cited_by": [
+        "Data Set 2",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%203.zip",
+      "status": 403,
+      "verdict": "blocked",
+      "ok": false,
+      "content_type": "text/html",
+      "cited_by": [
+        "Data Set 3",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%204.zip",
+      "status": 403,
+      "verdict": "blocked",
+      "ok": false,
+      "content_type": "text/html",
+      "cited_by": [
+        "Data Set 4",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%205.zip",
+      "status": 403,
+      "verdict": "blocked",
+      "ok": false,
+      "content_type": "text/html",
+      "cited_by": [
+        "Data Set 5",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%206.zip",
+      "status": 403,
+      "verdict": "blocked",
+      "ok": false,
+      "content_type": "text/html",
+      "cited_by": [
+        "Data Set 6",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%207.zip",
+      "status": 403,
+      "verdict": "blocked",
+      "ok": false,
+      "content_type": "text/html",
+      "cited_by": [
+        "Data Set 7",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%208.zip",
+      "status": 403,
+      "verdict": "blocked",
+      "ok": false,
+      "content_type": "text/html",
+      "cited_by": [
+        "Data Set 8",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%209.zip",
+      "status": 403,
+      "verdict": "blocked",
+      "ok": false,
+      "content_type": "text/html",
+      "cited_by": [
+        "Data Set 9",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/refs/heads/main/DataSet12_Changed.txt",
+      "status": 404,
+      "verdict": "gone",
+      "ok": false,
+      "size_hint": "14",
+      "content_type": "text/plain",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/refs/heads/main/DataSet_Changed_Deleted_lists/DataSet11_Deleted.txt",
+      "status": 404,
+      "verdict": "gone",
+      "ok": false,
+      "size_hint": "14",
+      "content_type": "text/plain",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4405",
+      "status": 403,
+      "verdict": "blocked",
+      "ok": false,
+      "size_hint": "5704",
+      "content_type": "text/html",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/doj-disclosures/data-set-9-files?page=17",
+      "status": 403,
+      "verdict": "blocked",
+      "ok": false,
+      "size_hint": "438",
+      "content_type": "text/html",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://apify.com/lofomachines/epstein-files-scraper-api",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "453558",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/20251224_20251224_2055",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/EFTA_12-23-25",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/Epstein-Data-Sets-So-Far",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/Epstein-Dataset-9-2026-01-30",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/JEpstein_H_R_4405_251223",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/combined-all-epstein-files-jp-2",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/data-set-1",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/data-set-10",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/data-set-10_202603",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/data-set-12_202601",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 12",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/data-set-1_20251220",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/data-set-8_20251228",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/data-set-8_202601",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/data-set-9-efta00040399-efta00058471",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/doj-epstein-files-dataset8-2025",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/doj-jeffrey-epstein-first-production-2025",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/doj_epstein_dataset10_incomplete",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/doj_epstein_files_first_production",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/ds-9-efta-gap-repair",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/dylan-burns-tv-2025-2-28-pkk-turkey-peace-trumps-awkward-meeting-with-british-pm",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/efta_niema_zip",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/entirity-of-epstein-files",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/epstein-file-archive-datasets",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/epstein-files-12-19-25-release",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/epstein-files-archive",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/epstein-files-data-set-11",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/epstein-files-dataset-zip-collectionn",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/epstein-files-dec-19-25-release",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/epstein-files-pdf-docs",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/epstein-files_202512",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/epstein-files_202601",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/epstein_library_transparency_act_hr_4405_dataset10_202605",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/epstein_library_transparency_act_hr_4405_dataset11_202602",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/epstein_library_transparency_act_hr_4405_dataset8",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/epstein_library_transparency_act_hr_4405_dataset9_202602",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/hr4405B",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/jeffrey-epstein-files-archive",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/oversight-committee-additional-epstein-files",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/the-epstein-files-07-14-2025",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/the-epstein-library",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/video2_202602",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_20260214",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_20260220",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_20260228",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_20260304",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_20260305",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_20260325",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_Court_Records_20260225",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_DataSet_10_individual",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_DataSet_11.zip",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_DataSet_11_individual",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_DataSet_8.zip_20260203",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_DataSet_8_individual_20260203",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_DataSet_9_individual_mp4_bruteforce_20260202",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_DataSet_9_individual_pdf_bruteforce",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_DataSet_9_individual_vob_bruteforce_20260202",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_DataSets",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_FOIA_20260225",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/details/www.justice.gov_epstein_files_Prior_DOJ_Disclosures_20260225",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/download/data-set-1/DataSet%201.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://dn721704.ca.archive.org/0/items/data-set-1/DataSet%201.zip",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 1",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/download/data-set-1/DataSet%202.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://dn721704.ca.archive.org/0/items/data-set-1/DataSet%202.zip",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 2",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/download/data-set-1/DataSet%203.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://dn721704.ca.archive.org/0/items/data-set-1/DataSet%203.zip",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 3",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/download/data-set-1/DataSet%204.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://dn721704.ca.archive.org/0/items/data-set-1/DataSet%204.zip",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 4",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/download/data-set-1/DataSet%205.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://dn721704.ca.archive.org/0/items/data-set-1/DataSet%205.zip",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 5",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/download/data-set-1/DataSet%206.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://dn721704.ca.archive.org/0/items/data-set-1/DataSet%206.zip",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 6",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/download/data-set-1/DataSet%207.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://dn721704.ca.archive.org/0/items/data-set-1/DataSet%207.zip",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 7",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://archive.org/download/data-set-10/DataSet%2010.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://ia601606.us.archive.org/9/items/data-set-10/DataSet%2010.zip",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 10",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://beak2825.github.io/epstein-files-archive",
+      "status": 301,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://beak2825.github.io/epstein-files-archive/",
+      "size_hint": "162",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://ddosecrets.org/article/epstein-files",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://edge.dog",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://epstein-docs.github.io/",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "1113261",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://epstein-files.org/",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "20884",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://epsteingraph.com/",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://epsteinvisualizer.com/",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/AfricanKillshot/Epstein-Files",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "1438843",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "AfricanKillshot/Epstein-Files"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/Hannah2704/epstein-emails",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "724050",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Hannah2704/epstein-emails"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/KillerShoaib/Jeffrey-Epstein-Emails-From-Epstein-Files",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "948324",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "KillerShoaib/Jeffrey-Epstein-Emails-From-Epstein-Files"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/LayerDynamics/epstein-doj-files",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "83725",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "LayerDynamics/epstein-doj-files"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/Nikity/Epstein-Files",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "1436333",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Nikity/Epstein-Files"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/PixelML/epstein-files-cctv-video-memory",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "177392",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "PixelML/epstein-files-cctv-video-memory"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/aurora2424/Epstein-Files",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "1438471",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "aurora2424/Epstein-Files"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/aurora2424/epstein-files-ocr-datasets-1-8-early-release",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "148133",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "aurora2424/epstein-files-ocr-datasets-1-8-early-release"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/devankit7873/EpsteinFiles-Vector-Embeddings-ChromaDB",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "148467",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "devankit7873/EpsteinFiles-Vector-Embeddings-ChromaDB"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/genevera/epstein-files-ocr-complete",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "514446",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "genevera/epstein-files-ocr-complete"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/ishumilin/epstein-files-ocr-complete",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "512017",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "ishumilin/epstein-files-ocr-complete"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/ishumilin/epstein-files-ocr-datasets-1-8-early-release",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "145902",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "ishumilin/epstein-files-ocr-datasets-1-8-early-release"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/kabasshouse/epstein-data",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "570577",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "kabasshouse/epstein-data"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/mindhug/Epstein-Files",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "1438867",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "mindhug/Epstein-Files"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/notesbymuneeb/epstein-emails",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "736292",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "notesbymuneeb/epstein-emails"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/ohmygaugh/Epstein-Files",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "1439206",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "ohmygaugh/Epstein-Files"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/post-train/Epstein-Files",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "1438884",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "post-train/Epstein-Files"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/ramvorg/Epstein-Files",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "1438631",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "ramvorg/Epstein-Files"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/robbd/epstein-index",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "115401",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "robbd/epstein-index"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/svetfm/epstein-fbi-files",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "475426",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "svetfm/epstein-fbi-files"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/svetfm/epstein-files-nov11-25-house-post-ocr-embeddings",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "641933",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "svetfm/epstein-files-nov11-25-house-post-ocr-embeddings"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/teyler/epstein-files-20k",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "259532",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "teyler/epstein-files-20k"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/theelderemo/FULL_EPSTEIN_INDEX",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "466211",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "theelderemo/FULL_EPSTEIN_INDEX"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/to-be/epstein-emails",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "1390542",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "to-be/epstein-emails"
+      ]
+    },
+    {
+      "url": "https://jmail.world/",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://journaliststudio.google.com/pinpoint/search?collection=c109fa8e7dcf42c1",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "0",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://justice.gov/epstein/files/DataSet%2010/EFTA01286686.pdf",
+      "status": 301,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/epstein/files/DataSet%2010/EFTA01286686.pdf",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://old.reddit.com/r/DataHoarder/comments/1qrd9ma/did_anyone_manage_to_get_backupsarchive_of_the/o2o8pov/",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://old.reddit.com/login/?reason=lor2&dest=https%3A%2F%2Fold.reddit.com%2Fr%2FDataHoarder%2Fcomments%2F1qrd9ma%2Fdid_anyone_manage_to_get_backupsarchive_of_the%2Fo2o8pov%2F",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/refs/heads/main/DataSet_Changed_Deleted_lists/DataSet10_Deleted.txt",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "77",
+      "content_type": "text/plain",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/refs/heads/main/DataSet_Changed_Deleted_lists/DataSet12_Deleted.txt",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "12",
+      "content_type": "text/plain",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/refs/heads/main/DataSet_Changed_Deleted_lists/DataSet1_Deleted.txt",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "90",
+      "content_type": "text/plain",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/refs/heads/main/DataSet_Changed_Deleted_lists/DataSet2_Changed.txt",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "12",
+      "content_type": "text/plain",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/refs/heads/main/DataSet_Changed_Deleted_lists/DataSet2_Deleted.txt",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "12",
+      "content_type": "text/plain",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/refs/heads/main/DataSet_Changed_Deleted_lists/DataSet3_Changed.txt",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "38",
+      "content_type": "text/plain",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/refs/heads/main/DataSet_Changed_Deleted_lists/DataSet3_Deleted.txt",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "25",
+      "content_type": "text/plain",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/refs/heads/main/DataSet_Changed_Deleted_lists/DataSet4_Changed.txt",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "25",
+      "content_type": "text/plain",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/refs/heads/main/DataSet_Changed_Deleted_lists/DataSet5_Changed.txt",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "12",
+      "content_type": "text/plain",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/refs/heads/main/DataSet_Changed_Deleted_lists/DataSet6_Changed.txt",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "25",
+      "content_type": "text/plain",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/refs/heads/main/DataSet_Changed_Deleted_lists/DataSet8_Changed.txt",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "272",
+      "content_type": "text/plain",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/refs/heads/main/DataSet_Changed_Deleted_lists/DataSet8_Deleted.txt",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "129",
+      "content_type": "text/plain",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beak2825/epstein-files-archive/refs/heads/main/DataSet_Changed_Deleted_lists/DataSet9_Deleted.txt",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "11257",
+      "content_type": "text/plain",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://search.epstein.ninja/",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "73210",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20260131175929/https://old.reddit.com/r/DataHoarder/comments/1qrk3qk/epstein_files_datasets_9_10_11_300_gb_lets_keep/",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/",
+      "status": 301,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/epstein",
+      "size_hint": "370",
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/doj-disclosures",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "content_type": "text/html",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%201.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%201.zip",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 1",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%2010.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%2010.zip",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 10",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%2011.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%2011.zip",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 11",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%2012.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%2012.zip",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 12",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%2012/EFTA02731790.pdf",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%2012/EFTA02731790.pdf",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%2012/EFTA02731812.pdf",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%2012/EFTA02731812.pdf",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%2012/EFTA02731852.pdf",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%2012/EFTA02731852.pdf",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%202.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%202.zip",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 2",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%203.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%203.zip",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 3",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%204.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%204.zip",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 4",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%205.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%205.zip",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 5",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%206.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%206.zip",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 6",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%207.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%207.zip",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 7",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%208.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%208.zip",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 8",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%208/EFTA00020685.pdf",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%208/EFTA00020685.pdf",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%209.zip",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%209.zip",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "Data Set 9",
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%209/EFTA00276494.ts",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%209/EFTA00276494.ts",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%209/EFTA01244748.wmv",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%209/EFTA01244748.wmv",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.justice.gov/epstein/files/DataSet%209/EFTA01244749.wmv",
+      "status": 302,
+      "verdict": "ok",
+      "ok": true,
+      "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%209/EFTA01244749.wmv",
+      "size_hint": "0",
+      "last_ok": "2026-09-20",
+      "cited_by": [
+        "links.txt"
+      ]
+    }
+  ]
+}

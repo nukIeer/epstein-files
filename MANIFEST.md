@@ -31,6 +31,41 @@ Per-release view: the official DOJ URL, every known mirror, and published checks
 | Data Set 11 | 27.5 GB | yes | 3 | 2 |
 | Data Set 12 | 114.1 MB | yes | 4 | 3 |
 
+## Derivative corpora
+
+Third-party processed versions — OCR text, email sets, embeddings — built from
+the same public records. Usually what you actually want instead of the raw scans.
+Listed by popularity; **not vetted for accuracy or completeness**.
+
+| Corpus | Kind | Downloads | License | Updated |
+|--------|------|-----------|---------|---------|
+| [ishumilin/epstein-files-ocr-datasets-1-8-early-release](https://huggingface.co/datasets/ishumilin/epstein-files-ocr-datasets-1-8-early-release) | ocr-text | 2,753 | cc0-1.0 | 2026-03-17 |
+| [svetfm/epstein-fbi-files](https://huggingface.co/datasets/svetfm/epstein-fbi-files) | corpus | 2,333 | cc-by-4.0 | 2025-12-23 |
+| [Nikity/Epstein-Files](https://huggingface.co/datasets/Nikity/Epstein-Files) | corpus | 1,277 | mit | 2026-02-20 |
+| [aurora2424/epstein-files-ocr-datasets-1-8-early-release](https://huggingface.co/datasets/aurora2424/epstein-files-ocr-datasets-1-8-early-release) | ocr-text | 751 | cc0-1.0 | 2026-03-13 |
+| [kabasshouse/epstein-data](https://huggingface.co/datasets/kabasshouse/epstein-data) | corpus | 743 | cc-by-4.0 | 2026-03-01 |
+| [robbd/epstein-index](https://huggingface.co/datasets/robbd/epstein-index) | index | 737 | other | 2026-09-19 |
+| [mindhug/Epstein-Files](https://huggingface.co/datasets/mindhug/Epstein-Files) | corpus | 717 | mit | 2026-02-20 |
+| [ramvorg/Epstein-Files](https://huggingface.co/datasets/ramvorg/Epstein-Files) | corpus | 663 | mit | 2026-02-20 |
+| [aurora2424/Epstein-Files](https://huggingface.co/datasets/aurora2424/Epstein-Files) | corpus | 660 | mit | 2026-03-13 |
+| [ohmygaugh/Epstein-Files](https://huggingface.co/datasets/ohmygaugh/Epstein-Files) | corpus | 606 | mit | 2026-02-24 |
+| [theelderemo/FULL_EPSTEIN_INDEX](https://huggingface.co/datasets/theelderemo/FULL_EPSTEIN_INDEX) | index | 191 | mit | 2025-12-23 |
+| [AfricanKillshot/Epstein-Files](https://huggingface.co/datasets/AfricanKillshot/Epstein-Files) | corpus | 183 | mit | 2026-02-20 |
+| [ishumilin/epstein-files-ocr-complete](https://huggingface.co/datasets/ishumilin/epstein-files-ocr-complete) | ocr-text | 155 | cc0-1.0 | 2026-03-19 |
+| [to-be/epstein-emails](https://huggingface.co/datasets/to-be/epstein-emails) | email-corpus | 120 | other | 2025-12-04 |
+| [PixelML/epstein-files-cctv-video-memory](https://huggingface.co/datasets/PixelML/epstein-files-cctv-video-memory) | media | 115 | cc-by-4.0 | 2026-02-16 |
+| [notesbymuneeb/epstein-emails](https://huggingface.co/datasets/notesbymuneeb/epstein-emails) | email-corpus | 111 | other | 2025-11-24 |
+| [teyler/epstein-files-20k](https://huggingface.co/datasets/teyler/epstein-files-20k) | corpus | 109 | ? | 2025-12-14 |
+| [post-train/Epstein-Files](https://huggingface.co/datasets/post-train/Epstein-Files) | corpus | 106 | mit | 2026-03-01 |
+| [genevera/epstein-files-ocr-complete](https://huggingface.co/datasets/genevera/epstein-files-ocr-complete) | ocr-text | 89 | cc0-1.0 | 2026-04-18 |
+| [LayerDynamics/epstein-doj-files](https://huggingface.co/datasets/LayerDynamics/epstein-doj-files) | corpus | 70 | ? | 2026-02-21 |
+| [Hannah2704/epstein-emails](https://huggingface.co/datasets/Hannah2704/epstein-emails) | email-corpus | 68 | other | 2026-01-30 |
+| [devankit7873/EpsteinFiles-Vector-Embeddings-ChromaDB](https://huggingface.co/datasets/devankit7873/EpsteinFiles-Vector-Embeddings-ChromaDB) | embeddings | 44 | mit | 2026-02-14 |
+| [KillerShoaib/Jeffrey-Epstein-Emails-From-Epstein-Files](https://huggingface.co/datasets/KillerShoaib/Jeffrey-Epstein-Emails-From-Epstein-Files) | email-corpus | 28 | ? | 2026-02-13 |
+| [svetfm/epstein-files-nov11-25-house-post-ocr-embeddings](https://huggingface.co/datasets/svetfm/epstein-files-nov11-25-house-post-ocr-embeddings) | embeddings | 23 | cc-by-4.0 | 2025-11-21 |
+
+By kind: corpus (11), email-corpus (4), embeddings (2), index (2), media (1), ocr-text (4)
+
 ## Torrents
 
 | Dataset | Infohash | Size | Source |
