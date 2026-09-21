@@ -1,120 +1,75 @@
 # Start here
 
-You have heard about the Epstein files and want to see them for yourself. This page
-tells you where to go, in plain language. You do not need to understand torrents,
-checksums or the command line to use any of this.
+Plain language, no jargon. You do not need to understand torrents or checksums.
 
 ## What these documents are
 
-In 2025 the U.S. Congress passed the **Epstein Files Transparency Act**
-([H.R.4405](https://www.congress.gov/bill/119th-congress/house-bill/4405)), which
-required the Department of Justice to publish its records on the Jeffrey Epstein
-investigation. The DOJ published them on [justice.gov/epstein](https://www.justice.gov/epstein/)
-in batches called **Data Set 1** through **Data Set 12**, alongside earlier court
-unsealings and material released by the House Oversight Committee.
+In 2025 Congress passed the **Epstein Files Transparency Act**
+([H.R.4405](https://www.congress.gov/bill/119th-congress/house-bill/4405)), requiring
+the Justice Department to publish its records on the Jeffrey Epstein investigation.
 
-They are mostly scanned documents — court filings, emails, flight and financial
-records, photographs, video — released as large ZIP files with no index inside. The
-full set runs to hundreds of gigabytes.
+The DOJ published them at [justice.gov/epstein](https://www.justice.gov/epstein/) as
+**Data Set 1** through **12**, plus court records and FOIA productions released
+separately. Mostly scanned documents — filings, emails, flight and financial records,
+photos, video. Hundreds of gigabytes, with no index inside.
 
 ## What this repository is
 
-**A catalogue, not the documents.** Think of it as a library card index: it records
-where every copy lives, how big it is, whether the link still works, and what its
-fingerprint should be. The whole thing is a few hundred kilobytes.
+A **catalogue, not the documents** — a library card index. It records where every copy
+lives, how big it is, whether the link still works, and what its fingerprint should be.
+A few hundred kilobytes.
 
-It exists because the documents keep moving. Government sites reorganize, files have
-been removed after publication, and volunteer mirrors lapse. A catalogue that is
-checked weekly outlives any single copy.
+It exists because the documents keep moving. Sites reorganize, files get removed after
+publication, volunteer mirrors lapse. A catalogue checked weekly outlives any one copy.
 
-## What do you want to do?
+## Where to go
 
-### "I just want to read them"
+| You want to… | Go to | Why |
+|---|---|---|
+| **Read them** | [VIEWERS.md](VIEWERS.md) | Others already put the documents online, searchable. Nothing to install. **Right answer for almost everyone.** |
+| **Get the original files** | [DOWNLOADS.md](DOWNLOADS.md) | Every release, smallest first. Data Set 5 is 61 MB — start there, not the 180 GB one. |
+| **Find one specific case** | [OFFICIAL-LIBRARY.md](OFFICIAL-LIBRARY.md) | 51 named court records and FOIA productions that no mirror or torrent covers. |
+| **Analyse the text** | [`derivatives.json`](../data/derivatives.json) | OCR'd text and email sets you can load in one line of Python or R. |
+| **Help keep it online** | [DOWNLOADS.md](DOWNLOADS.md) | Seed a torrent. Costs only disk space, and it is the most useful thing a non-technical person can do here. |
 
-→ **[VIEWERS.md](VIEWERS.md)**
-
-Other people have already put the documents online in searchable form. You read them
-like any website — nothing to install, no account, no download. **This is the right
-answer for almost everyone.** Downloading hundreds of gigabytes of scanned PDFs will
-not help you find anything; the search interfaces will.
-
-### "I'm writing something and need the text"
-
-→ **[`data/derivatives.json`](../data/derivatives.json)**
-
-Researchers have published processed versions: OCR'd text, extracted email sets, and
-prepared datasets you can load in Python or R in one line. Far more tractable than the
-page images. They are other people's pipelines, so OCR quality and coverage vary —
-trace anything important back to the original document before you cite it.
-
-For how to cite this index itself, see [Citing this](#citing-this) below.
-
-### "I'm looking for one specific case or record"
-
-→ **[OFFICIAL-LIBRARY.md](OFFICIAL-LIBRARY.md)**
-
-The DOJ published far more than the twelve bulk Data Sets: 51 individually named court
-records, FOIA productions from the FBI, CBP and the Bureau of Prisons, and earlier
-disclosures. Almost no mirror or torrent covers these — they are published separately.
-If you want a named lawsuit rather than the whole corpus, start there.
-
-### "I want the original files"
-
-→ **[DOWNLOADS.md](DOWNLOADS.md)**
-
-Every release, smallest first, with the easy browser links before the technical ones.
-Data Set 5 is 61 MB. Start there rather than with the 180 GB one.
-
-### "I want to help keep this available"
-
-→ **[DOWNLOADS.md](DOWNLOADS.md)**, torrent section
-
-Download a release over BitTorrent and leave your client running. While it is open you
-are serving the files to everyone else. This is the single most useful thing a
-non-technical person can do here, and it costs nothing but disk space.
+Downloading hundreds of gigabytes of scanned PDFs will not help you find anything. The
+search interfaces will.
 
 ## Before you read them
 
-**These documents concern the sexual abuse of children.** Much of the material is
-distressing, and some of it is graphic. Decide deliberately whether you want to look.
+> [!WARNING]
+> **These documents describe the sexual abuse of children.** Much of it is distressing
+> and some is graphic. Decide deliberately whether you want to look.
 
 **Being named is not evidence of wrongdoing.** These are investigative files. They
-contain witnesses, investigators, household staff, hotel and travel records, business
-correspondence and people who appear once in someone else's address book. Names have
-already circulated online as "revelations" on the strength of a single filename. If
-you are about to accuse someone based on a document, read the whole document, work out
-what kind of record it is, and check whether anyone with access to the full context
-has reported on it.
+contain witnesses, investigators, staff, hotel and travel records, business letters, and
+people who appear once in someone else's address book. Names have already circulated
+online as "revelations" on the strength of a single filename. Before you accuse anyone:
+read the whole document, work out what kind of record it is, and check whether anyone
+with the full context has reported on it.
 
-**The redactions are inconsistent.** Material was withheld to protect victims, but not
-uniformly — victim names and identifying details survive in places. Some sites
-advertise "unredacted" versions assembled by volunteers. Those redactions protect real
-people who did not choose to be in these files. Do not republish anything that
-identifies a victim.
+**The redactions are inconsistent.** Victim names and identifying details survive in
+places. Some sites advertise "unredacted" versions assembled by volunteers — those
+redactions protect real people who did not choose to be in these files. Do not republish
+anything that identifies a victim. The DOJ asks that it be reported to **EFTA@usdoj.gov**.
 
 **Data Set 9 is incomplete.** Files were removed from the government site after
-publication. Volunteer reconstructions cover more of it than the official download
-does, and no single copy is the complete record. If something appears to be missing,
-that may be why.
+publication. Volunteer reconstructions cover more of it than the official download does.
+If something seems missing, that may be why.
 
 ## Citing this
 
-This index is archived on Zenodo with a permanent DOI, so a citation keeps working
-even if the repository moves:
+```
+https://doi.org/10.5281/zenodo.22865745
+```
 
-> https://doi.org/10.5281/zenodo.22865745
+Always resolves to the latest version; see [`CITATION.cff`](../CITATION.cff) for BibTeX.
 
-That DOI always resolves to the latest version. To pin one exact snapshot, use the
-individual release's DOI from the Zenodo record. GitHub also renders a **"Cite this
-repository"** button from [`CITATION.cff`](../CITATION.cff).
+Cite the index when you used it to *locate* something. Cite the records themselves by
+production number (`EFTA…`, `DOJ-OGR-…`) and say which copy you used — official,
+archive.org, or a torrent infohash — because the copies are not all byte-identical.
 
-Cite the index when you used it to *locate* material. Cite the underlying records
-themselves by their production numbers (`EFTA…`, `DOJ-OGR-…`) and the release they
-came from, and say which copy you worked from — official, archive.org, or a specific
-torrent infohash — since the copies are not all byte-identical.
+## Stuck?
 
-## Still stuck?
-
-[Open an issue](https://github.com/nukIeer/epstein-files/issues). A question about
-where to find something is a perfectly good issue, and the answer probably belongs in
-this page.
+[Open an issue](https://github.com/nukIeer/epstein-files/issues). "Where do I find X" is
+a perfectly good issue, and the answer probably belongs on this page.
