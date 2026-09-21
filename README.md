@@ -1,4 +1,4 @@
-# The Epstein Files: Complete Archive Index
+# The Epstein Files Collection
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22865745.svg)](https://doi.org/10.5281/zenodo.22865745)
 [![Link health](https://img.shields.io/badge/pointers-re--probed%20weekly-brightgreen)](data/health.json)
@@ -7,15 +7,16 @@
 **Where to read the Epstein files online, where to download every DOJ release, and how
 to check that what you got is genuine.**
 
-One catalogue covering the whole public record: the twelve EFTA Data Sets, the
+A complete **archive index** of the public record: the twelve EFTA Data Sets, the
 individually published court records and FOIA productions most mirrors miss, every
 known mirror and torrent, the SHA-256 checksums to verify them, and a weekly check of
 which links still work.
 
-**This repository does not host the documents.** It is a card index — a few hundred
-kilobytes describing terabytes of material on justice.gov, the Internet Archive and in
-BitTorrent swarms. That is deliberate: the copies keep moving, and a small catalogue
-re-checked every week outlives any one of them.
+**To be exact about the word "collection": this repository holds no documents.** It is
+a card index — a few hundred kilobytes describing terabytes of material that lives on
+justice.gov, the Internet Archive and in BitTorrent swarms. Collecting *where
+everything is* is the point. The copies keep moving, and a small catalogue re-checked
+every week outlives any one of them.
 
 ## 👉 New here? Read [**docs/START-HERE.md**](docs/START-HERE.md)
 
@@ -113,13 +114,15 @@ something are also welcome as issues.
 Archived on Zenodo with a permanent DOI. Cite the concept DOI — it always resolves to
 the latest version:
 
-> Epstein Files Aggregated Index contributors. *Epstein Files — Aggregated Pointer Index
-> (magnets, torrents, mirrors)*. Zenodo. https://doi.org/10.5281/zenodo.22865745
+> The Epstein Files Collection contributors. *The Epstein Files Collection — archive
+> index of official releases, mirrors, torrents and checksums*. Zenodo.
+> https://doi.org/10.5281/zenodo.22865745
 
 ```bibtex
 @dataset{epstein_files_index,
-  title     = {Epstein Files --- Aggregated Pointer Index (magnets, torrents, mirrors)},
-  author    = {{Epstein Files Aggregated Index contributors}},
+  title     = {The Epstein Files Collection --- archive index of official releases,
+               mirrors, torrents and checksums},
+  author    = {{The Epstein Files Collection contributors}},
   publisher = {Zenodo},
   doi       = {10.5281/zenodo.22865745},
   url       = {https://doi.org/10.5281/zenodo.22865745}

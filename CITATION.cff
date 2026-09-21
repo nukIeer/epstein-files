@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-title: "Epstein Files — Aggregated Pointer Index (magnets, torrents, mirrors)"
+title: "The Epstein Files Collection — archive index of official releases, mirrors, torrents and checksums"
 message: "If you use this index in research, please cite it using the DOI below."
 type: dataset
 authors:
-  - name: "Epstein Files Aggregated Index contributors"
+  - name: "The Epstein Files Collection contributors"
     website: "https://github.com/nukIeer/epstein-files"
 abstract: >-
   A pointer-only index of publicly released Epstein Files Transparency Act (EFTA)
