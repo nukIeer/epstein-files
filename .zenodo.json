@@ -40,6 +40,11 @@
       "relation": "isSupplementTo",
       "identifier": "https://github.com/nukIeer/epstein-files",
       "scheme": "url"
+    },
+    {
+      "relation": "isVersionOf",
+      "identifier": "https://doi.org/10.5281/zenodo.22865745",
+      "scheme": "doi"
     }
   ]
 }

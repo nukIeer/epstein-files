@@ -1,5 +1,9 @@
 # Epstein Files — Aggregated Index
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22865745.svg)](https://doi.org/10.5281/zenodo.22865745)
+[![Link health](https://img.shields.io/badge/pointers-re--probed%20weekly-brightgreen)](data/health.json)
+[![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey)](LICENSE)
+
 A catalogue of where the publicly released Epstein documents live: every official
 link, mirror, torrent and published checksum, checked weekly and kept in one place.
 
@@ -99,8 +103,25 @@ something are also welcome as issues.
 
 ## Citation
 
-Each GitHub Release is archived to Zenodo with a permanent DOI. See
-[`CITATION.cff`](CITATION.cff), or use GitHub's **Cite this repository** button.
+Archived on Zenodo with a permanent DOI. Cite the concept DOI — it always resolves to
+the latest version:
+
+> Epstein Files Aggregated Index contributors. *Epstein Files — Aggregated Pointer Index
+> (magnets, torrents, mirrors)*. Zenodo. https://doi.org/10.5281/zenodo.22865745
+
+```bibtex
+@dataset{epstein_files_index,
+  title     = {Epstein Files --- Aggregated Pointer Index (magnets, torrents, mirrors)},
+  author    = {{Epstein Files Aggregated Index contributors}},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.22865745},
+  url       = {https://doi.org/10.5281/zenodo.22865745}
+}
+```
+
+To cite one exact snapshot instead, use that release's own DOI from the
+[Zenodo record](https://doi.org/10.5281/zenodo.22865745). See also [`CITATION.cff`](CITATION.cff) —
+GitHub renders a **Cite this repository** button from it.
 
 ## License
 

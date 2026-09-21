@@ -90,10 +90,14 @@ that may be why.
 
 ## Citing this
 
-Each release of this index is archived on Zenodo with a permanent DOI, so a citation
-keeps working even if the repository moves. See [`CITATION.cff`](../CITATION.cff) for
-the current version, authors and reference list — GitHub renders a **"Cite this
-repository"** button from it on the front page.
+This index is archived on Zenodo with a permanent DOI, so a citation keeps working
+even if the repository moves:
+
+> https://doi.org/10.5281/zenodo.22865745
+
+That DOI always resolves to the latest version. To pin one exact snapshot, use the
+individual release's DOI from the Zenodo record. GitHub also renders a **"Cite this
+repository"** button from [`CITATION.cff`](../CITATION.cff).
 
 Cite the index when you used it to *locate* material. Cite the underlying records
 themselves by their production numbers (`EFTA…`, `DOJ-OGR-…`) and the release they

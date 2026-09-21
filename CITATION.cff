@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: "Epstein Files — Aggregated Pointer Index (magnets, torrents, mirrors)"
-message: "If you use this index in research, please cite it."
+message: "If you use this index in research, please cite it using the DOI below."
 type: dataset
 authors:
   - name: "Epstein Files Aggregated Index contributors"
@@ -25,6 +25,7 @@ keywords:
   - BitTorrent
   - data archiving
   - provenance
+doi: "10.5281/zenodo.22865745"
 license: CC0-1.0
 repository-code: "https://github.com/nukIeer/epstein-files"
 version: "0.3.0"
