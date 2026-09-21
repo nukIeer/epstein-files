@@ -1,6 +1,13 @@
 {
-  "description": "Upstream sources the aggregator pulls from. Add entries via PR. Every URL must point to PUBLIC raw text/JSON/markdown. type: readme_scan (extract magnets+links from a raw file), torrents_json, github_tree (scan repo tree for *.torrent and compute infohash), archive_org (search the Internet Archive and index each matching item's auto-generated .torrent).",
+  "description": "Upstream sources the aggregator pulls from. Add entries via PR. Every URL must point to PUBLIC raw text/JSON/markdown. type: readme_scan (extract magnets+links from a raw file), torrents_json, github_tree (scan repo tree for *.torrent and compute infohash), archive_org (search the Internet Archive and index each matching item's auto-generated .torrent), huggingface (index derived corpora), doj_library (snapshot the structure of the DOJ's own Epstein Library).",
   "sources": [
+    {
+      "id": "doj-epstein-library",
+      "enabled": true,
+      "type": "doj_library",
+      "note": "The Department of Justice's own library structure: EFTA Data Sets, individually named Court Records, FOIA productions, prior disclosures and the letters to Congress. The Department has reorganized this page before, so a dated snapshot of what was published and where outlives the next reshuffle.",
+      "url": "https://www.justice.gov/epstein/doj-disclosures"
+    },
     {
       "id": "archive-org-collections",
       "enabled": true,

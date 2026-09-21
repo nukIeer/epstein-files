@@ -25,6 +25,8 @@ Supported `type` values:
   (official URL, mirrors, magnet, published SHA-256).
 - `huggingface` — index derived corpora (OCR text, email sets, embeddings) into
   `data/derivatives.json`, gated on downloads/likes to keep re-uploads out.
+- `doj_library` — snapshot the accordion structure of an official library page into
+  `data/official_library.json` (sections, entry names, URLs).
 
 ### 2. Add a browser-based viewer
 [`data/viewers.json`](data/viewers.json) is the one hand-curated file — "is this usable

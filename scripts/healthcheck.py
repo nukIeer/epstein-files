@@ -64,6 +64,13 @@ def targets():
         if u.startswith(("http://", "https://")):
             cites.setdefault(u, set()).add(d["id"])
 
+    lib = load_json(os.path.join(DATA, "official_library.json"), {})
+    for sec in lib.get("sections", []):
+        for e in sec.get("entries", []):
+            u = e.get("url", "")
+            if u.startswith(("http://", "https://")):
+                cites.setdefault(u, set()).add(f"DOJ library: {sec['title']}")
+
     for v in load_json(os.path.join(DATA, "viewers.json"), []):
         u = v.get("url", "")
         if u.startswith(("http://", "https://")):

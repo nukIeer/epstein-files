@@ -160,6 +160,7 @@ def main():
     # Seeded from the committed files so a failed upstream fetch never empties them.
     datasets = load_json(os.path.join(DATA, "datasets.json"), [])
     derivatives = load_json(os.path.join(DATA, "derivatives.json"), [])
+    library = load_json(os.path.join(DATA, "official_library.json"), {})
 
     for s in src.get("sources", []):
         if not s.get("enabled"):
@@ -179,16 +180,19 @@ def main():
                             links.add(a["url"])
             elif s["type"] == "huggingface":
                 derivatives = handle_huggingface(s) or derivatives
+            elif s["type"] == "doj_library":
+                library = handle_doj_library(s, links) or library
             else:
                 handle_source(s, magnets, links, torrents)
             print(f"[ok] {s['id']}")
         except Exception as e:  # noqa: BLE001 - keep other sources alive
             print(f"[warn] {s['id']}: {e}", file=sys.stderr)
 
-    write_outputs(magnets, links, torrents, datasets, derivatives)
+    write_outputs(magnets, links, torrents, datasets, derivatives, library)
     print(
         f"magnets={len(magnets)} links={len(links)} torrents={len(torrents)} "
-        f"datasets={len(datasets)} derivatives={len(derivatives)}"
+        f"datasets={len(datasets)} derivatives={len(derivatives)} "
+        f"library={library.get('total_entries', 0)}"
     )
 
 
@@ -230,10 +234,124 @@ def handle_source(s, magnets, links, torrents):
                 magnets.setdefault(ih, build_magnet(ih, name, length, trackers))
     elif t == "archive_org":
         handle_archive_org(s, magnets, links, torrents)
-    elif t in ("dataset_sections", "huggingface"):
+    elif t in ("dataset_sections", "huggingface", "doj_library"):
         pass  # handled separately in main(); each needs its own output file
     else:
         raise ValueError(f"unknown source type: {t}")
+
+
+# ---- the DOJ's own library structure ---------------------------------------
+# justice.gov/epstein publishes far more than the bulk EFTA ZIPs: individually
+# named court records, FOIA productions and prior disclosures, laid out as a
+# USWDS accordion. Capturing that structure matters because the Department has
+# reorganized this page before — a snapshot of what was published, and where,
+# survives the next reshuffle.
+# Section boundaries are either accordion buttons (EFTA, Court Records, FOIA, Prior
+# Disclosures) or a plain heading ("Related Documentation"). Match both.
+ACCORDION_HEAD = re.compile(
+    r'<h[2-4][^>]*class="[^"]*usa-accordion__heading[^"]*"[^>]*>\s*'
+    r"<button[^>]*>(?P<title>.*?)</button>\s*</h[2-4]>"
+    r"|<h[2-3][^>]*>(?P<plain>(?:(?!</h[2-3]>).)*?)</h[2-3]>",
+    re.S | re.I,
+)
+# Everything from here down is site chrome, not records.
+FOOTER = re.compile(r'<footer|class="[^"]*usa-footer|id="footer"', re.I)
+# Headings that wrap UI, not records.
+BOILERPLATE_TITLE = re.compile(
+    r"18 years|access denied|verified|privacy notice|utilities|breadcrumb|"
+    r"^epstein library$|^share$|skip to",
+    re.I,
+)
+STRONG_LABEL = re.compile(r"<p[^>]*>\s*<strong>(?P<label>.*?)</strong>\s*</p>", re.S | re.I)
+ANCHOR = re.compile(r'<a\s+[^>]*href="(?P<href>[^"]+)"[^>]*>(?P<text>.*?)</a>', re.S | re.I)
+GENERIC_ANCHOR = re.compile(r"^view\s+file", re.I)
+
+
+def strip_tags(html: str) -> str:
+    import html as _html
+
+    text = re.sub(r"<[^>]+>", "", html)
+    return re.sub(r"\s+", " ", _html.unescape(text)).strip()
+
+
+def parse_doj_library(html: str, base: str):
+    """-> [{title, entries:[{name, url}]}] from the accordion on a DOJ library page."""
+    cut = FOOTER.search(html)
+    if cut:
+        html = html[: cut.start()]  # otherwise the last section swallows the site footer
+
+    heads = list(ACCORDION_HEAD.finditer(html))
+    sections = []
+    for i, h in enumerate(heads):
+        title = strip_tags(h.group("title") or h.group("plain") or "")
+        if not title or BOILERPLATE_TITLE.search(title):
+            continue
+        body = html[h.end() : heads[i + 1].start() if i + 1 < len(heads) else len(html)]
+
+        # Remember the nearest <strong> label before each anchor: EFTA entries put the
+        # record name there and leave the link text as a generic "View files".
+        labels = [(m.start(), strip_tags(m.group("label"))) for m in STRONG_LABEL.finditer(body)]
+        entries, seen = [], set()
+        for a in ANCHOR.finditer(body):
+            href = a.group("href")
+            if not href or href.startswith(("#", "mailto:", "javascript:")):
+                continue
+            url = urllib.parse.urljoin(base, href)
+            host = urllib.parse.urlparse(url).netloc.lower()
+            # Record entries live on justice.gov (the library itself, and the
+            # /opa/media letters to Congress under "Related Documentation") and on
+            # oversight.house.gov, which the library links to for House releases.
+            if not (host.endswith("justice.gov") or host.endswith("house.gov")):
+                continue
+            if re.search(r"/(themes|core|sites/default/files/js)/", url):
+                continue
+
+            name = strip_tags(a.group("text"))
+            if not name or GENERIC_ANCHOR.match(name):
+                prior = [lbl for pos, lbl in labels if pos < a.start()]
+                name = prior[-1] if prior else name
+            if not name or url in seen:
+                continue
+            seen.add(url)
+            entries.append({"name": name, "url": url})
+
+        if entries:
+            sections.append({"title": title, "entries": entries})
+    return sections
+
+
+def handle_doj_library(s, links):
+    html = fetch(s["url"])
+    sections = parse_doj_library(html, s["url"])
+    if not sections:
+        raise ValueError("no accordion sections found — the page layout probably changed")
+
+    for sec in sections:
+        for e in sec["entries"]:
+            links.add(e["url"])
+
+    out = {
+        "source": s["url"],
+        "fetched": _today(),
+        "sections": sections,
+        "total_entries": sum(len(sec["entries"]) for sec in sections),
+    }
+
+    # The library home carries the "Last Updated" date for the whole collection.
+    if s.get("home_url"):
+        try:
+            m = re.search(r"Last Updated:\s*([A-Z][a-z]+ \d{1,2}, \d{4})", fetch(s["home_url"]))
+            if m:
+                out["site_last_updated"] = m.group(1)
+        except Exception as e:  # noqa: BLE001
+            print(f"[warn] doj library home: {e}", file=sys.stderr)
+    return out
+
+
+def _today():
+    import datetime
+
+    return datetime.date.today().isoformat()
 
 
 # ---- derivative corpora (Hugging Face) -------------------------------------
@@ -449,7 +567,7 @@ def human(n):
     return f"{n:.1f} PB"
 
 
-def write_outputs(magnets, links, torrents, datasets=(), derivatives=()):
+def write_outputs(magnets, links, torrents, datasets=(), derivatives=(), library=None):
     # magnets.txt
     header = [
         "# Magnet links — one per line. Auto-managed by scripts/aggregate.py (deduped by infohash).",
@@ -481,7 +599,13 @@ def write_outputs(magnets, links, torrents, datasets=(), derivatives=()):
         json.dump(list(derivatives), f, indent=2, ensure_ascii=False)
         f.write("\n")
 
-    write_manifest(magnets, links, tlist, dlist, derivatives)
+    # official_library.json
+    if library:
+        with open(os.path.join(DATA, "official_library.json"), "w", encoding="utf-8", newline="\n") as f:
+            json.dump(library, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+
+    write_manifest(magnets, links, tlist, dlist, derivatives, library)
 
 
 def natural_key(s: str):
@@ -489,7 +613,7 @@ def natural_key(s: str):
     return [int(p) if p.isdigit() else p.lower() for p in re.split(r"(\d+)", s)]
 
 
-def write_manifest(magnets, links, tlist, dlist=(), derivatives=()):
+def write_manifest(magnets, links, tlist, dlist=(), derivatives=(), library=None):
     total = sum(t.get("size_bytes", 0) or 0 for t in tlist)
     n_sha = sum(1 for d in dlist for a in d["artifacts"] if a.get("sha256"))
     lines = [
@@ -501,6 +625,8 @@ def write_manifest(magnets, links, tlist, dlist=(), derivatives=()):
         f"- **Magnets:** {len(magnets)}",
         f"- **Direct/mirror links:** {len(links)}",
         f"- **Documented datasets:** {len(dlist)} ({n_sha} artifacts with a published SHA-256)",
+        f"- **Official library entries:** {(library or {}).get('total_entries', 0)} "
+        f"across {len((library or {}).get('sections', []))} sections on justice.gov",
         f"- **Sum of indexed torrent payloads:** {human(total)} ({total:,} bytes)",
         "",
         "> The payload sum counts every indexed torrent. Many are *mirrors of the same",

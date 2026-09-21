@@ -1,16 +1,21 @@
-# Epstein Files — Aggregated Index
+# The Epstein Files: Complete Archive Index
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22865745.svg)](https://doi.org/10.5281/zenodo.22865745)
 [![Link health](https://img.shields.io/badge/pointers-re--probed%20weekly-brightgreen)](data/health.json)
 [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey)](LICENSE)
 
-A catalogue of where the publicly released Epstein documents live: every official
-link, mirror, torrent and published checksum, checked weekly and kept in one place.
+**Where to read the Epstein files online, where to download every DOJ release, and how
+to check that what you got is genuine.**
 
-**This repository does not contain the documents.** It is a card index — a few hundred
-kilobytes describing terabytes of material held on justice.gov, the Internet Archive
-and in BitTorrent swarms. That is deliberate: the copies keep moving, and a small
-catalogue that is re-checked every week outlives any one of them.
+One catalogue covering the whole public record: the twelve EFTA Data Sets, the
+individually published court records and FOIA productions most mirrors miss, every
+known mirror and torrent, the SHA-256 checksums to verify them, and a weekly check of
+which links still work.
+
+**This repository does not host the documents.** It is a card index — a few hundred
+kilobytes describing terabytes of material on justice.gov, the Internet Archive and in
+BitTorrent swarms. That is deliberate: the copies keep moving, and a small catalogue
+re-checked every week outlives any one of them.
 
 ## 👉 New here? Read [**docs/START-HERE.md**](docs/START-HERE.md)
 
@@ -20,6 +25,7 @@ Plain language, no jargon. In short:
 |---|---|
 | **Read the documents** — searchable, in your browser, nothing to install | [**docs/VIEWERS.md**](docs/VIEWERS.md) |
 | **Download the original files** — every release, easiest route first | [**docs/DOWNLOADS.md**](docs/DOWNLOADS.md) |
+| **Find a specific court record or FOIA production** — the official library, mapped | [**docs/OFFICIAL-LIBRARY.md**](docs/OFFICIAL-LIBRARY.md) |
 | **Analyse the text** — OCR'd corpora, email sets, ready-made datasets | [`data/derivatives.json`](data/derivatives.json) |
 | **Help keep it online** — seed a torrent, costs nothing but disk | [docs/DOWNLOADS.md](docs/DOWNLOADS.md#three-ways-to-download-easiest-first) |
 
@@ -42,6 +48,7 @@ provenance model are in [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md).
 | [`data/torrents.json`](data/torrents.json) | Every distinct torrent, keyed by infohash |
 | [`data/derivatives.json`](data/derivatives.json) | Processed corpora: OCR text, email sets, embeddings |
 | [`data/viewers.json`](data/viewers.json) | Browser-based readers and search interfaces |
+| [`data/official_library.json`](data/official_library.json) | Dated snapshot of the DOJ Epstein Library's own structure |
 | [`data/health.json`](data/health.json) | Weekly probe: which pointers still resolve, and when each last worked |
 | [`data/magnets.txt`](data/magnets.txt) · [`data/links.txt`](data/links.txt) | Flat pointer lists for tooling |
 | [`MANIFEST.md`](MANIFEST.md) | Generated rollup of everything above |

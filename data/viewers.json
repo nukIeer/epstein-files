@@ -10,6 +10,16 @@
     "note": "Authoritative, but the site has reorganized before and files have been removed after publication — which is why this index exists."
   },
   {
+    "name": "Search the Full Epstein Library (official)",
+    "url": "https://www.justice.gov/epstein/search",
+    "kind": "search",
+    "operator": "U.S. Department of Justice",
+    "summary": "The Department's own full-text search across everything it published. The authoritative place to search, and the first result for most people looking.",
+    "needs_download": false,
+    "needs_account": false,
+    "note": "The DOJ warns that handwritten and image-only material may not be electronically searchable, so a null result here is not proof a document does not exist. The site also asks you to confirm you are 18 or older."
+  },
+  {
     "name": "Epstein Archive (epstein-docs)",
     "url": "https://epstein-docs.github.io",
     "kind": "browse",
@@ -70,5 +80,35 @@
     "needs_download": true,
     "needs_account": false,
     "note": "Requires running the project yourself. Listed for researchers, not general visitors."
+  },
+  {
+    "name": "Epstein Files Transparency Dashboard (Public Interest Index)",
+    "url": "https://epstein-stats.vercel.app/",
+    "kind": "search",
+    "operator": "community",
+    "summary": "Search across 1.4M+ court records, flight logs, depositions and federal files, with classifications taken verbatim from the official sources.",
+    "needs_download": false,
+    "needs_account": false,
+    "note": "Carries its own prominent disclaimer that appearance of a name does not imply guilt."
+  },
+  {
+    "name": "The Epstein Library (epsteinlibrary.com)",
+    "url": "https://epsteinlibrary.com/",
+    "kind": "search",
+    "operator": "community",
+    "summary": "Full-text search over 20,392 indexed documents / 126,120 pages released under H.R.4405. Free, no account.",
+    "needs_download": false,
+    "needs_account": false,
+    "note": "Unaffiliated with the DOJ despite the similar name. Opens with a content warning and a crisis-line number."
+  },
+  {
+    "name": "Epstein Files Search (Epstein Unboxed)",
+    "url": "https://www.epsteinunboxed.com/",
+    "kind": "search",
+    "operator": "FiscalNote (private company)",
+    "summary": "Searches 400,000+ documents and answers questions with citations back to the source document.",
+    "needs_download": false,
+    "needs_account": false,
+    "note": "Age verification gate on entry, and subject to the operator's terms of service. Answers are machine-generated — follow the citation and read the document before relying on one."
   }
 ]

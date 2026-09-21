@@ -4,8 +4,9 @@
 
 - **Torrents indexed:** 57
 - **Magnets:** 57
-- **Direct/mirror links:** 133
+- **Direct/mirror links:** 209
 - **Documented datasets:** 12 (34 artifacts with a published SHA-256)
+- **Official library entries:** 76 across 5 sections on justice.gov
 - **Sum of indexed torrent payloads:** 2.2 TB (2,370,602,109,680 bytes)
 
 > The payload sum counts every indexed torrent. Many are *mirrors of the same

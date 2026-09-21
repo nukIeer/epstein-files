@@ -22,6 +22,14 @@ The primary source. Browse and download the releases from the government site th
 
 > Authoritative, but the site has reorganized before and files have been removed after publication — which is why this index exists.
 
+### [Search the Full Epstein Library (official)](https://www.justice.gov/epstein/search) ✅
+
+The Department's own full-text search across everything it published. The authoritative place to search, and the first result for most people looking.
+
+*Run by U.S. Department of Justice · no account needed*
+
+> The DOJ warns that handwritten and image-only material may not be electronically searchable, so a null result here is not proof a document does not exist. The site also asks you to confirm you are 18 or older.
+
 ### [Epstein Archive (epstein-docs)](https://epstein-docs.github.io) ✅
 
 Browse ~8,175 processed documents by person, organization, location, date or document type. Includes machine-generated summaries. No download, no account.
@@ -57,6 +65,30 @@ Aggregates ~11,622 DOJ files with cross-referencing across people, locations, or
 *Run by Vatra Labs (private company) · no account needed*
 
 > ⚠️ **Caution.** Advertises 'community-sourced unredacted documents'. Material the DOJ redacted can identify victims. Redactions in these productions protect real people — prefer the official or archive.org copies unless you have a specific, defensible reason to work with unredacted versions.
+
+### [Epstein Files Transparency Dashboard (Public Interest Index)](https://epstein-stats.vercel.app/) ✅
+
+Search across 1.4M+ court records, flight logs, depositions and federal files, with classifications taken verbatim from the official sources.
+
+*Run by community · no account needed*
+
+> Carries its own prominent disclaimer that appearance of a name does not imply guilt.
+
+### [The Epstein Library (epsteinlibrary.com)](https://epsteinlibrary.com/) ✅
+
+Full-text search over 20,392 indexed documents / 126,120 pages released under H.R.4405. Free, no account.
+
+*Run by community · no account needed*
+
+> Unaffiliated with the DOJ despite the similar name. Opens with a content warning and a crisis-line number.
+
+### [Epstein Files Search (Epstein Unboxed)](https://www.epsteinunboxed.com/) ✅
+
+Searches 400,000+ documents and answers questions with citations back to the source document.
+
+*Run by FiscalNote (private company) · no account needed*
+
+> Age verification gate on entry, and subject to the operator's terms of service. Answers are machine-generated — follow the citation and read the document before relying on one.
 
 ## For researchers — run it yourself
 

@@ -49,6 +49,15 @@ trace anything important back to the original document before you cite it.
 
 For how to cite this index itself, see [Citing this](#citing-this) below.
 
+### "I'm looking for one specific case or record"
+
+→ **[OFFICIAL-LIBRARY.md](OFFICIAL-LIBRARY.md)**
+
+The DOJ published far more than the twelve bulk Data Sets: 51 individually named court
+records, FOIA productions from the FBI, CBP and the Bureau of Prisons, and earlier
+disclosures. Almost no mirror or torrent covers these — they are published separately.
+If you want a named lawsuit rather than the whole corpus, start there.
+
 ### "I want the original files"
 
 → **[DOWNLOADS.md](DOWNLOADS.md)**

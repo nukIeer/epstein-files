@@ -78,6 +78,27 @@ are hundreds of gigabytes of images. Sorted by downloads, descending.
 > and redaction handling vary widely and none of it is checked here. Anything load-bearing
 > should be traced back to the source document via `datasets.json`.
 
+## `data/official_library.json`
+
+A dated snapshot of how the **DOJ Epstein Library** is laid out on justice.gov. Most
+mirrors cover only the twelve bulk EFTA Data Sets; the Department also publishes court
+records, FOIA productions and prior disclosures individually, and those are not in any
+bulk archive. Rendered into [`OFFICIAL-LIBRARY.md`](OFFICIAL-LIBRARY.md).
+
+| Field | Type | Meaning |
+|-------|------|---------|
+| `source` | string | The page this was parsed from. |
+| `fetched` | string | `YYYY-MM-DD` this snapshot was taken. |
+| `site_last_updated` | string | *Optional.* The library's own "Last Updated" date, when it can be read. |
+| `total_entries` | int | Sum across all sections. |
+| `sections` | array | `{title, entries: [{name, url}]}`, in page order. |
+
+> **This is a snapshot, not a live mirror.** The Department has reorganized this page
+> before and has removed files after publication. The value of a dated capture is that
+> it records something *was* published, and where, even after the page changes. Compare
+> `fetched` against the current site before treating an entry as live — and check
+> `health.json`, which probes every one of these URLs weekly.
+
 ## `data/viewers.json`
 
 The one **hand-curated** file: websites where the documents can be read without

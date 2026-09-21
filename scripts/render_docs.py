@@ -268,9 +268,66 @@ def render_downloads():
     return "\n".join(L)
 
 
+def render_library():
+    lib = load("official_library.json", {})
+    if not lib:
+        return None
+    health, _ = health_map()
+
+    L = [
+        "# What the government actually published",
+        "",
+        GENERATED,
+        "",
+        "A snapshot of the **DOJ Epstein Library** as it is laid out on justice.gov — not",
+        "just the bulk ZIP releases everyone mirrors, but the individually published court",
+        "records, FOIA productions and letters to Congress that are easy to miss.",
+        "",
+        "The Department has reorganized this page before and has removed files after",
+        "publication. This snapshot records what was published and where, so a later",
+        "reshuffle does not erase the fact that something existed.",
+        "",
+        f"Source: <{lib.get('source')}> · captured **{lib.get('fetched')}**"
+        + (f" · library last updated **{lib['site_last_updated']}**" if lib.get("site_last_updated") else ""),
+        "",
+        f"**{lib.get('total_entries', 0)} entries across {len(lib.get('sections', []))} sections.**",
+        "",
+        "> The DOJ applies redactions to protect victim identities, and asks that anything",
+        "> improperly disclosed be reported to **EFTA@usdoj.gov**. In audio files, victim",
+        "> names are redacted with a steady tone rather than removed.",
+        "",
+    ]
+
+    for sec in lib.get("sections", []):
+        L += [f"## {sec['title']}", "", f"{len(sec['entries'])} entries.", ""]
+        L += ["| Entry | Status |", "|-------|--------|"]
+        for e in sec["entries"]:
+            st = health.get(e["url"], {}).get("verdict")
+            mark = {"ok": "✅", "gone": "❌ gone", "blocked": "⚠️ refused check"}.get(st, "—")
+            name = e["name"].replace("|", r"\|")
+            L.append(f"| [{name}]({e['url']}) | {mark} |")
+        L.append("")
+
+    L += [
+        "## Why this matters",
+        "",
+        "Most mirrors and torrents cover the twelve EFTA Data Sets and nothing else. The",
+        "court records, FOIA productions and prior disclosures listed above are published",
+        "separately, are not in those bulk archives, and disappear from view whenever the",
+        "page is restructured. If you are researching a specific case rather than the bulk",
+        "corpus, this is where to look.",
+        "",
+    ]
+    return "\n".join(L)
+
+
 def main():
     os.makedirs(DOCS, exist_ok=True)
-    for fname, body in [("VIEWERS.md", render_viewers()), ("DOWNLOADS.md", render_downloads())]:
+    pages = [("VIEWERS.md", render_viewers()), ("DOWNLOADS.md", render_downloads())]
+    lib = render_library()
+    if lib:
+        pages.append(("OFFICIAL-LIBRARY.md", lib))
+    for fname, body in pages:
         path = os.path.join(DOCS, fname)
         with open(path, "w", encoding="utf-8", newline="\n") as f:
             f.write(body.rstrip() + "\n")
