@@ -63,27 +63,20 @@ def render_viewers():
     local = [v for v in viewers if v.get("needs_download")]
 
     L = [
-        "# Read the documents in your browser",
+        "# Read them online",
         "",
         GENERATED,
         "",
-        "**You do not need to download anything to read these files.** Other people have",
-        "already put the documents online in a form you can search and read like any",
-        "website. Start here. Downloading the raw releases only makes sense if you need the",
-        "original files — see [DOWNLOADS.md](DOWNLOADS.md) for that.",
+        "Search and read the documents in your browser. Nothing to install, no account.",
         "",
-        "None of these sites are run by this project. They are listed because they work and",
-        "are publicly available, not because their contents have been checked for accuracy.",
+        "*None of these sites are run by this project. Listed because they work, not",
+        "because their contents have been checked.*",
         "",
     ]
 
     if checked:
-        L += [f"Reachability last checked **{checked}**.", ""]
-
-    L += [
-        "## Open in a browser — nothing to install",
-        "",
-    ]
+        L += [f"*Checked {checked}.*", ""]
+    L += [""]
 
     for v in hosted:
         st = health.get(v["url"], {})
@@ -124,18 +117,18 @@ def render_viewers():
         L.append("")
 
     L += [
-        "## A word before you start",
+        "---",
         "",
-        "These documents describe the sexual abuse of children. They contain names,",
-        "photographs and contact details of victims, and the redactions applied before",
-        "release were not applied consistently.",
-        "",
-        "**Being named in these files is not evidence of wrongdoing.** The releases include",
-        "witnesses, investigators, household staff, hotel bookings and unrelated",
-        "correspondence. People have already been misidentified online on the strength of a",
-        "single filename.",
-        "",
-        "If you find something that appears to identify a victim, do not republish it.",
+        "> [!WARNING]",
+        "> These documents describe the sexual abuse of children, and the redactions",
+        "> protecting victims were applied inconsistently.",
+        ">",
+        "> **Being named is not evidence of wrongdoing.** The releases include witnesses,",
+        "> investigators, staff, hotel bookings and unrelated correspondence. People have",
+        "> already been misidentified online on the strength of a single filename.",
+        ">",
+        "> If you find something that identifies a victim, do not republish it. The DOJ",
+        "> asks that it be reported to EFTA@usdoj.gov.",
         "",
     ]
     return "\n".join(L)
@@ -147,22 +140,34 @@ def render_downloads():
     health, checked = health_map()
 
     L = [
-        "# Getting the actual files",
+        "# Downloads",
         "",
         GENERATED,
         "",
-        "Only do this if you need the original documents. To *read* them, the browser",
-        "viewers in [VIEWERS.md](VIEWERS.md) are easier and need nothing installed.",
+        "Only download if you need the original files. To *read* them,",
+        "[the browser viewers](VIEWERS.md) are easier and need nothing installed.",
         "",
-        "Releases are listed **smallest first**. Data Set 5 is 61 MB and downloads in under a",
-        "minute; Data Set 9 is roughly 180 GB and is not something you start by accident.",
+        "## Pick a release",
+        "",
+        "| Release | Size | Get it |",
+        "|---------|------|--------|",
+    ]
+    for d in datasets:
+        anchor = "#" + d["dataset"].lower().replace(" ", "-")
+        flag = "" if d.get("complete", True) else " ⚠️"
+        L.append(f"| **{d['dataset']}**{flag} | {d.get('size_label') or '?'} | [links ↓]({anchor}) |")
+    L += [
+        "",
+        "Smallest first. Data Set 5 is 61 MB and takes a minute; Data Set 9 is ~180 GB.",
+        "⚠️ = incomplete at the source.",
         "",
     ]
     if checked:
-        L += [f"Link reachability last checked **{checked}**.", ""]
+        L += [f"*Links last checked {checked}.*", ""]
 
     L += [
-        "## Three ways to download, easiest first",
+        "<details>",
+        "<summary><b>How to download, and how to verify what you got</b></summary>",
         "",
         "**1. Click a link in your browser.** Where a release has an `archive.org` or",
         "`justice.gov` file link below, clicking it downloads the ZIP like any other file.",
@@ -182,7 +187,7 @@ def render_downloads():
         "Torrents are also how this material stays online: while your client is open, you",
         "are serving the files to other people. That is the point.",
         "",
-        "## Checking you got the real thing",
+        "### Checking you got the real thing",
         "",
         "Some releases publish a **SHA-256** — a fingerprint of the file. If yours matches,",
         "you have a byte-identical copy of what the publisher put out. To check it:",
@@ -204,13 +209,15 @@ def render_downloads():
         "A mismatch is not proof of tampering — mirrors legitimately repackage these",
         "archives. It means *this is not the exact file that checksum describes*.",
         "",
+        "</details>",
+        "",
         "---",
         "",
     ]
 
     for d in datasets:
         name, size = d["dataset"], d.get("size_label") or "size unknown"
-        L += [f"## {name} — {size}", ""]
+        L += [f"## {name}", "", f"**{size}**", ""]
         if not d.get("complete", True):
             L += [
                 "> ⚠️ **Incomplete at the source.** Files were removed from the government",
@@ -321,8 +328,45 @@ def render_library():
     return "\n".join(L)
 
 
+STATS_BLOCK = re.compile(
+    r"(?P<start><!-- stats:start -->)(?P<body>.*?)(?P<end><!-- stats:end -->)", re.S
+)
+
+
+def update_readme_stats():
+    """Keep the headline counts in README.md true without hand-editing them."""
+    path = os.path.join(ROOT, "README.md")
+    try:
+        with open(path, encoding="utf-8") as f:
+            readme = f.read()
+    except FileNotFoundError:
+        return None
+    if not STATS_BLOCK.search(readme):
+        return None
+
+    lib = load("official_library.json", {})
+    health = load("health.json", {})
+    rows = [
+        ("Official DOJ library entries", lib.get("total_entries", 0)),
+        ("Torrents (by infohash)", len(load("torrents.json", []))),
+        ("Releases with published checksums", len(load("datasets.json", []))),
+        ("Processed text corpora", len(load("derivatives.json", []))),
+        ("Browser viewers", len(load("viewers.json", []))),
+        ("Links re-checked weekly", health.get("total", 0)),
+    ]
+    table = "\n".join(["| | |", "|---|---|"] + [f"| {k} | **{v:,}** |" for k, v in rows])
+    new = STATS_BLOCK.sub(lambda m: f"{m.group('start')}\n{table}\n{m.group('end')}", readme)
+    if new != readme:
+        with open(path, "w", encoding="utf-8", newline="\n") as f:
+            f.write(new)
+    return rows
+
+
 def main():
     os.makedirs(DOCS, exist_ok=True)
+    rows = update_readme_stats()
+    if rows:
+        print("README stats: " + ", ".join(f"{k.split()[0].lower()}={v}" for k, v in rows))
     pages = [("VIEWERS.md", render_viewers()), ("DOWNLOADS.md", render_downloads())]
     lib = render_library()
     if lib:

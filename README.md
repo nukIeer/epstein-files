@@ -1,140 +1,117 @@
 # The Epstein Files Collection
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22865745.svg)](https://doi.org/10.5281/zenodo.22865745)
-[![Link health](https://img.shields.io/badge/pointers-re--probed%20weekly-brightgreen)](data/health.json)
-[![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey)](LICENSE)
+[![Links checked weekly](https://img.shields.io/badge/links-checked%20weekly-brightgreen)](data/health.json)
+[![CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey)](LICENSE)
 
-**Where to read the Epstein files online, where to download every DOJ release, and how
-to check that what you got is genuine.**
+Where to read the Epstein files, where to download them, and how to check what you got.
 
-A complete **archive index** of the public record: the twelve EFTA Data Sets, the
-individually published court records and FOIA productions most mirrors miss, every
-known mirror and torrent, the SHA-256 checksums to verify them, and a weekly check of
-which links still work.
+**No documents are stored here.** This is the index of where they all are.
 
-**To be exact about the word "collection": this repository holds no documents.** It is
-a card index — a few hundred kilobytes describing terabytes of material that lives on
-justice.gov, the Internet Archive and in BitTorrent swarms. Collecting *where
-everything is* is the point. The copies keep moving, and a small catalogue re-checked
-every week outlives any one of them.
+## What do you want to do?
 
-## 👉 New here? Read [**docs/START-HERE.md**](docs/START-HERE.md)
-
-Plain language, no jargon. In short:
-
-| If you want to… | Go to |
+|  | |
 |---|---|
-| **Read the documents** — searchable, in your browser, nothing to install | [**docs/VIEWERS.md**](docs/VIEWERS.md) |
-| **Download the original files** — every release, easiest route first | [**docs/DOWNLOADS.md**](docs/DOWNLOADS.md) |
-| **Find a specific court record or FOIA production** — the official library, mapped | [**docs/OFFICIAL-LIBRARY.md**](docs/OFFICIAL-LIBRARY.md) |
-| **Analyse the text** — OCR'd corpora, email sets, ready-made datasets | [`data/derivatives.json`](data/derivatives.json) |
-| **Help keep it online** — seed a torrent, costs nothing but disk | [docs/DOWNLOADS.md](docs/DOWNLOADS.md#three-ways-to-download-easiest-first) |
+| 📖 **Read them** — in your browser, nothing to install | **[Read online →](docs/VIEWERS.md)** |
+| ⬇️ **Download the files** — every release, smallest first | **[Downloads →](docs/DOWNLOADS.md)** |
+| ⚖️ **Find one court record or FOIA file** | **[Official library →](docs/OFFICIAL-LIBRARY.md)** |
+| 🔬 **Analyse the text** — OCR corpora, email sets | **[Datasets →](data/derivatives.json)** |
+| 🤔 **Not sure** | **[Start here →](docs/START-HERE.md)** |
 
-Most people want the first row. Hundreds of gigabytes of scanned PDFs will not help
-you find anything; the search interfaces will.
+Most people want the first row.
 
-> **Before you read:** these records concern the sexual abuse of children, the
-> redactions protecting victims were applied inconsistently, and **being named in an
-> investigative file is not evidence of wrongdoing**. [START-HERE](docs/START-HERE.md#before-you-read-them)
-> explains what that means in practice.
+> [!WARNING]
+> These records concern the sexual abuse of children, and the redactions protecting
+> victims are inconsistent. **Being named in an investigative file is not evidence of
+> wrongdoing.** → [What to know before reading](docs/START-HERE.md#before-you-read-them)
 
-## For developers and researchers
+## What's in the index
 
-The machine-readable index lives in `data/`. Schemas, stability guarantees and the
-provenance model are in [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md).
+<!-- stats:start -->
+| | |
+|---|---|
+| Official DOJ library entries | **76** |
+| Torrents (by infohash) | **57** |
+| Releases with published checksums | **12** |
+| Processed text corpora | **24** |
+| Browser viewers | **11** |
+| Links re-checked weekly | **243** |
+<!-- stats:end -->
 
-| Path | Contents |
+## For developers
+
+<details>
+<summary>Machine-readable data, CLI tools, and how it is built</summary>
+
+### Data
+
+| File | Contents |
 |------|----------|
-| [`data/datasets.json`](data/datasets.json) | Per-release: official URL, every mirror, magnet, published SHA-256 |
-| [`data/torrents.json`](data/torrents.json) | Every distinct torrent, keyed by infohash |
-| [`data/derivatives.json`](data/derivatives.json) | Processed corpora: OCR text, email sets, embeddings |
-| [`data/viewers.json`](data/viewers.json) | Browser-based readers and search interfaces |
-| [`data/official_library.json`](data/official_library.json) | Dated snapshot of the DOJ Epstein Library's own structure |
-| [`data/health.json`](data/health.json) | Weekly probe: which pointers still resolve, and when each last worked |
-| [`data/magnets.txt`](data/magnets.txt) · [`data/links.txt`](data/links.txt) | Flat pointer lists for tooling |
-| [`MANIFEST.md`](MANIFEST.md) | Generated rollup of everything above |
+| [`datasets.json`](data/datasets.json) | Per release: official URL, mirrors, magnet, SHA-256 |
+| [`official_library.json`](data/official_library.json) | Snapshot of the DOJ library's own structure |
+| [`torrents.json`](data/torrents.json) | Every torrent, keyed by infohash |
+| [`derivatives.json`](data/derivatives.json) | OCR text, email sets, embeddings |
+| [`viewers.json`](data/viewers.json) | Browser readers and search interfaces |
+| [`health.json`](data/health.json) | Which links still resolve, and when each last worked |
+| [`magnets.txt`](data/magnets.txt) · [`links.txt`](data/links.txt) | Flat lists for tooling |
 
-Command line:
+Schemas: [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md)
+
+### CLI
 
 ```bash
-python scripts/verify.py list                  # every documented release
-python scripts/verify.py show "Data Set 9"     # all pointers for one release
-python scripts/verify.py check DataSet9.zip    # identify a file you downloaded
-python scripts/healthcheck.py --report         # what is still reachable
-aria2c -i data/magnets.txt                     # fetch everything at once
+python scripts/verify.py list                # every documented release
+python scripts/verify.py show "Data Set 9"   # all pointers for one release
+python scripts/verify.py check DataSet9.zip  # identify a file you downloaded
+python scripts/healthcheck.py --report       # what is still reachable
 ```
 
-## How it works
+### Build
 
 ```
-sources.json ──► aggregate.py ──► data/*  ──► render_docs.py ──► docs/VIEWERS.md
-                      ▲                 │                        docs/DOWNLOADS.md
-   daily cron ────────┘                 ├──► verify.py selftest
-   weekly ──► healthcheck.py ───────────┘
+sources.json ──► aggregate.py ──► data/ ──► render_docs.py ──► docs/
+                                     └────► verify.py selftest
+              healthcheck.py ──► data/health.json
 ```
 
-`aggregate.py` pulls from a curated source list: README scans, GitHub tree scans for
-`*.torrent`, Internet Archive searches, a per-release parser that extracts checksums,
-and Hugging Face for derived corpora. Everything is deduplicated by infohash and URL.
-`healthcheck.py` probes every HTTP pointer weekly. `render_docs.py` regenerates the
-human-facing pages. All stdlib, no dependencies, and the index is self-tested before
-anything is committed.
+Stdlib only, no dependencies. Daily aggregation, weekly link probe, self-tested before
+anything is committed. A source going down degrades to "no change", never data loss.
 
-An upstream going down degrades to "no change" rather than data loss: every output is
-seeded from what is already committed.
+Contributions: [`CONTRIBUTING.md`](CONTRIBUTING.md)
 
-## Verification and its limits
+</details>
 
-Checksums here are **transcribed from the upstream that published each mirror**. This
-project does not re-download terabytes to independently re-verify them. A matching hash
-is strong evidence of provenance; a mismatch means *this is not the exact file that
-checksum describes*, which is often just a repackaged mirror rather than tampering.
+<details>
+<summary>Known limits — read before relying on the data</summary>
 
-Link health separates `gone` (the host says it is not there) from `blocked` (the host
-refused **us** — bot protection is indistinguishable from withdrawal at probe level,
-and both congress.gov and justice.gov do it). Read `blocked` as "check by hand".
+**Checksums are claims, not proofs.** They are transcribed from whoever published each
+mirror; nobody here re-downloads terabytes to re-verify them. A match is strong evidence
+of provenance. A mismatch usually means a repackaged mirror, not tampering.
 
-Data Set 9 is **incomplete at the source**; see
-[`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md).
+**`blocked` is not `gone`.** In `health.json`, `gone` means the host says the file is not
+there. `blocked` means the host refused *our probe* — bot protection looks identical to
+withdrawal from the outside. congress.gov and justice.gov both do it.
 
-## Scope
+**Data Set 9 is incomplete at the source.** Files were removed from justice.gov after
+publication. Volunteer reconstructions cover more of it than the official ZIP. No single
+copy is the complete record.
 
-Only **publicly released** material is indexed: court unsealings, Congressional and DOJ
-releases, FOIA productions, and public mirrors thereof. This project indexes pointers
-to that material; it does not host it.
+**Derivative corpora are unvetted.** Other people's OCR pipelines. Quality, coverage and
+redaction handling vary. Trace anything load-bearing back to the source document.
 
-## Contribute
-
-See [`CONTRIBUTING.md`](CONTRIBUTING.md). Add a source or a magnet and open a PR — CI
-validates, dedupes and rejects blobs automatically. Questions about where to find
-something are also welcome as issues.
+</details>
 
 ## Citation
 
-Archived on Zenodo with a permanent DOI. Cite the concept DOI — it always resolves to
-the latest version:
-
-> The Epstein Files Collection contributors. *The Epstein Files Collection — archive
-> index of official releases, mirrors, torrents and checksums*. Zenodo.
-> https://doi.org/10.5281/zenodo.22865745
-
-```bibtex
-@dataset{epstein_files_index,
-  title     = {The Epstein Files Collection --- archive index of official releases,
-               mirrors, torrents and checksums},
-  author    = {{The Epstein Files Collection contributors}},
-  publisher = {Zenodo},
-  doi       = {10.5281/zenodo.22865745},
-  url       = {https://doi.org/10.5281/zenodo.22865745}
-}
+```
+https://doi.org/10.5281/zenodo.22865745
 ```
 
-To cite one exact snapshot instead, use that release's own DOI from the
-[Zenodo record](https://doi.org/10.5281/zenodo.22865745). See also [`CITATION.cff`](CITATION.cff) —
-GitHub renders a **Cite this repository** button from it.
+Always resolves to the latest version. BibTeX and per-version DOIs:
+[`CITATION.cff`](CITATION.cff).
 
-## License
+## Scope & license
 
-Index data and metadata are dedicated to the public domain under [CC0 1.0](LICENSE).
-The underlying documents are U.S. government records and are not covered by this
-repository's license.
+Publicly released material only — court unsealings, DOJ and Congressional releases, FOIA
+productions, and public mirrors. Index data is [CC0](LICENSE); the underlying documents
+are U.S. government records.
