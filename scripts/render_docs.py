@@ -362,8 +362,84 @@ def update_readme_stats():
     return rows
 
 
+def update_zenodo_description():
+    """Regenerate the Zenodo abstract from the data, so its numbers are never stale.
+
+    Zenodo renders a sanitized subset of HTML. Short paragraphs and lists read far
+    better on a record page than the dense prose block this replaced.
+    """
+    path = os.path.join(ROOT, ".zenodo.json")
+    try:
+        with open(path, encoding="utf-8") as f:
+            z = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return None
+
+    lib = load("official_library.json", {})
+    health = load("health.json", {})
+    n_ds = len(load("datasets.json", []))
+    n_sha = sum(1 for d in load("datasets.json", []) for a in d.get("artifacts", []) if a.get("sha256"))
+
+    contents = [
+        (
+            "official_library.json",
+            f"snapshot of the DOJ Epstein Library — {lib.get('total_entries', 0)} entries: "
+            "the 12 EFTA Data Sets, 51 individually named court records, FOIA productions "
+            "and prior disclosures",
+        ),
+        ("datasets.json", f"{n_ds} releases with every official URL, mirror and magnet, and {n_sha} published SHA-256 checksums"),
+        ("torrents.json", f"{len(load('torrents.json', []))} distinct torrents keyed by infohash"),
+        ("derivatives.json", f"{len(load('derivatives.json', []))} third-party processed corpora — OCR text, email sets, embeddings"),
+        ("viewers.json", f"{len(load('viewers.json', []))} browser-based readers and search interfaces"),
+        ("health.json", f"weekly probe of {health.get('total', 0)} pointers recording which still resolve, and when each last worked"),
+    ]
+    limits = [
+        "Checksums are transcribed from whoever published each mirror, not independently re-verified here.",
+        "Data Set 9 is incomplete at the source — files were removed after publication, and volunteer reconstructions cover more of it than the official ZIP.",
+        "Derivative corpora are other people's pipelines, unvetted for OCR quality, coverage or redaction handling.",
+        "In link health, <em>blocked</em> (401/403/429) is not <em>gone</em>: bot protection is indistinguishable from withdrawal at probe level.",
+    ]
+
+    html = (
+        "<p><strong>Where to read the Epstein files, where to download them, and how to "
+        "check that what you got is genuine.</strong></p>"
+        "<p>A catalogue of the public record released under the Epstein Files Transparency "
+        "Act (H.R.4405) and related DOJ, House Oversight and court productions. It holds "
+        "<strong>no documents</strong> — a few hundred kilobytes of metadata describing "
+        "terabytes of material on justice.gov, the Internet Archive and in BitTorrent swarms.</p>"
+        "<p><strong>Contents</strong></p><ul>"
+        + "".join(f"<li><code>{k}</code> — {v}</li>" for k, v in contents)
+        + "</ul>"
+        "<p>Plus flat magnet and link lists, a generated manifest, and plain-language guides "
+        "for readers who are not programmers. Field-level schemas are documented in "
+        "<code>docs/DATA_DICTIONARY.md</code>.</p>"
+        "<p><strong>Tools</strong> (Python, standard library only): <code>aggregate.py</code> "
+        "rebuilds the index from a curated source list; <code>verify.py</code> identifies a "
+        "file you already downloaded against the recorded checksums; "
+        "<code>healthcheck.py</code> detects link rot; <code>render_docs.py</code> generates "
+        "the guides.</p>"
+        "<p><strong>Limits worth knowing</strong></p><ul>"
+        + "".join(f"<li>{x}</li>" for x in limits)
+        + "</ul>"
+        "<p>Only publicly released material is indexed. These records concern the sexual "
+        "abuse of children and contain victim information; <strong>being named in an "
+        "investigative file is not evidence of wrongdoing</strong>.</p>"
+    )
+
+    if z.get("description") == html:
+        return len(html)
+    z["description"] = html
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        json.dump(z, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+    return len(html)
+
+
 def main():
     os.makedirs(DOCS, exist_ok=True)
+    n = update_zenodo_description()
+    if n:
+        print(f"zenodo description: {n:,} chars")
     rows = update_readme_stats()
     if rows:
         print("README stats: " + ", ".join(f"{k.split()[0].lower()}={v}" for k, v in rows))
