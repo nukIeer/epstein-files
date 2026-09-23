@@ -19,7 +19,7 @@
     "url": "https://huggingface.co/datasets/svetfm/epstein-fbi-files",
     "kind": "corpus",
     "name_group": "epstein-fbi-files",
-    "downloads": 2446,
+    "downloads": 2524,
     "likes": 1,
     "license": "cc-by-4.0",
     "formats": [],
@@ -36,7 +36,7 @@
     "url": "https://huggingface.co/datasets/Nikity/Epstein-Files",
     "kind": "corpus",
     "name_group": "epstein-files",
-    "downloads": 1186,
+    "downloads": 935,
     "likes": 10,
     "license": "mit",
     "formats": [
@@ -49,26 +49,12 @@
     "updated": "2026-02-20"
   },
   {
-    "id": "robbd/epstein-index",
-    "platform": "huggingface",
-    "url": "https://huggingface.co/datasets/robbd/epstein-index",
-    "kind": "index",
-    "name_group": "epstein-index",
-    "downloads": 778,
-    "likes": 0,
-    "license": "other",
-    "formats": [],
-    "modalities": [],
-    "size_category": "10K<n<100K",
-    "updated": "2026-09-21"
-  },
-  {
     "id": "kabasshouse/epstein-data",
     "platform": "huggingface",
     "url": "https://huggingface.co/datasets/kabasshouse/epstein-data",
     "kind": "corpus",
     "name_group": "epstein-data",
-    "downloads": 764,
+    "downloads": 793,
     "likes": 4,
     "license": "cc-by-4.0",
     "formats": [
@@ -82,12 +68,26 @@
     "updated": "2026-03-01"
   },
   {
+    "id": "robbd/epstein-index",
+    "platform": "huggingface",
+    "url": "https://huggingface.co/datasets/robbd/epstein-index",
+    "kind": "index",
+    "name_group": "epstein-index",
+    "downloads": 782,
+    "likes": 0,
+    "license": "other",
+    "formats": [],
+    "modalities": [],
+    "size_category": "10K<n<100K",
+    "updated": "2026-09-23"
+  },
+  {
     "id": "aurora2424/epstein-files-ocr-datasets-1-8-early-release",
     "platform": "huggingface",
     "url": "https://huggingface.co/datasets/aurora2424/epstein-files-ocr-datasets-1-8-early-release",
     "kind": "ocr-text",
     "name_group": "epstein-files-ocr-datasets-1-8-early-release",
-    "downloads": 759,
+    "downloads": 763,
     "likes": 0,
     "license": "cc0-1.0",
     "formats": [],
@@ -101,7 +101,7 @@
     "url": "https://huggingface.co/datasets/aurora2424/Epstein-Files",
     "kind": "corpus",
     "name_group": "epstein-files",
-    "downloads": 659,
+    "downloads": 624,
     "likes": 0,
     "license": "mit",
     "formats": [
@@ -119,7 +119,7 @@
     "url": "https://huggingface.co/datasets/ramvorg/Epstein-Files",
     "kind": "corpus",
     "name_group": "epstein-files",
-    "downloads": 637,
+    "downloads": 623,
     "likes": 0,
     "license": "mit",
     "formats": [
@@ -137,7 +137,7 @@
     "url": "https://huggingface.co/datasets/mindhug/Epstein-Files",
     "kind": "corpus",
     "name_group": "epstein-files",
-    "downloads": 598,
+    "downloads": 523,
     "likes": 1,
     "license": "mit",
     "formats": [
@@ -155,7 +155,7 @@
     "url": "https://huggingface.co/datasets/ohmygaugh/Epstein-Files",
     "kind": "corpus",
     "name_group": "epstein-files",
-    "downloads": 525,
+    "downloads": 449,
     "likes": 1,
     "license": "mit",
     "formats": [
@@ -173,7 +173,7 @@
     "url": "https://huggingface.co/datasets/theelderemo/FULL_EPSTEIN_INDEX",
     "kind": "index",
     "name_group": "full_epstein_index",
-    "downloads": 196,
+    "downloads": 201,
     "likes": 22,
     "license": "mit",
     "formats": [
@@ -186,30 +186,12 @@
     "updated": "2025-12-23"
   },
   {
-    "id": "AfricanKillshot/Epstein-Files",
-    "platform": "huggingface",
-    "url": "https://huggingface.co/datasets/AfricanKillshot/Epstein-Files",
-    "kind": "corpus",
-    "name_group": "epstein-files",
-    "downloads": 161,
-    "likes": 0,
-    "license": "mit",
-    "formats": [
-      "parquet"
-    ],
-    "modalities": [
-      "text"
-    ],
-    "size_category": "100G<n<1T",
-    "updated": "2026-02-20"
-  },
-  {
     "id": "ishumilin/epstein-files-ocr-complete",
     "platform": "huggingface",
     "url": "https://huggingface.co/datasets/ishumilin/epstein-files-ocr-complete",
     "kind": "ocr-text",
     "name_group": "epstein-files-ocr-complete",
-    "downloads": 160,
+    "downloads": 157,
     "likes": 3,
     "license": "cc0-1.0",
     "formats": [
@@ -241,30 +223,12 @@
     "updated": "2025-12-04"
   },
   {
-    "id": "post-train/Epstein-Files",
-    "platform": "huggingface",
-    "url": "https://huggingface.co/datasets/post-train/Epstein-Files",
-    "kind": "corpus",
-    "name_group": "epstein-files",
-    "downloads": 117,
-    "likes": 0,
-    "license": "mit",
-    "formats": [
-      "parquet"
-    ],
-    "modalities": [
-      "text"
-    ],
-    "size_category": "100G<n<1T",
-    "updated": "2026-03-01"
-  },
-  {
     "id": "notesbymuneeb/epstein-emails",
     "platform": "huggingface",
     "url": "https://huggingface.co/datasets/notesbymuneeb/epstein-emails",
     "kind": "email-corpus",
     "name_group": "epstein-emails",
-    "downloads": 112,
+    "downloads": 119,
     "likes": 16,
     "license": "other",
     "formats": [
@@ -277,12 +241,30 @@
     "updated": "2025-11-24"
   },
   {
+    "id": "post-train/Epstein-Files",
+    "platform": "huggingface",
+    "url": "https://huggingface.co/datasets/post-train/Epstein-Files",
+    "kind": "corpus",
+    "name_group": "epstein-files",
+    "downloads": 116,
+    "likes": 0,
+    "license": "mit",
+    "formats": [
+      "parquet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "size_category": "100G<n<1T",
+    "updated": "2026-03-01"
+  },
+  {
     "id": "PixelML/epstein-files-cctv-video-memory",
     "platform": "huggingface",
     "url": "https://huggingface.co/datasets/PixelML/epstein-files-cctv-video-memory",
     "kind": "media",
     "name_group": "epstein-files-cctv-video-memory",
-    "downloads": 106,
+    "downloads": 107,
     "likes": 0,
     "license": "cc-by-4.0",
     "formats": [],
@@ -316,7 +298,7 @@
     "url": "https://huggingface.co/datasets/genevera/epstein-files-ocr-complete",
     "kind": "ocr-text",
     "name_group": "epstein-files-ocr-complete",
-    "downloads": 91,
+    "downloads": 89,
     "likes": 0,
     "license": "cc0-1.0",
     "formats": [
@@ -327,6 +309,24 @@
     ],
     "size_category": "1M<n<10M",
     "updated": "2026-04-18"
+  },
+  {
+    "id": "AfricanKillshot/Epstein-Files",
+    "platform": "huggingface",
+    "url": "https://huggingface.co/datasets/AfricanKillshot/Epstein-Files",
+    "kind": "corpus",
+    "name_group": "epstein-files",
+    "downloads": 71,
+    "likes": 0,
+    "license": "mit",
+    "formats": [
+      "parquet"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "size_category": "100G<n<1T",
+    "updated": "2026-02-20"
   },
   {
     "id": "LayerDynamics/epstein-doj-files",
@@ -361,30 +361,12 @@
     "updated": "2026-01-30"
   },
   {
-    "id": "jpeglle/epstein-files-ocr-complete",
-    "platform": "huggingface",
-    "url": "https://huggingface.co/datasets/jpeglle/epstein-files-ocr-complete",
-    "kind": "ocr-text",
-    "name_group": "epstein-files-ocr-complete",
-    "downloads": 50,
-    "likes": 0,
-    "license": "cc0-1.0",
-    "formats": [
-      "parquet"
-    ],
-    "modalities": [
-      "text"
-    ],
-    "size_category": "1M<n<10M",
-    "updated": "2026-08-08"
-  },
-  {
     "id": "devankit7873/EpsteinFiles-Vector-Embeddings-ChromaDB",
     "platform": "huggingface",
     "url": "https://huggingface.co/datasets/devankit7873/EpsteinFiles-Vector-Embeddings-ChromaDB",
     "kind": "embeddings",
     "name_group": "epsteinfiles-vector-embeddings-chromadb",
-    "downloads": 41,
+    "downloads": 40,
     "likes": 3,
     "license": "mit",
     "formats": [],
@@ -416,7 +398,7 @@
     "url": "https://huggingface.co/datasets/svetfm/epstein-files-nov11-25-house-post-ocr-embeddings",
     "kind": "embeddings",
     "name_group": "epstein-files-nov11-25-house-post-ocr-embeddings",
-    "downloads": 25,
+    "downloads": 26,
     "likes": 3,
     "license": "cc-by-4.0",
     "formats": [
