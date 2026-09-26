@@ -10,7 +10,7 @@ The Department has reorganized this page before and has removed files after
 publication. This snapshot records what was published and where, so a later
 reshuffle does not erase the fact that something existed.
 
-Source: <https://www.justice.gov/epstein/doj-disclosures> · captured **2026-09-25**
+Source: <https://www.justice.gov/epstein/doj-disclosures> · captured **2026-09-26**
 
 **76 entries across 5 sections.**
 
