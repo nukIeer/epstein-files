@@ -25,7 +25,7 @@ Only download if you need the original files. To *read* them,
 Smallest first. Data Set 5 is 61 MB and takes a minute; Data Set 9 is ~180 GB.
 ⚠️ = incomplete at the source.
 
-*Links last checked 2026-09-21.*
+*Links last checked 2026-09-28.*
 
 <details>
 <summary><b>How to download, and how to verify what you got</b></summary>
