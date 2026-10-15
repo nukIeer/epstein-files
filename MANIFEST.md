@@ -40,31 +40,31 @@ Listed by popularity; **not vetted for accuracy or completeness**.
 
 | Corpus | Kind | Downloads | License | Updated |
 |--------|------|-----------|---------|---------|
-| [svetfm/epstein-fbi-files](https://huggingface.co/datasets/svetfm/epstein-fbi-files) | corpus | 3,489 | cc-by-4.0 | 2025-12-23 |
-| [robbd/epstein-index](https://huggingface.co/datasets/robbd/epstein-index) | index | 3,464 | other | 2026-10-02 |
-| [Nikity/Epstein-Files](https://huggingface.co/datasets/Nikity/Epstein-Files) | corpus | 994 | mit | 2026-02-20 |
-| [LayerDynamics/epstein-doj-files](https://huggingface.co/datasets/LayerDynamics/epstein-doj-files) | corpus | 623 | ? | 2026-02-21 |
-| [kabasshouse/epstein-data](https://huggingface.co/datasets/kabasshouse/epstein-data) | corpus | 568 | cc-by-4.0 | 2026-03-01 |
-| [ishumilin/epstein-files-ocr-datasets-1-8-early-release](https://huggingface.co/datasets/ishumilin/epstein-files-ocr-datasets-1-8-early-release) | ocr-text | 325 | cc0-1.0 | 2026-03-17 |
-| [nynxz/epstein-images](https://huggingface.co/datasets/nynxz/epstein-images) | media | 261 | ? | 2025-12-20 |
-| [aurora2424/Epstein-Files](https://huggingface.co/datasets/aurora2424/Epstein-Files) | corpus | 181 | mit | 2026-03-13 |
-| [ramvorg/Epstein-Files](https://huggingface.co/datasets/ramvorg/Epstein-Files) | corpus | 178 | mit | 2026-02-20 |
-| [theelderemo/FULL_EPSTEIN_INDEX](https://huggingface.co/datasets/theelderemo/FULL_EPSTEIN_INDEX) | index | 174 | mit | 2025-12-23 |
-| [PixelML/epstein-files-cctv-video-memory](https://huggingface.co/datasets/PixelML/epstein-files-cctv-video-memory) | media | 164 | cc-by-4.0 | 2026-02-16 |
-| [mindhug/Epstein-Files](https://huggingface.co/datasets/mindhug/Epstein-Files) | corpus | 156 | mit | 2026-02-20 |
-| [AfricanKillshot/Epstein-Files](https://huggingface.co/datasets/AfricanKillshot/Epstein-Files) | corpus | 152 | mit | 2026-02-20 |
-| [post-train/Epstein-Files](https://huggingface.co/datasets/post-train/Epstein-Files) | corpus | 126 | mit | 2026-03-01 |
-| [ohmygaugh/Epstein-Files](https://huggingface.co/datasets/ohmygaugh/Epstein-Files) | corpus | 124 | mit | 2026-02-24 |
-| [aurora2424/epstein-files-ocr-datasets-1-8-early-release](https://huggingface.co/datasets/aurora2424/epstein-files-ocr-datasets-1-8-early-release) | ocr-text | 98 | cc0-1.0 | 2026-03-13 |
+| [robbd/epstein-index](https://huggingface.co/datasets/robbd/epstein-index) | index | 3,619 | other | 2026-10-02 |
+| [svetfm/epstein-fbi-files](https://huggingface.co/datasets/svetfm/epstein-fbi-files) | corpus | 2,830 | cc-by-4.0 | 2025-12-23 |
+| [Nikity/Epstein-Files](https://huggingface.co/datasets/Nikity/Epstein-Files) | corpus | 966 | mit | 2026-02-20 |
+| [LayerDynamics/epstein-doj-files](https://huggingface.co/datasets/LayerDynamics/epstein-doj-files) | corpus | 778 | ? | 2026-02-21 |
+| [kabasshouse/epstein-data](https://huggingface.co/datasets/kabasshouse/epstein-data) | corpus | 557 | cc-by-4.0 | 2026-03-01 |
+| [ishumilin/epstein-files-ocr-datasets-1-8-early-release](https://huggingface.co/datasets/ishumilin/epstein-files-ocr-datasets-1-8-early-release) | ocr-text | 319 | cc0-1.0 | 2026-03-17 |
+| [nynxz/epstein-images](https://huggingface.co/datasets/nynxz/epstein-images) | media | 262 | ? | 2025-12-20 |
+| [ramvorg/Epstein-Files](https://huggingface.co/datasets/ramvorg/Epstein-Files) | corpus | 185 | mit | 2026-02-20 |
+| [theelderemo/FULL_EPSTEIN_INDEX](https://huggingface.co/datasets/theelderemo/FULL_EPSTEIN_INDEX) | index | 180 | mit | 2025-12-23 |
+| [post-train/Epstein-Files](https://huggingface.co/datasets/post-train/Epstein-Files) | corpus | 172 | mit | 2026-03-01 |
+| [PixelML/epstein-files-cctv-video-memory](https://huggingface.co/datasets/PixelML/epstein-files-cctv-video-memory) | media | 165 | cc-by-4.0 | 2026-02-16 |
+| [AfricanKillshot/Epstein-Files](https://huggingface.co/datasets/AfricanKillshot/Epstein-Files) | corpus | 153 | mit | 2026-02-20 |
+| [aurora2424/Epstein-Files](https://huggingface.co/datasets/aurora2424/Epstein-Files) | corpus | 145 | mit | 2026-03-13 |
+| [mindhug/Epstein-Files](https://huggingface.co/datasets/mindhug/Epstein-Files) | corpus | 141 | mit | 2026-02-20 |
+| [ohmygaugh/Epstein-Files](https://huggingface.co/datasets/ohmygaugh/Epstein-Files) | corpus | 114 | mit | 2026-02-24 |
+| [notesbymuneeb/epstein-emails](https://huggingface.co/datasets/notesbymuneeb/epstein-emails) | email-corpus | 103 | other | 2025-11-24 |
+| [ishumilin/epstein-files-ocr-complete](https://huggingface.co/datasets/ishumilin/epstein-files-ocr-complete) | ocr-text | 101 | cc0-1.0 | 2026-03-19 |
 | [nynxz/epstein-images-cropped](https://huggingface.co/datasets/nynxz/epstein-images-cropped) | media | 95 | ? | 2025-12-21 |
-| [notesbymuneeb/epstein-emails](https://huggingface.co/datasets/notesbymuneeb/epstein-emails) | email-corpus | 94 | other | 2025-11-24 |
-| [ishumilin/epstein-files-ocr-complete](https://huggingface.co/datasets/ishumilin/epstein-files-ocr-complete) | ocr-text | 92 | cc0-1.0 | 2026-03-19 |
+| [aurora2424/epstein-files-ocr-datasets-1-8-early-release](https://huggingface.co/datasets/aurora2424/epstein-files-ocr-datasets-1-8-early-release) | ocr-text | 94 | cc0-1.0 | 2026-03-13 |
+| [teyler/epstein-files-20k](https://huggingface.co/datasets/teyler/epstein-files-20k) | corpus | 92 | ? | 2025-12-14 |
 | [to-be/epstein-emails](https://huggingface.co/datasets/to-be/epstein-emails) | email-corpus | 92 | other | 2025-12-04 |
-| [teyler/epstein-files-20k](https://huggingface.co/datasets/teyler/epstein-files-20k) | corpus | 89 | ? | 2025-12-14 |
-| [Hannah2704/epstein-emails](https://huggingface.co/datasets/Hannah2704/epstein-emails) | email-corpus | 62 | other | 2026-01-30 |
-| [devankit7873/EpsteinFiles-Vector-Embeddings-ChromaDB](https://huggingface.co/datasets/devankit7873/EpsteinFiles-Vector-Embeddings-ChromaDB) | embeddings | 41 | mit | 2026-02-14 |
+| [Hannah2704/epstein-emails](https://huggingface.co/datasets/Hannah2704/epstein-emails) | email-corpus | 56 | other | 2026-01-30 |
+| [devankit7873/EpsteinFiles-Vector-Embeddings-ChromaDB](https://huggingface.co/datasets/devankit7873/EpsteinFiles-Vector-Embeddings-ChromaDB) | embeddings | 40 | mit | 2026-02-14 |
 | [KillerShoaib/Jeffrey-Epstein-Emails-From-Epstein-Files](https://huggingface.co/datasets/KillerShoaib/Jeffrey-Epstein-Emails-From-Epstein-Files) | email-corpus | 37 | ? | 2026-02-13 |
-| [svetfm/epstein-files-nov11-25-house-post-ocr-embeddings](https://huggingface.co/datasets/svetfm/epstein-files-nov11-25-house-post-ocr-embeddings) | embeddings | 34 | cc-by-4.0 | 2025-11-21 |
+| [svetfm/epstein-files-nov11-25-house-post-ocr-embeddings](https://huggingface.co/datasets/svetfm/epstein-files-nov11-25-house-post-ocr-embeddings) | embeddings | 37 | cc-by-4.0 | 2025-11-21 |
 
 By kind: corpus (11), email-corpus (4), embeddings (2), index (2), media (3), ocr-text (3)
 
