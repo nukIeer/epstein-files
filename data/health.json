@@ -1,12 +1,12 @@
 {
-  "checked": "2026-10-12",
-  "total": 244,
-  "ok": 223,
+  "checked": "2026-10-19",
+  "total": 246,
+  "ok": 224,
   "by_verdict": {
-    "blocked": 16,
-    "gone": 4,
-    "ok": 223,
-    "unreachable": 1
+    "blocked": 4,
+    "gone": 5,
+    "ok": 224,
+    "unreachable": 13
   },
   "results": [
     {
@@ -32,10 +32,10 @@
     },
     {
       "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%201.zip",
-      "status": 403,
-      "verdict": "blocked",
+      "status": null,
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "verdict": "unreachable",
       "ok": false,
-      "content_type": "text/html",
       "cited_by": [
         "Data Set 1",
         "links.txt"
@@ -43,10 +43,10 @@
     },
     {
       "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%2010.zip",
-      "status": 403,
-      "verdict": "blocked",
+      "status": null,
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "verdict": "unreachable",
       "ok": false,
-      "content_type": "text/html",
       "cited_by": [
         "Data Set 10",
         "links.txt"
@@ -54,10 +54,10 @@
     },
     {
       "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%2011.zip",
-      "status": 403,
-      "verdict": "blocked",
+      "status": null,
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "verdict": "unreachable",
       "ok": false,
-      "content_type": "text/html",
       "cited_by": [
         "Data Set 11",
         "links.txt"
@@ -65,10 +65,10 @@
     },
     {
       "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%2012.zip",
-      "status": 403,
-      "verdict": "blocked",
+      "status": null,
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "verdict": "unreachable",
       "ok": false,
-      "content_type": "text/html",
       "cited_by": [
         "Data Set 12",
         "links.txt"
@@ -76,10 +76,10 @@
     },
     {
       "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%202.zip",
-      "status": 403,
-      "verdict": "blocked",
+      "status": null,
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "verdict": "unreachable",
       "ok": false,
-      "content_type": "text/html",
       "cited_by": [
         "Data Set 2",
         "links.txt"
@@ -87,10 +87,10 @@
     },
     {
       "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%203.zip",
-      "status": 403,
-      "verdict": "blocked",
+      "status": null,
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "verdict": "unreachable",
       "ok": false,
-      "content_type": "text/html",
       "cited_by": [
         "Data Set 3",
         "links.txt"
@@ -98,10 +98,10 @@
     },
     {
       "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%204.zip",
-      "status": 403,
-      "verdict": "blocked",
+      "status": null,
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "verdict": "unreachable",
       "ok": false,
-      "content_type": "text/html",
       "cited_by": [
         "Data Set 4",
         "links.txt"
@@ -109,10 +109,10 @@
     },
     {
       "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%205.zip",
-      "status": 403,
-      "verdict": "blocked",
+      "status": null,
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "verdict": "unreachable",
       "ok": false,
-      "content_type": "text/html",
       "cited_by": [
         "Data Set 5",
         "links.txt"
@@ -120,10 +120,10 @@
     },
     {
       "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%206.zip",
-      "status": 403,
-      "verdict": "blocked",
+      "status": null,
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "verdict": "unreachable",
       "ok": false,
-      "content_type": "text/html",
       "cited_by": [
         "Data Set 6",
         "links.txt"
@@ -131,10 +131,10 @@
     },
     {
       "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%207.zip",
-      "status": 403,
-      "verdict": "blocked",
+      "status": null,
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "verdict": "unreachable",
       "ok": false,
-      "content_type": "text/html",
       "cited_by": [
         "Data Set 7",
         "links.txt"
@@ -142,10 +142,10 @@
     },
     {
       "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%208.zip",
-      "status": 403,
-      "verdict": "blocked",
+      "status": null,
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "verdict": "unreachable",
       "ok": false,
-      "content_type": "text/html",
       "cited_by": [
         "Data Set 8",
         "links.txt"
@@ -153,10 +153,10 @@
     },
     {
       "url": "https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%209.zip",
-      "status": 403,
-      "verdict": "blocked",
+      "status": null,
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "verdict": "unreachable",
       "ok": false,
-      "content_type": "text/html",
       "cited_by": [
         "Data Set 9",
         "links.txt"
@@ -222,10 +222,22 @@
       "status": 403,
       "verdict": "blocked",
       "ok": false,
-      "size_hint": "5640",
+      "size_hint": "5629",
       "content_type": "text/html",
       "cited_by": [
         "links.txt"
+      ]
+    },
+    {
+      "url": "https://www.epsteinunboxed.com/",
+      "status": 404,
+      "verdict": "gone",
+      "ok": false,
+      "size_hint": "107",
+      "content_type": "text/plain",
+      "last_ok": "2026-10-12",
+      "cited_by": [
+        "viewer: Epstein Files Search (Epstein Unboxed)"
       ]
     },
     {
@@ -233,7 +245,7 @@
       "status": 403,
       "verdict": "blocked",
       "ok": false,
-      "size_hint": "434",
+      "size_hint": "438",
       "content_type": "text/html",
       "cited_by": [
         "links.txt"
@@ -244,9 +256,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "459833",
+      "size_hint": "495834",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -257,7 +269,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -268,7 +280,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -279,7 +291,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -290,7 +302,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -301,7 +313,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -312,7 +324,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -323,7 +335,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -334,7 +346,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -345,7 +357,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -356,7 +368,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 12",
         "links.txt"
@@ -368,7 +380,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -379,7 +391,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -390,7 +402,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -401,7 +413,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -412,7 +424,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -423,7 +435,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -434,7 +446,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -445,7 +457,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -456,7 +468,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -467,7 +479,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -478,7 +490,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -489,7 +501,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -500,7 +512,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -511,7 +523,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -522,7 +534,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -533,7 +545,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -544,7 +556,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -555,7 +567,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -566,7 +578,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -577,7 +589,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -588,7 +600,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -599,7 +611,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -610,7 +622,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -621,7 +633,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -632,7 +644,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -643,7 +655,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -654,7 +666,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -665,7 +677,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -676,7 +688,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -687,7 +699,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -698,7 +710,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -709,7 +721,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -720,7 +732,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -731,7 +743,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -742,7 +754,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -753,7 +765,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -764,7 +776,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -775,7 +787,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -786,7 +798,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -797,7 +809,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -808,7 +820,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -819,7 +831,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -830,7 +842,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -841,7 +853,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -852,7 +864,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -863,7 +875,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -874,7 +886,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -885,7 +897,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -896,7 +908,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -908,7 +920,7 @@
       "ok": true,
       "redirect_to": "https://dn721704.ca.archive.org/0/items/data-set-1/DataSet%201.zip",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 1",
         "links.txt"
@@ -921,7 +933,7 @@
       "ok": true,
       "redirect_to": "https://dn721704.ca.archive.org/0/items/data-set-1/DataSet%202.zip",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 2",
         "links.txt"
@@ -934,7 +946,7 @@
       "ok": true,
       "redirect_to": "https://dn721704.ca.archive.org/0/items/data-set-1/DataSet%203.zip",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 3",
         "links.txt"
@@ -947,7 +959,7 @@
       "ok": true,
       "redirect_to": "https://dn721704.ca.archive.org/0/items/data-set-1/DataSet%204.zip",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 4",
         "links.txt"
@@ -960,7 +972,7 @@
       "ok": true,
       "redirect_to": "https://dn721704.ca.archive.org/0/items/data-set-1/DataSet%205.zip",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 5",
         "links.txt"
@@ -973,7 +985,7 @@
       "ok": true,
       "redirect_to": "https://dn721704.ca.archive.org/0/items/data-set-1/DataSet%206.zip",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 6",
         "links.txt"
@@ -986,7 +998,7 @@
       "ok": true,
       "redirect_to": "https://dn721704.ca.archive.org/0/items/data-set-1/DataSet%207.zip",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 7",
         "links.txt"
@@ -997,9 +1009,9 @@
       "status": 302,
       "verdict": "ok",
       "ok": true,
-      "redirect_to": "https://ia801606.us.archive.org/9/items/data-set-10/DataSet%2010.zip",
+      "redirect_to": "https://ia601606.us.archive.org/9/items/data-set-10/DataSet%2010.zip",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 10",
         "links.txt"
@@ -1013,7 +1025,7 @@
       "redirect_to": "https://beak2825.github.io/epstein-files-archive/",
       "size_hint": "162",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1024,7 +1036,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1035,7 +1047,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1047,7 +1059,7 @@
       "ok": true,
       "size_hint": "1113261",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "viewer: Epstein Archive (epstein-docs)"
       ]
@@ -1059,7 +1071,7 @@
       "ok": true,
       "size_hint": "1113261",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1071,7 +1083,7 @@
       "ok": true,
       "size_hint": "20884",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1083,7 +1095,7 @@
       "ok": true,
       "size_hint": "110538",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "viewer: Epstein Files Transparency Dashboard (Public Interest Index)"
       ]
@@ -1094,7 +1106,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "viewer: Epstein Exposed"
       ]
@@ -1105,7 +1117,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1116,7 +1128,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "viewer: The Epstein Library (epsteinlibrary.com)"
       ]
@@ -1127,7 +1139,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1138,7 +1150,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "viewer: Epstein Files DB"
       ]
@@ -1149,7 +1161,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "viewer: Epstein Document Explorer"
       ]
@@ -1159,9 +1171,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "1439022",
+      "size_hint": "1439166",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "AfricanKillshot/Epstein-Files"
       ]
@@ -1171,9 +1183,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "724283",
+      "size_hint": "724417",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Hannah2704/epstein-emails"
       ]
@@ -1183,9 +1195,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "948508",
+      "size_hint": "948638",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "KillerShoaib/Jeffrey-Epstein-Emails-From-Epstein-Files"
       ]
@@ -1195,9 +1207,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "83973",
+      "size_hint": "84082",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "LayerDynamics/epstein-doj-files"
       ]
@@ -1207,9 +1219,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "1436509",
+      "size_hint": "1436656",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Nikity/Epstein-Files"
       ]
@@ -1219,9 +1231,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "178038",
+      "size_hint": "178158",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "PixelML/epstein-files-cctv-video-memory"
       ]
@@ -1231,9 +1243,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "1438650",
+      "size_hint": "1438794",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "aurora2424/Epstein-Files"
       ]
@@ -1243,9 +1255,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "148345",
+      "size_hint": "148457",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "aurora2424/epstein-files-ocr-datasets-1-8-early-release"
       ]
@@ -1255,9 +1267,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "148679",
+      "size_hint": "148800",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "devankit7873/EpsteinFiles-Vector-Embeddings-ChromaDB"
       ]
@@ -1267,9 +1279,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "512277",
+      "size_hint": "512415",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "ishumilin/epstein-files-ocr-complete"
       ]
@@ -1279,11 +1291,23 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "146111",
+      "size_hint": "146223",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "ishumilin/epstein-files-ocr-datasets-1-8-early-release"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/jpeglle/epstein-files-ocr-complete",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "184067",
+      "content_type": "text/html",
+      "last_ok": "2026-10-19",
+      "cited_by": [
+        "jpeglle/epstein-files-ocr-complete"
       ]
     },
     {
@@ -1291,9 +1315,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "570780",
+      "size_hint": "570908",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "kabasshouse/epstein-data"
       ]
@@ -1303,9 +1327,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "1439046",
+      "size_hint": "1439190",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "mindhug/Epstein-Files"
       ]
@@ -1315,9 +1339,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "736545",
+      "size_hint": "736681",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "notesbymuneeb/epstein-emails"
       ]
@@ -1327,9 +1351,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "625012",
+      "size_hint": "625118",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "nynxz/epstein-images"
       ]
@@ -1339,9 +1363,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "137570",
+      "size_hint": "137676",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "nynxz/epstein-images-cropped"
       ]
@@ -1351,9 +1375,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "1439385",
+      "size_hint": "1439527",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "ohmygaugh/Epstein-Files"
       ]
@@ -1363,11 +1387,23 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "1439063",
+      "size_hint": "1439207",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "post-train/Epstein-Files"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/qarnold/epstein-emails-embeddings",
+      "status": 200,
+      "verdict": "ok",
+      "ok": true,
+      "size_hint": "625124",
+      "content_type": "text/html",
+      "last_ok": "2026-10-19",
+      "cited_by": [
+        "qarnold/epstein-emails-embeddings"
       ]
     },
     {
@@ -1375,9 +1411,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "1438810",
+      "size_hint": "1438954",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "ramvorg/Epstein-Files"
       ]
@@ -1387,9 +1423,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "125466",
+      "size_hint": "125629",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "robbd/epstein-index"
       ]
@@ -1399,9 +1435,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "475704",
+      "size_hint": "475858",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "svetfm/epstein-fbi-files"
       ]
@@ -1411,9 +1447,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "642197",
+      "size_hint": "642331",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "svetfm/epstein-files-nov11-25-house-post-ocr-embeddings"
       ]
@@ -1423,9 +1459,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "260051",
+      "size_hint": "260134",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "teyler/epstein-files-20k"
       ]
@@ -1435,9 +1471,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "466471",
+      "size_hint": "466591",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "theelderemo/FULL_EPSTEIN_INDEX"
       ]
@@ -1447,9 +1483,9 @@
       "status": 200,
       "verdict": "ok",
       "ok": true,
-      "size_hint": "1390732",
+      "size_hint": "1390838",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "to-be/epstein-emails"
       ]
@@ -1461,7 +1497,7 @@
       "ok": true,
       "redirect_to": "https://www.jefftube.net/",
       "content_type": "text/plain",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "viewer: JeffTube"
       ]
@@ -1472,7 +1508,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1484,7 +1520,7 @@
       "ok": true,
       "size_hint": "0",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1496,7 +1532,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/epstein/files/DataSet%2010/EFTA01286686.pdf",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1508,7 +1544,7 @@
       "ok": true,
       "size_hint": "77",
       "content_type": "text/plain",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1520,7 +1556,7 @@
       "ok": true,
       "size_hint": "12",
       "content_type": "text/plain",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1532,7 +1568,7 @@
       "ok": true,
       "size_hint": "90",
       "content_type": "text/plain",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1544,7 +1580,7 @@
       "ok": true,
       "size_hint": "12",
       "content_type": "text/plain",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1556,7 +1592,7 @@
       "ok": true,
       "size_hint": "12",
       "content_type": "text/plain",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1568,7 +1604,7 @@
       "ok": true,
       "size_hint": "38",
       "content_type": "text/plain",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1580,7 +1616,7 @@
       "ok": true,
       "size_hint": "25",
       "content_type": "text/plain",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1592,7 +1628,7 @@
       "ok": true,
       "size_hint": "25",
       "content_type": "text/plain",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1604,7 +1640,7 @@
       "ok": true,
       "size_hint": "12",
       "content_type": "text/plain",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1616,7 +1652,7 @@
       "ok": true,
       "size_hint": "25",
       "content_type": "text/plain",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1628,7 +1664,7 @@
       "ok": true,
       "size_hint": "272",
       "content_type": "text/plain",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1640,7 +1676,7 @@
       "ok": true,
       "size_hint": "129",
       "content_type": "text/plain",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1652,7 +1688,7 @@
       "ok": true,
       "size_hint": "11257",
       "content_type": "text/plain",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1663,21 +1699,9 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
-      ]
-    },
-    {
-      "url": "https://www.epsteinunboxed.com/",
-      "status": 200,
-      "verdict": "ok",
-      "ok": true,
-      "size_hint": "6097",
-      "content_type": "text/html",
-      "last_ok": "2026-10-12",
-      "cited_by": [
-        "viewer: Epstein Files Search (Epstein Unboxed)"
       ]
     },
     {
@@ -1688,7 +1712,7 @@
       "redirect_to": "https://www.justice.gov/epstein",
       "size_hint": "370",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt",
         "viewer: U.S. Department of Justice — Epstein files"
@@ -1700,7 +1724,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -1711,7 +1735,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Prior DOJ Disclosures",
         "links.txt"
@@ -1723,7 +1747,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1735,7 +1759,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1747,7 +1771,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1759,7 +1783,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1771,7 +1795,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1783,7 +1807,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1795,7 +1819,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1807,7 +1831,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1819,7 +1843,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1831,7 +1855,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1843,7 +1867,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1855,7 +1879,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1867,7 +1891,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1879,7 +1903,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1891,7 +1915,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1903,7 +1927,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1915,7 +1939,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1927,7 +1951,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1939,7 +1963,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1951,7 +1975,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1963,7 +1987,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1975,7 +1999,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1987,7 +2011,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -1999,7 +2023,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2011,7 +2035,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2023,7 +2047,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2035,7 +2059,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2047,7 +2071,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2059,7 +2083,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2071,7 +2095,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2083,7 +2107,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2095,7 +2119,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2107,7 +2131,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2119,7 +2143,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2131,7 +2155,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2143,7 +2167,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2155,7 +2179,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2167,7 +2191,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2179,7 +2203,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2191,7 +2215,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2203,7 +2227,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2215,7 +2239,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2227,7 +2251,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2239,7 +2263,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2251,7 +2275,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2263,7 +2287,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2275,7 +2299,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2287,7 +2311,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2299,7 +2323,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2311,7 +2335,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2323,7 +2347,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Court Records",
         "links.txt"
@@ -2335,7 +2359,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Epstein Files Transparency Act (H.R. 4405)",
         "links.txt"
@@ -2347,7 +2371,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Epstein Files Transparency Act (H.R. 4405)",
         "links.txt"
@@ -2359,7 +2383,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Epstein Files Transparency Act (H.R. 4405)",
         "links.txt"
@@ -2371,7 +2395,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Epstein Files Transparency Act (H.R. 4405)",
         "links.txt"
@@ -2383,7 +2407,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Epstein Files Transparency Act (H.R. 4405)",
         "links.txt"
@@ -2395,7 +2419,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Epstein Files Transparency Act (H.R. 4405)",
         "links.txt"
@@ -2407,7 +2431,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Epstein Files Transparency Act (H.R. 4405)",
         "links.txt"
@@ -2419,7 +2443,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Epstein Files Transparency Act (H.R. 4405)",
         "links.txt"
@@ -2431,7 +2455,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Epstein Files Transparency Act (H.R. 4405)",
         "links.txt"
@@ -2443,7 +2467,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Epstein Files Transparency Act (H.R. 4405)",
         "links.txt"
@@ -2455,7 +2479,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Epstein Files Transparency Act (H.R. 4405)",
         "links.txt"
@@ -2467,7 +2491,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Epstein Files Transparency Act (H.R. 4405)",
         "links.txt"
@@ -2479,7 +2503,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Prior DOJ Disclosures",
         "links.txt"
@@ -2491,7 +2515,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Freedom of Information Act (FOIA)",
         "links.txt"
@@ -2503,7 +2527,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Freedom of Information Act (FOIA)",
         "links.txt"
@@ -2515,7 +2539,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Freedom of Information Act (FOIA)",
         "links.txt"
@@ -2527,7 +2551,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Freedom of Information Act (FOIA)",
         "links.txt"
@@ -2539,7 +2563,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Prior DOJ Disclosures",
         "links.txt"
@@ -2551,7 +2575,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Prior DOJ Disclosures",
         "links.txt"
@@ -2564,7 +2588,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%201.zip",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 1",
         "links.txt"
@@ -2577,7 +2601,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%2010.zip",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 10",
         "links.txt"
@@ -2590,7 +2614,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%2011.zip",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 11",
         "links.txt"
@@ -2603,7 +2627,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%2012.zip",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 12",
         "links.txt"
@@ -2616,7 +2640,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%2012/EFTA02731790.pdf",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -2628,7 +2652,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%2012/EFTA02731812.pdf",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -2640,7 +2664,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%2012/EFTA02731852.pdf",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -2652,7 +2676,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%202.zip",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 2",
         "links.txt"
@@ -2665,7 +2689,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%203.zip",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 3",
         "links.txt"
@@ -2678,7 +2702,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%204.zip",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 4",
         "links.txt"
@@ -2691,7 +2715,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%205.zip",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 5",
         "links.txt"
@@ -2704,7 +2728,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%206.zip",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 6",
         "links.txt"
@@ -2717,7 +2741,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%207.zip",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 7",
         "links.txt"
@@ -2730,7 +2754,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%208.zip",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 8",
         "links.txt"
@@ -2743,7 +2767,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%208/EFTA00020685.pdf",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -2755,7 +2779,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%209.zip",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "Data Set 9",
         "links.txt"
@@ -2768,7 +2792,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%209/EFTA00276494.ts",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -2780,7 +2804,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%209/EFTA01244748.wmv",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -2792,7 +2816,7 @@
       "ok": true,
       "redirect_to": "https://www.justice.gov/age-verify?destination=/epstein/files/DataSet%209/EFTA01244749.wmv",
       "size_hint": "0",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "links.txt"
       ]
@@ -2803,7 +2827,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "viewer: Search the Full Epstein Library (official)"
       ]
@@ -2816,7 +2840,7 @@
       "redirect_to": "https://www.justice.gov/opa/media/1426091/dl",
       "size_hint": "422",
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Related Documentation",
         "links.txt"
@@ -2829,7 +2853,7 @@
       "ok": true,
       "size_hint": "423826",
       "content_type": "application/pdf",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Related Documentation",
         "links.txt"
@@ -2842,7 +2866,7 @@
       "ok": true,
       "size_hint": "344876",
       "content_type": "application/pdf",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Related Documentation",
         "links.txt"
@@ -2855,7 +2879,7 @@
       "ok": true,
       "size_hint": "4580109",
       "content_type": "application/pdf",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Related Documentation",
         "links.txt"
@@ -2867,7 +2891,7 @@
       "verdict": "ok",
       "ok": true,
       "content_type": "text/html",
-      "last_ok": "2026-10-12",
+      "last_ok": "2026-10-19",
       "cited_by": [
         "DOJ library: Related Documentation",
         "links.txt"

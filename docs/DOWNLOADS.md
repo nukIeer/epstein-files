@@ -25,7 +25,7 @@ Only download if you need the original files. To *read* them,
 Smallest first. Data Set 5 is 61 MB and takes a minute; Data Set 9 is ~180 GB.
 ⚠️ = incomplete at the source.
 
-*Links last checked 2026-10-12.*
+*Links last checked 2026-10-19.*
 
 <details>
 <summary><b>How to download, and how to verify what you got</b></summary>
@@ -85,7 +85,7 @@ archives. It means *this is not the exact file that checksum describes*.
 
 <details><summary>Links that did not respond at the last check</summary>
 
-- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%206.zip` — blocked — the host refused our check; may still work in a browser
+- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%206.zip` — unreachable
 
 </details>
 
@@ -129,7 +129,7 @@ d54d26d94127b9a277cf3f7d9eeaf9a7271f118757997edac3bc6e1039ed6555
 
 <details><summary>Links that did not respond at the last check</summary>
 
-- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%205.zip` — blocked — the host refused our check; may still work in a browser
+- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%205.zip` — unreachable
 
 </details>
 
@@ -173,7 +173,7 @@ eeda87e747487d718e35b661d2d078ff08f0b0e80107c5f498fce17ae4f298ba
 
 <details><summary>Links that did not respond at the last check</summary>
 
-- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%207.zip` — blocked — the host refused our check; may still work in a browser
+- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%207.zip` — unreachable
 
 </details>
 
@@ -217,7 +217,7 @@ magnet:?xt=urn:btih:101b10571e0b2edc2496f72a831c865ec6a3c070&dn=VOL00007&xl=1030
 
 <details><summary>Links that did not respond at the last check</summary>
 
-- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%2012.zip` — blocked — the host refused our check; may still work in a browser
+- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%2012.zip` — unreachable
 
 </details>
 
@@ -261,7 +261,7 @@ b5314b7efca98e25d8b35e4b7fac3ebb3ca2e6cfd0937aa2300ca8b71543bbe2
 
 <details><summary>Links that did not respond at the last check</summary>
 
-- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%204.zip` — blocked — the host refused our check; may still work in a browser
+- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%204.zip` — unreachable
 
 </details>
 
@@ -305,7 +305,7 @@ e78948690c22b904d6b79afe92a4eb1d7abb8e746b0d025123826ebee0df8273
 
 <details><summary>Links that did not respond at the last check</summary>
 
-- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%203.zip` — blocked — the host refused our check; may still work in a browser
+- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%203.zip` — unreachable
 
 </details>
 
@@ -349,7 +349,7 @@ magnet:?xt=urn:btih:3f5923fefc496e394fc1fd553f9d3a1c4242789c&dn=VOL00003&xl=6285
 
 <details><summary>Links that did not respond at the last check</summary>
 
-- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%202.zip` — blocked — the host refused our check; may still work in a browser
+- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%202.zip` — unreachable
 
 </details>
 
@@ -393,7 +393,7 @@ magnet:?xt=urn:btih:dd6b5cac7991d34625e4eea1fb2c295c6fbd3adc&dn=VOL00002&xl=6623
 
 <details><summary>Links that did not respond at the last check</summary>
 
-- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%201.zip` — blocked — the host refused our check; may still work in a browser
+- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%201.zip` — unreachable
 
 </details>
 
@@ -437,7 +437,7 @@ magnet:?xt=urn:btih:10d451428ac43a98f2eff06ce256231b8eba7bed&dn=VOL00001&xl=1329
 <details><summary>Links that did not respond at the last check</summary>
 
 - `https://archive.org/details/data-set-8` — gone
-- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%208.zip` — blocked — the host refused our check; may still work in a browser
+- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%208.zip` — unreachable
 
 </details>
 
@@ -480,7 +480,7 @@ magnet:?xt=urn:btih:8dacaa3a16be77a51db1cc21fe3b0ffaca0ab116&dn=VOL00008&xl=1146
 
 <details><summary>Links that did not respond at the last check</summary>
 
-- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%2011.zip` — blocked — the host refused our check; may still work in a browser
+- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%2011.zip` — unreachable
 
 </details>
 
@@ -518,7 +518,7 @@ magnet:?xt=urn:btih:59975667f8bdd5baf9945b0e2db8a57d52d32957&xt=urn:btmh:12200ab
 
 <details><summary>Links that did not respond at the last check</summary>
 
-- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%2010.zip` — blocked — the host refused our check; may still work in a browser
+- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%2010.zip` — unreachable
 
 </details>
 
@@ -566,7 +566,7 @@ magnet:?xt=urn:btih:d509cc4ca1a415a9ba3b6cb920f67c44aed7fe1f&dn=DataSet%2010.zip
 
 <details><summary>Links that did not respond at the last check</summary>
 
-- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%209.zip` — blocked — the host refused our check; may still work in a browser
+- `https://doj-files.geeken.dev/doj_zips/original_archives/DataSet%209.zip` — unreachable
 
 </details>
 

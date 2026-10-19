@@ -7,7 +7,7 @@ Search and read the documents in your browser. Nothing to install, no account.
 *None of these sites are run by this project. Listed because they work, not
 because their contents have been checked.*
 
-*Checked 2026-10-12.*
+*Checked 2026-10-19.*
 
 
 ### [U.S. Department of Justice — Epstein files](https://www.justice.gov/epstein/) ✅
@@ -78,7 +78,7 @@ Full-text search over 20,392 indexed documents / 126,120 pages released under H.
 
 > Unaffiliated with the DOJ despite the similar name. Opens with a content warning and a crisis-line number.
 
-### [Epstein Files Search (Epstein Unboxed)](https://www.epsteinunboxed.com/) ✅
+### [Epstein Files Search (Epstein Unboxed)](https://www.epsteinunboxed.com/) ❌ *(last check: gone)*
 
 Searches 400,000+ documents and answers questions with citations back to the source document.
 
